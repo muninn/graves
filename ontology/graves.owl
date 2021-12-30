@@ -321,17 +321,22 @@
    <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
-<owl:ObjectProperty rdf:ID="atDepth">
- <foaf:name xml:lang="en">At Depth</foaf:name>
+<owl:DatatypeProperty rdf:ID="atDepth">
  <rdfs:label xml:lang="en">At Depth</rdfs:label>
  <rdfs:label xml:lang="fr">A une profondeur</rdfs:label>
- <rdfs:label xml:lang="de"></rdfs:label>
+ <rdfs:label xml:lang="de">In der Tiefe</rdfs:label>
  <skos:definition xml:lang="en">Record the approximate depth that the wreck lies at.</skos:definition>
+ <skos:definition xml:lang="fr">Notez la profondeur approximative à laquelle se trouve l'épave.</skos:definition>
+ <skos:definition xml:lang="de">Notieren Sie die ungefähre Tiefe, in der das Wrack liegt.</skos:definition>
+ <rdfs:comment xml:lang="en">This is a convenience property to record depth without the overhead of a full Coordinate Reference System or Datum reference. This is a common practice in documenting historical shipwrecks.</rdfs:comment>
+ <rdfs:comment xml:lang="fr">Une propriété pratique pour enregistrer la profondeur sans la complexité d'un système de référence de coordonnées complet. C'est une pratique courante dans la documentation des épaves historiques.</rdfs:comment>
+ <rdfs:comment xml:lang="de">Dies ist eine praktische Eigenschaft, um die Tiefe ohne den Overhead von aufzuzeichnen ein vollständiges Koordinatenreferenzsystem oder eine Datumsreferenz. Dies ist eine gängige Praxis bei der Dokumentation historischer Schiffswracks.</rdfs:comment>
+ <vs:term_status>stable</vs:term_status> 
  <rdfs:domain rdf:resource="#ShipWreck"/>
-   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
-   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   <void:inDataset rdf:resource="#datasetdefinition"/>
-</owl:ObjectProperty>
+ <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+ <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+ <void:inDataset rdf:resource="#datasetdefinition"/>
+</owl:DatatypeProperty>
 
 
   <owl:Class rdf:ID="Statue"> 
@@ -925,6 +930,7 @@
    <skos:definition xml:lang="en">An Armenian cross-stone used to mark a grave or as a commemoration.</skos:definition>
    <skos:definition xml:lang="fr">Une croix de pierre arménienne utilisée pour marquer une tombe ou comme commémoration.</skos:definition>
    <skos:definition xml:lang="de">Ein armenischer Kreuzstein, der zur Markierung eines Grabes oder als Gedenkstein verwendet wurde.</skos:definition>
+   <vs:term_status>stable</vs:term_status>
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    <void:inDataset rdf:resource="#datasetdefinition"/>
@@ -937,10 +943,11 @@
    <rdfs:label xml:lang="en">Archaeological dig site</rdfs:label>
    <rdfs:label xml:lang="fr">Site de fouilles archéologiques</rdfs:label>
    <rdfs:label xml:lang="de">Archäologische Ausgrabungsstätte</rdfs:label>
-   <skos:definition xml:lang="en">A physical location under the administration of an Archaeological organization where graves are being exhumed.</skos:definition> 
-   <skos:definition xml:lang="fr">Un site archéologiques sous le controle d'un groupe de recherche où des fouilles prennent place.</skos:definition>
-   <skos:definition xml:lang="de">Eine archäologische Ausgrabungsstätte unter der Kontrolle von einer Arbeitsgruppe, wo Ausgrabungen stattfinden.</skos:definition>
+   <skos:definition xml:lang="en">A physical location under the administration of an Archaeological organization where graves are being exhumed or ruined monuments may be found.</skos:definition> 
+   <skos:definition xml:lang="fr">Un emplacement physique sous l'administration d'une organisation archéologique où des tombes sont exhumées ou des monuments en ruine peuvent être trouvés.</skos:definition>
+   <skos:definition xml:lang="de">Es kann ein physischer Ort unter der Verwaltung einer archäologischen Organisation gefunden werden, an dem Gräber exhumiert oder Denkmäler zerstört werden.</skos:definition>
    <owl:subClassOf rdf:resource="#Dead_people_place"/>
+   <vs:term_status>stable</vs:term_status>
    <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/ArchaeologicalSite"/>
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
