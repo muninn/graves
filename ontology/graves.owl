@@ -919,14 +919,17 @@
   </owl:Class>
 
   <owl:Class rdf:ID="Khachkar">
-   <rdfs:label>Khachkar</rdfs:label> 
-   <skos:definition xml:lang="en">Convinience class - redirects to #tombstone.</skos:definition>
-   <owl:sameAs rdf:resource="#Tombs" />
+   <rdfs:label xml:lang="en">Khachkar</rdfs:label> 
+   <rdfs:label xml:lang="fr">Khatchkar</rdfs:label>
+   <rdfs:label xml:lang="de">Chatschkar</rdfs:label>
+   <skos:definition xml:lang="en">An Armenian cross-stone used to mark a grave or as a commemoration.</skos:definition>
+   <skos:definition xml:lang="fr">Une croix de pierre arménienne utilisée pour marquer une tombe ou comme commémoration.</skos:definition>
+   <skos:definition xml:lang="de">Ein armenischer Kreuzstein, der zur Markierung eines Grabes oder als Gedenkstein verwendet wurde.</skos:definition>
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    <void:inDataset rdf:resource="#datasetdefinition"/>
    <owl:equivalentClass muninn:wikipedia_version="811938757" rdf:resource="http://dbpedia.org/resource/Khachkar"/>
-   <owl:subClassOf rdf:resource="#Monument"/>
+   <owl:subClassOf rdf:resource="#Tombstone"/>
   </owl:Class>
 
 
