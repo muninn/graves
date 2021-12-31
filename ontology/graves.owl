@@ -527,24 +527,33 @@
 </graves:ObjectState>
 
 <graves:ObjectState rdf:about="#Eliminated">
- <foaf:name xml:lang="en">Eliminated</foaf:name>
  <rdfs:label xml:lang="en">Eliminated</rdfs:label>
- <skos:prefLabel xml:lang="en">Eliminated</skos:prefLabel>
+ <rdfs:label xml:lang="fr">Éliminé</rdfs:label>
+ <rdfs:label xml:lang="de">Eliminiert</rdfs:label>
  <skos:definition xml:lang="en">The object was completely and permanently destroyed or disassembled. No remains or traces of the object exists.</skos:definition>
+ <skos:definition xml:lang="de">Das Objekt wurde vollständig und dauerhaft zerstört oder demontiert. Es sind keine Reste oder Spuren des Objekts vorhanden.</skos:definition>
+ <skos:definition xml:lang="fr">L'objet a été complètement et définitivement détruit ou démonté. Aucune trace de l'objet n'existe.</skos:definition>
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
  <skos:topConceptOf rdf:resource="#ObjectStatesScheme"/>
-   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
-   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   <void:inDataset rdf:resource="#datasetdefinition"/>
+ <vs:term_status>stable</vs:term_status> 
+ <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+ <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+ <void:inDataset rdf:resource="#datasetdefinition"/>
 </graves:ObjectState>
 
 <graves:ObjectState rdf:about="#Demolished">
- <foaf:name xml:lang="en">Demolished</foaf:name>
  <rdfs:label xml:lang="en">Demolished</rdfs:label>
- <skos:prefLabel xml:lang="en">Demolished</skos:prefLabel>
+ <rdfs:label xml:lang="fr">Démoli</rdfs:label>
+ <rdfs:label xml:lang="de">Niederreißen</rdfs:label>
  <skos:definition xml:lang="en">The object was destroyed or disassembled and remains or traces of the object may exists.</skos:definition>
+ <skos:definition xml:lang="fr">L'objet a été détruit ou démoli et des restes ou des traces de l'objet peuvent exister.</skos:definition>
+ <skos:definition xml:lang="de">Das Objekt wurde zerstört oder demontiert und es können Reste oder Spuren des Objekts vorhanden sein.</skos:definition>
+ <vs:term_status>stable</vs:term_status> 
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
  <skos:topConceptOf rdf:resource="#ObjectStatesScheme"/>
+ <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+ <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+ <void:inDataset rdf:resource="#datasetdefinition"/>
 </graves:ObjectState>
 
 <graves:ObjectState rdf:about="#Wrecked">
@@ -1357,7 +1366,7 @@
    <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DeprecatedClass>
 
-  <owl:Class rdf:ID="EmptyGrave" >
+  <owl:Class rdf:ID="EmptyGrave">
    <foaf:name xml:lang="en">Empty Grave</foaf:name>
    <rdfs:label xml:lang="en">Empty Grave</rdfs:label>
    <rdfs:label xml:lang="fr">Tombe vide</rdfs:label>
