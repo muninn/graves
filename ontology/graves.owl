@@ -1305,22 +1305,26 @@
 
 
   <owl:Class rdf:ID="Mass_grave">
-   <foaf:name xml:lang="en">Mass Grave</foaf:name>
    <rdfs:label xml:lang="en">Mass Grave</rdfs:label>
    <rdfs:label xml:lang="fr">Fosse commune</rdfs:label>
    <rdfs:label xml:lang="de">Massengrab</rdfs:label>
-   <skos:definition xml:lang="en">True if the grave contains more than the remains of one person. This limit is arbitrary and needs debate.</skos:definition> 
-   <skos:definition xml:lang="fr">Vrai si la tombe contient plus d'un corps. Cette limite est arbitraire et doit être discuté.</skos:definition> 
-   <skos:definition xml:lang="de">True, wenn das Grab enthält mehr als ein Körper. Diese Grenze ist willkürlich und sollte diskutiert werden.</skos:definition>
-   <owl:equivalentClass muninn:wikipedia_version="499197251" rdf:resource="http://dbpedia.org/resource/Mass_grave"/>
+   <skos:definition xml:lang="en">A mass graves is a burial pit where multiple bodies were thrown in without regard to identity or status. For example: plague pits or war crimes sites.</skos:definition>
+   <skos:definition xml:lang="fr">Une fosse commune est une fosse funéraire où plusieurs corps ont été jetés sans distinction d'identité ou de statut. Par exemple : fosses à peste ou sites de crimes de guerre.</skos:definition>
+   <skos:definition xml:lang="de">Ein Massengrab ist eine Grabgrube, in die mehrere Leichen ohne Rücksicht auf Identität oder Status geworfen wurden. Zum Beispiel: Pestgruben oder Kriegsverbrechen.</skos:definition>
+   <rdfs:comment xml:lang="en">True if the grave contains more than the remains of one person. This limit is arbitrary and needs debate.</rdfs:comment> 
+   <rdfs:comment xml:lang="fr">Vrai si la tombe contient plus d'un corps. Cette limite est arbitraire et doit être discuté.</rdfs:comment> 
+   <rdfs:comment xml:lang="de">True, wenn das Grab enthält mehr als ein Körper. Diese Grenze ist willkürlich und sollte diskutiert werden.</rdfs:comment>
+   <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Mass_grave"/>
+   <muninn:wikipedia_version>499197251</muninn:wikipedia_version>
+   <vs:term_status>stable</vs:term_status>
    <owl:subClassOf rdf:resource="#Dead_people_place"/>
    <owl:subClassOf rdf:resource="#Container_for_human_remains"/>
    <owl:subClassOf>
-   <owl:Restriction rdf:ID="internalGraves003">
-    <owl:onProperty rdf:resource="#containsRemains" />
-    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
-   </owl:Restriction>
- </owl:subClassOf>
+    <owl:Restriction rdf:ID="internalGraves003">
+     <owl:onProperty rdf:resource="#containsRemains" />
+     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+    </owl:Restriction>
+   </owl:subClassOf>
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    <void:inDataset rdf:resource="#datasetdefinition"/>
