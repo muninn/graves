@@ -901,6 +901,21 @@
    <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
+  <owl:Class rdf:ID="Marker">
+   <rdfs:label xml:lang="en">Marker</rdfs:label> 
+   <rdfs:label xml:lang="fr">Marqueur</rdfs:label>
+   <rdfs:label xml:lang="de">Markierstift</rdfs:label>
+   <skos:definition xml:lang="en">A marker is a stake, flag, sign or peg indicating the location of a grave.</skos:definition>
+   <skos:definition xml:lang="fr">Un marqueur est un pieu, une petite enseigne ou un piquet indiquant l'emplacement d'une tombe.</skos:definition>
+   <skos:definition xml:lang="de">Ein Marker ist ein Pfahl, eine Flagge, ein Schild oder ein Stift, der die Position eines Grabes anzeigt.</skos:definition>
+   <owl:subClassOf rdf:resource="#Memorial" />
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:Class>
+
+
+
   <owl:Class rdf:ID="Headstone">
    <rdfs:label xml:lang="en">Headstone</rdfs:label> 
    <rdfs:label xml:lang="fr">Pierre Tombale</rdfs:label>
