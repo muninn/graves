@@ -351,30 +351,28 @@
    <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
-  <owl:Class rdf:ID="Burial_mound">
-   <rdfs:label xml:lang="en">Burial Mound</rdfs:label>     
-   <owl:sameAs rdf:resource="#Tumulus"/> 
-   <owl:subClassOf rdf:resource="#Memorial" />
-   <owl:subClassOf rdf:resource="#Dead_people_place"/>
-   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
-   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-   <void:inDataset rdf:resource="#datasetdefinition"/>
-  </owl:Class>
 
   <owl:Class rdf:ID="Tumulus"> 
-   <skos:definition xml:lang="en">Tumulus is actually the Latin word, but unclear what the appropriate English label is here.</skos:definition>
    <rdfs:label xml:lang="fr">Tumulus</rdfs:label>   
    <rdfs:label xml:lang="de">Hügelgrab</rdfs:label>
-   <rdfs:label xml:lang="en">Tumulus</rdfs:label>   
-   <owl:subClassOf rdf:resource="#Memorial" />
+   <rdfs:label xml:lang="en">Barrow</rdfs:label>
+   <rdfs:label xml:lang="la">Tumulus</rdfs:label>   
+   <skos:altLabel xml:lang="en">Burial Mound</skos:altLabel>
+   <skos:definition xml:lang="en">A mound of earth and stones raised over a grave or graves.</skos:definition>
+   <skos:definition xml:lang="fr">Un monticule de terre et de pierres élevé sur une ou plusieurs tombes.</skos:definition>
+   <skos:definition xml:lang="de">Ein Hügel aus Erde und Steinen, der über einem Grab oder mehreren Gräbern erhoben wurde.</skos:definition>      
+   <owl:subClassOf rdf:resource="#Memorial"/>
    <owl:subClassOf rdf:resource="#Dead_people_place"/>
-    <owl:equivalentClass   muninn:wikipedia_version="515641451"   rdf:resource="http://dbpedia.org/resource/Tumulus"/>
+   <owl:equivalentProperty rdf:resource="#Burial_mound"/>
+   <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Tumulus"/>
+   <muninn:wikipedia_version>515641451</muninn:wikipedia_version>
+   <vs:term_status>stable</vs:term_status> 
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
-  <owl:Class rdf:ID="Shrine"> 
+  <owl:Class rdf:ID="Shrine">
    <rdfs:label xml:lang="en">Shrine</rdfs:label>
    <rdfs:label xml:lang="fr">Sanctuaire</rdfs:label>
    <rdfs:label xml:lang="de">Schrein</rdfs:label>
@@ -1584,6 +1582,18 @@
    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:ObjectProperty>
+
+  <owl:DeprecatedClass rdf:ID="Burial_mound">
+   <rdfs:label xml:lang="en">Burial Mound</rdfs:label>     
+   <owl:sameAs rdf:resource="#Tumulus"/> 
+   <owl:subClassOf rdf:resource="#Memorial" />
+   <owl:subClassOf rdf:resource="#Dead_people_place"/>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <vs:term_status>archaic</vs:term_status>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:DeprecatedClass>
 
   <owl:DeprecatedProperty rdf:ID="commemorates">
    <foaf:name xml:lang="en">commemorates</foaf:name>
