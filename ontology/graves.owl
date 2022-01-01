@@ -68,6 +68,7 @@
    <owl:imports rdf:resource="http://www.opengis.net/ont/sf#"/>
    <owl:imports rdf:resource="http://www.w3.org/2008/05/skos-xl"/>
    <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
+   <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <void:inDataset rdf:resource="#datasetdefinition"/>
    <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85066566"/>
