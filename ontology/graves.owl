@@ -945,7 +945,7 @@
    <rdfs:label xml:lang="en">Headstone</rdfs:label> 
    <rdfs:label xml:lang="fr">Pierre Tombale</rdfs:label>
    <rdfs:label xml:lang="de">Grabstein</rdfs:label>
-   <skos:definition xml:lang="en">Convinience class - redirects to #tombstone.</skos:definition>
+   <skos:definition xml:lang="en">Convenience class - redirects to #tombstone.</skos:definition>
    <owl:sameAs rdf:resource="#Tombstone" />
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -956,7 +956,7 @@
    <rdfs:label xml:lang="en">Gravestone</rdfs:label> 
    <rdfs:label xml:lang="fr">Pierre Tombale</rdfs:label>
    <rdfs:label xml:lang="de">Grabstein</rdfs:label>
-   <skos:definition xml:lang="en">Convinience class - redirects to #tombstone.</skos:definition>
+   <skos:definition xml:lang="en">Convenience class - redirects to #tombstone.</skos:definition>
    <owl:sameAs rdf:resource="#Tombstone" />
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
