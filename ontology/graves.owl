@@ -945,12 +945,30 @@
    <rdfs:label xml:lang="en">Headstone</rdfs:label> 
    <rdfs:label xml:lang="fr">Pierre Tombale</rdfs:label>
    <rdfs:label xml:lang="de">Grabstein</rdfs:label>
-   <skos:definition xml:lang="en">Convenience class - redirects to #tombstone.</skos:definition>
-   <owl:sameAs rdf:resource="#Tombstone" />
+   <skos:definition xml:lang="en">A stone or wooden marker used to locate a grave and placed at the top (head) of the deceased's remains.</skos:definition>
+   <skos:definition xml:lang="fr">Une pierre ou un marqueur en bois utilisé pour localiser une tombe et placé au sommet (tête) de la dépouille du défunt.</skos:definition>
+   <skos:definition xml:lang="de">Ein Stein- oder Holzmarker, der verwendet wird, um ein Grab zu finden und der oben (Kopf) der Überreste des Verstorbenen platziert wird.</skos:definition>
+   <owl:subClassOf rdf:resource="#Tombstone" />
+   <owl:disjointWith rdf:resource="#Footstone"/>
+   <vs:term_status>stable</vs:term_status> 
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
+
+  <owl:Class rdf:ID="Footstone">
+   <rdfs:label xml:lang="en">Footstone</rdfs:label> 
+   <rdfs:label xml:lang="de">Fußstein</rdfs:label>
+   <skos:definition xml:lang="en">A stone or wooden marker used to locate a grave and placed at the bottom (feet) of the deceased's remains.</skos:definition>
+   <skos:definition xml:lang="fr">Une pierre ou un marqueur en bois utilisé pour localiser une tombe et placé au bas (pied) de la dépouille du défunt.</skos:definition>
+   <skos:definition xml:lang="de">Ein Stein- oder Holzmarker, der verwendet wird, um ein Grab zu finden und am Boden (Füße) der Überreste des Verstorbenen platziert wird.</skos:definition>
+   <vs:term_status>stable</vs:term_status> 
+   <owl:disjointWith rdf:resource="#Footstone"/>
+   <owl:subClassOf rdf:resource="#Tombstone" />
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:Class>  
 
   <owl:Class rdf:ID="Gravestone">
    <rdfs:label xml:lang="en">Gravestone</rdfs:label> 
