@@ -1663,7 +1663,7 @@
   </owl:DeprecatedProperty>
 
 
-  <owl:DatatypeProperty rdf:ID="siteName">
+  <owl:DeprecatedProperty rdf:ID="siteName">
    <rdfs:label xml:lang="en">Site Name</rdfs:label>
    <rdfs:label xml:lang="fr">Nom du site</rdfs:label>
    <rdfs:label xml:lang="de">Site-Namen</rdfs:label>
@@ -1674,8 +1674,26 @@
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    <void:inDataset rdf:resource="#datasetdefinition"/>
-  </owl:DatatypeProperty>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <vs:term_status>archaic</vs:term_status>
+  </owl:DeprecatedProperty>
 
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+   <rdfs:label xml:lang="en">Name</rdfs:label>
+   <rdfs:label xml:lang="fr">Nom</rdfs:label>
+   <rdfs:label xml:lang="de">Name</rdfs:label>
+   <skos:definition xml:lang="en">The name of a feature, place or thing.</skos:definition>
+   <skos:definition xml:lang="fr">Le nom d'un toponyme, d'un lieu ou d'une chose.</skos:definition>
+   <skos:definition xml:lang="de">Der Name eines Merkmals, Ortes oder Dings.</skos:definition>
+   <rdfs:comment xml:lang="en">Links foaf term to ontology.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">Relie le terme de foaf à l'ontologie.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Verbindet den foaf mit der Ontologie. </rdfs:comment>
+   <owl:equivalentProperty rdf:resource="#siteName"/>
+   <vs:term_status>stable</vs:term_status>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </rdf:Description>
 
 
 
