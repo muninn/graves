@@ -1293,6 +1293,20 @@
    <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
+  <owl:Class rdf:ID="Columbarium">
+   <rdfs:label xml:lang="en">Columbarium</rdfs:label>
+   <rdfs:label xml:lang="fr">Columbarium</rdfs:label>
+   <rdfs:label xml:lang="de">Kolumbarium</rdfs:label>
+   <skos:definition xml:lang="en">A structure for the respectful and usually public storage of funerary urns.</skos:definition> 
+   <skos:definition xml:lang="fr">Un lieu où sont conservées les urnes cinéraires.</skos:definition>
+   <skos:definition xml:lang="de">Eine Struktur zur respektvollen und meist öffentlichen Aufbewahrung von Bestattungsurnen.</skos:definition>
+   <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Columbarium"/>
+   <owl:subClassOf rdf:resource="#Dead_people_place"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:Class>
+
   <owl:Class rdf:ID="Grave">
    <rdfs:label xml:lang="en">Grave</rdfs:label>
    <rdfs:label xml:lang="fr">Tombe</rdfs:label>
@@ -1306,6 +1320,8 @@
    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
    <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
+
+
 
   <owl:Class rdf:ID="WarGrave">
    <rdfs:label xml:lang="en">War Grave</rdfs:label>
