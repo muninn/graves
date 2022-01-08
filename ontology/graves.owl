@@ -1307,6 +1307,21 @@
    <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
+  <owl:Class rdf:ID="FuneraryUrn">
+   <rdfs:label xml:lang="en">Urn</rdfs:label>
+   <rdfs:label xml:lang="fr">Urnes</rdfs:label>
+   <rdfs:label xml:lang="de">Grab</rdfs:label>
+   <skos:definition xml:lang="en">A vessel to hold cremated ashes.</skos:definition> 
+   <skos:definition xml:lang="fr">Un contenant pour cendres humaines.</skos:definition>
+   <skos:definition xml:lang="de">Ein Behälter für menschliche Asche.</skos:definition>
+   <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Grave"/>
+   <owl:subClassOf rdf:resource="#Container_for_human_remains"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:Class>
+
+
   <owl:Class rdf:ID="Grave">
    <rdfs:label xml:lang="en">Grave</rdfs:label>
    <rdfs:label xml:lang="fr">Tombe</rdfs:label>
