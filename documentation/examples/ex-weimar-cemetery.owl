@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns       ="https://rdf.muninn-project.org/ontologies/graves#"
+    xmlns:person="http://rdf.muninn-project.org/ontologies/person#"
+    xmlns:schema="https://schema.org/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:org="http://rdf.muninn-project.org/ontologies/organization#"
+    xmlns:mil="http://rdf.muninn-project.org/ontologies/military#"
+    xmlns:muninn="http://rdf.muninn-project.org/ontologies/muninn#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:religion="http://rdf.muninn-project.org/ontologies/religion#"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:gn="http://www.geonames.org/ontology#"
+    xmlns:graves="https://rdf.muninn-project.org/ontologies/graves#"
+    xmlns:time = "http://www.w3.org/2006/time#"   
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:loc="http://id.loc.gov/vocabulary/relators/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:documents="http://rdf.muninn-project.org/ontologies/documents#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"   
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+    xmlns:sf="http://www.opengis.net/ont/sf#"
+    xml:base="https://rdf.muninn-project.org/ontologies/graves#">
+<graves:MilitaryCemetery rdf:about="#sovietCemetery">
+ <rdfs:label xml:lang="en">Soviet Military Cemetary (Weimar, Germany)</rdfs:label>
+ <foaf:name>Soviet Military Cemetary</foaf:name>
+ <graves:denomination></graves:denomination>
+ <graves:siteName>Soviet Military Cemetary</graves:siteName>
+ <gn:locatedIn rdf:resource="http://sws.geonames.org/2812482/"/>
+ <graves:hasPart rdf:resource="#centralMonument"/>
+ <graves:hasPart rdf:resource="#cemeteryGate"/>
+ <graves:containsGrave rdf:resource="#БЕАКИНGrave"/>
+ <graves:containsGrave rdf:resource="#ГРОМОВGrave"/>
+ <graves:containsGrave rdf:resource="#otherGraves"/>
+</graves:MilitaryCemetery>
+
+<graves:Monument rdf:about="#centralMonument">
+ <rdfs:label xml:lang="en">Soviet Cemetary Monument (Weimar, Germany)</rdfs:label>
+ <rdfs:name>Soviet Cemetary Monument</rdfs:name>
+ <graves:siteName>Monument to Soviet Soldiers buried in the Cemetary.</graves:siteName>
+ <graves:hasLocation> 
+  <geo:Point>
+   <geo:lat>50.974984</geo:lat>
+   <geo:long>11.332123</geo:long>
+  </geo:Point>
+ </graves:hasLocation>
+ <graves:inscription xml:lang="en">ETERNAL GLORY TO THE HEROES YEARS 1941 - 1945</graves:inscription>
+ <graves:inscription xml:lang="ru">ВЕЧНАЯ СЛАВА ГЕРОЯМ 1941 - 1945 ГГ</graves:inscription>
+ <gn:locatedIn rdf:resource="http://sws.geonames.org/2812482/"/>
+ <graves:isPartOf rdf:resource="#sovietCemetery"/>
+</graves:Monument>
+
+<graves:Monument rdf:about="#cemeteryGate">
+ <rdfs:label xml:lang="en">Soviet Cemetary Gate (Weimar, Germany)</rdfs:label>
+ <foaf:name>Cemetary Gate</foaf:name>
+ <graves:siteName xml:lang="en">Soviet Cemetary Gate</graves:siteName>
+ <graves:hasLocation>
+  <geo:Point>
+   <geo:lat>50.974903</geo:lat>
+   <geo:long>11.331570</geo:long>
+  </geo:Point>
+ </graves:hasLocation>
+ <gn:locatedIn rdf:resource="http://sws.geonames.org/2812482/"/>
+ <graves:isPartOf rdf:resource="#sovietCemetery"/>
+</graves:Monument>
+
+<graves:Tombstone rdf:about="#tombstoneOneFront">
+ <graves:hasRearFace rdf:resource="#tombstoneOneBack"/>
+ <graves:inscription>ГРУНОВ 1901-1946 ДРОЗДОВ ФЕДОР 1916-1946 ЗУБКОВ НИКОЛАЙ 1920-1945</graves:inscription>
+ <graves:isCommemorationOf rdf:resource="#ГРУНОВgrave"/>
+ <graves:isCommemorationOf rdf:resource="#ДРОЗДОВgrave"/>
+ <graves:isCommemorationOf rdf:resource="#ЗУБКОВgrave"/>
+ <graves:isPartOf rdf:resource="#sovietCemetery"/>
+</graves:Tombstone>
+
+<graves:Tombstone rdf:about="#tombstoneOneBack">
+ <graves:hasFrontFace rdf:resource="#tombstoneOneFront"/>
+ <graves:inscription>БЕАКИН ВАСИПИЙ 1923-1945 ГРОМОВ СЕМЕН 1921-1945 ДОВИДЕН ПАВЕЛ 1920-1946</graves:inscription>
+ <graves:isCommemorationOf rdf:resource="#БЕАКИНgrave"/>
+ <graves:isCommemorationOf rdf:resource="#ГРОМОВgrave"/>
+ <graves:isCommemorationOf rdf:resource="#ДОВИДЕНgrave"/>
+ <graves:isPartOf rdf:resource="#sovietCemetery"/>
+</graves:Tombstone>
+
+<graves:Graves rdf:about="#БЕАКИНgrave">
+ <graves:hasCommemoration rdf:resource="#tombstoneOneBack"/>
+ <graves:containsRemains rdf:resource="#БЕАКИНRemains"/>
+ <graves:graveContainedIn rdf:resource="#sovietCemetery"/>
+</graves:Graves>
+
+<graves:Skeleton rdf:about="#БЕАКИНremains">
+ <graves:isRemainsOf rdf:resource="#БЕАКИНsoldier"/>
+ <graves:remainsIn rdf:resource="#БЕАКИНgrave"/>
+</graves:Skeleton>
+
+<mil:Soldier rdf:about="#БЕАКИНremains">
+ <rdfs:label xml-lang="ru">БЕАКИН ВАСИПИЙ (Советский солдат, 1923-1945)"</rdfs:label>
+ <rdfs:label xml-lang="en">BEAKIN VASIPY (Soviet Soldier, 1923-1945)"</rdfs:label>
+ <mil:name xml-lang="ru">БЕАКИН ВАСИПИЙ"</mil:name>
+ <mil:firstName xml-lang="ru">БЕАКИН"</mil:firstName>
+ <mil:lastName xml-lang="ru">ВАСИПИЙ"</mil:lastName>
+ <mil:allegiance rdf:resource="http://dbpedia.org/resource/Soviet_Union"/>
+ <mil:birthday rdf:resource="#БЕАКИНbirth"/>
+ <mil:deathday rdf:resource="#БЕАКИНdeath"/>
+ <graves:hisRemains rdf:resource="#БЕАКИНremains"/>
+</mil:Soldier>
+</rdf:RDF>

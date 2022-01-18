@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns       ="https://rdf.muninn-project.org/ontologies/graves#"
+    xmlns:person="http://rdf.muninn-project.org/ontologies/person#"
+    xmlns:schema="https://schema.org/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:org="http://rdf.muninn-project.org/ontologies/organization#"
+    xmlns:mil="http://rdf.muninn-project.org/ontologies/military#"
+    xmlns:muninn="http://rdf.muninn-project.org/ontologies/muninn#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:religion="http://rdf.muninn-project.org/ontologies/religion#"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:graves="https://rdf.muninn-project.org/ontologies/graves#"
+    xmlns:time = "http://www.w3.org/2006/time#"   
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:loc="http://id.loc.gov/vocabulary/relators/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:documents="http://rdf.muninn-project.org/ontologies/documents#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"   
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+    xmlns:sf="http://www.opengis.net/ont/sf#"
+    xml:base="https://rdf.muninn-project.org/ontologies/graves#">
+ <graves:Plaque>
+  <graves:siteName>CBC Waterloo Branch Great War Plaque</graves:siteName>
+  <graves:inscription>IN MEMORY OF 1701 MEN OF THE CANADIAN BANK OF COMMERCE 
+  WHO SERVED IN THE GREAT WAR 1914-1918 LT H G HAZELTON SGT C R KRANE SPR W R DIERLAMM 
+  WATERLOO ONT BRANCH</graves:inscription>
+  <graves:commemorates rdf:resource="#426398_Charles_Robert_Kranz_CEF"/>
+  <graves:commemorates rdf:resource="#355071_Wilfred_R_Dierlamm_CEF"/>
+  <graves:commemorates rdf:resource="#866b9bb7ef671b2a6a9afcec7079bf30"/>
+  <graves:hasLocation>
+   <schema:PostalAddress>
+    <foaf:name>Canadian Imperial Bank of Commerce</foaf:name>
+    <schema:postalCode>N2J3Z6</schema:postalCode>
+    <schema:streetAddress>27 King Street North</schema:streetAddress>
+    <schema:telephone>+1-519-886-2960</schema:telephone>
+    <schema:addressCountry rdf:resource="http://sws.geonames.org/6251999/"/>
+    <schema:addressLocality rdf:resource="http://sws.geonames.org/6176823/"/>
+    <schema:addressRegion rdf:resource="http://sws.geonames.org/6093943/"/>
+  </schema:PostalAddress> 
+ </graves:hasLocation>
+ <graves:hasLocation>
+  <geo:Point>
+   <geo:lat>43.465883</geo:lat>
+   <geo:long>-80.522788</geo:long>
+  </geo:Point>  
+ </graves:hasLocation>
+</graves:Plaque>
+</rdf:RDF>
+
