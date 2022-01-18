@@ -1612,7 +1612,7 @@
    <skos:definition xml:lang="fr">Une reference a l'identité de la personne a qui la depouille appartient.</skos:definition>
    <skos:definition xml:lang="de">Ein Verweis auf die Identität der Person, die den Körper gehört.</skos:definition>
    <rdfs:domain rdf:resource="#Remains"/>
-   <rdfs:range rdf:resource="org:Person"/>
+   <rdfs:range rdf:resource="http://www.w3.org/ns/org#Person"/>
    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -1628,7 +1628,7 @@
    <skos:definition xml:lang="fr">Une reference a l'identité de la personne a qui la depouille appartient.</skos:definition>
    <skos:definition xml:lang="de">Ein Verweis auf die Identität der Person, die den Körper gehört.</skos:definition>
    <rdfs:domain rdf:resource="#Remains"/>
-   <rdfs:range rdf:resource="org:Person"/>
+   <rdfs:range rdf:resource="http://www.w3.org/ns/org#Person"/>
    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
    <owl:equivalentProperty rdf:resource="#remains_of"/>
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
@@ -1657,7 +1657,7 @@
    <rdfs:label xml:lang="fr">La personne a ces restes</rdfs:label>
    <rdfs:label xml:lang="de">Person hat, bleibt</rdfs:label>
    <rdfs:range rdf:resource="#Remains"/>
-   <rdfs:domain rdf:resource="org:Person"/>
+   <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Person"/>
    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
    <owl:inverseOf rdf:resource="#isRemainsOf"/>
    <owl:equivalentProperty rdf:resource="#has_remains"/>
