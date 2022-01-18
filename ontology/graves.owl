@@ -60,6 +60,7 @@
    <dcterms:creator rdf:resource="#warren"/>
    <dcterms:publisher rdf:resource="#muninn"/>
    <loc:ctb rdf:resource="#jakes"/>
+   <loc:ctb rdf:resource="#gates"/>
    <vann:preferredNamespacePrefix>graves</vann:preferredNamespacePrefix>
    <vann:preferredNamespaceUri>https://rdf.muninn-project.org/ontologies/graves#</vann:preferredNamespaceUri>
    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
@@ -116,6 +117,8 @@
    <dcterms:publisher rdf:resource="#muninn"/>
    <loc:ctb rdf:resource="#jakes"/>
    <schema:contributor rdf:resource="#jakes"/>
+   <loc:ctb rdf:resource="#gates"/>
+   <schema:contributor rdf:resource="#gates"/>
    <schema:version>ONTOLOGY_VERSION</schema:version>
    <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85066566"/>
    <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85124583"/>
@@ -194,6 +197,17 @@
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <void:inDataset rdf:resource="#datasetdefinition"/>
   </bibo:Collection>
+
+  <foaf:Person rdf:about="#gates">
+   <rdf:type rdf:resource="https://schema.org/Person"/>
+   <foaf:name>Stephen Gates</foaf:name>
+   <rdfs:label>Stephen Gates</rdfs:label>
+   <schema:affiliation>Friends of Toowong Cemetery</schema:affiliation>
+   <foaf:img rdf:resource="https://avatars.githubusercontent.com/u/9379524?v=4" />
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </foaf:Person>
+
   
   <foaf:Person rdf:about="#warren">
    <rdf:type rdf:resource="https://schema.org/Person"/>
