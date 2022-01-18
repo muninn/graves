@@ -1651,8 +1651,8 @@
    <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DeprecatedProperty>
 
-  <owl:ObjectProperty rdf:ID="hisRemains">
-   <foaf:name xml:lang="en">hisRemains</foaf:name>
+  <owl:ObjectProperty rdf:ID="hasRemains">
+   <foaf:name xml:lang="en">has Remains</foaf:name>
    <rdfs:label xml:lang="en">Person has remains</rdfs:label>
    <rdfs:label xml:lang="fr">La personne a ces restes</rdfs:label>
    <rdfs:label xml:lang="de">Person hat, bleibt</rdfs:label>
