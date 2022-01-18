@@ -1,0 +1,82 @@
+<p>This class is equivalent to the dbpedia instance <a href="http://dbpedia.org/resource/Cemetery">http://dbpedia.org/resource/Cemetery</a> based on the <a href="http://en.wikipedia.org/w/index.php?title=Cemetery&oldid=514561782">514561782</a> version of the <a href="http://en.wikipedia.org/wiki/Main_Page">Wikipedia</a> page.</p>
+<p>This class is equivalent to the instance <a href="http://linkedgeodata.org/ontology/LanduseCemetery">http://linkedgeodata.org/ontology/LanduseCemetery</a>.</p>
+<p>This class is equivalent to the instance <a href="http://linkedgeodata.org/ontology/Cemetery">http://linkedgeodata.org/ontology/Cemetery</a>.</p>
+<p>This class is a subclass of <a href="#term_Dead_people_place">Dead people place</a>.</p>
+<p>A cemetery is a collection of graves in a location under a common administration, past or present.</p>
+
+<h3 id="halifax_holy_cross_example">6.8. Halifax Holy Cross, A Cemetery Example</h3>
+
+The following example: 
+
+<div class="example" style="white-space: pre-wrap;">
+<pre>
+
+&lt;graves:Cemetery rdf:about="<A href="http://rdf.muninn-project.org/ww1/2011/11/11/Cemetery/HolyCrossHalifaxNS">Holy Cross Cemetery</a>"&gt;
+ &lt;dc:source&gt;<a href="http://holycrosshalifax.ca/">http://holycrosshalifax.ca/</a>&lt;/dc:source&gt;
+ &lt;graves:denomination rdf:resource="<A href="http://rdf.muninn-project.org/ww1/2011/11/11/Religion/catholicism">Catholic</a>"/&gt;
+ &lt;graves:siteName&gt;Holy Cross Cemetery&lt;/graves:siteName&gt;
+ &lt;graves:hasLocation&gt;
+  &lt;geo:Point rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Point/HolyCrossHalifaxNSCenterPoint">HolyCrossHalifaxNSCenterPoint</a>"&gt;
+   &lt;geo:lat&gt;44.639117&lt;/geo:lat&gt;
+   &lt;geo:long&gt;-63.576037&lt;/geo:long&gt;
+  &lt;/geo:Point&gt;
+ &lt;graves:hasLocation&gt;
+ &lt;gn:locatedIn rdf:resource="<a href="http://sws.geonames.org/6324729/">Halifax</a>"/&gt;
+ &lt;graves:containsGrave rdf:resource="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Grave/47c58aa16a883758c73dbb5dbdc806ef">Lt. Harold Howe</a>"/&gt;
+ &lt;graves:containsGrave rdf:resource="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Grave/180003d2a1fd820bb66621ea41ba6edd">Sgt. Major Charles E. L. Lewis</a>"/&gt;
+ &lt;graves:containsGrave rdf:resource="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Grave/99ace35e8ee4df3a4d6497061e770273">Sgt. F. T. Mooring</a>"/&gt;
+ &lt;graves:containsGrave rdf:resource="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Grave/60811badb25ea31da916a98bb4e5385f">Lt. A. St. Croix Des Brisay</a>"/&gt;
+ &lt;graves:containsGrave rdf:resource="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Grave/7b9c018d7774454517039fb700d1d145"> Joseph's Grave </a>"/&gt;
+&lt;/graves:Cemetery&gt;
+( ... )
+&lt;graves:Grave rdf:about="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Grave/7b9c018d7774454517039fb700d1d145"> Joseph's Grave </a>"&gt;
+ &lt;ns4:label xml:lang="en"&gt;Grave of Private Joseph Preston (Halifax, Canada)&lt;/ns4:label&gt;
+ &lt;!-- Joseph's friends chipped in to get him a decent grave marker --&gt;<img border=2 src="http://rdf.muninn-project.org/ww1/2011/11/11/Image/47c58aa16a883758c73dbb5dbdc806ef/thumbnail.jpg"  alt="Joseph's Tombstone" style="float: right; padding:10px;" >
+ &lt;documents:createdBy&gt;
+  &lt;org:Group rdf:about="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Group/7b9c018d7774454517039fb700d1d145">..</a>"/&gt;
+   &lt;org:name&gt;The comrades of Joseph Preston&lt;/org:name&gt;  
+  &lt;org:Group&gt;
+ &lt;/documents:createdBy&gt;
+ &lt;grave:siteName&gt;Grave of Private Joseph Preston&lt;/ns1:siteName&gt;
+ &lt;grave:hasLocation rdf:resource="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Point/7b9c018d7774454517039fb700d1d145-22711">Point</a>"/&gt;
+ &lt;grave:hasCommemoration rdf:resource="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Tombstone/7b9c018d7774454517039fb700d1d145"> Joseph's Tombstone </a>"/&gt;
+ &lt;grave:containsRemains rdf:resource="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Remains/7b9c018d7774454517039fb700d1d145"> Joseph's Remains </a>"/&gt;
+ &lt;grave:graveContainedIn rdf:resource="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Cemetery/HolyCrossHalifaxNS"> Holy Cross Cemetery </A>"/&gt;
+&lt;/graves:Grave&gt;
+
+&lt;graves:Tombstone rdf:about="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Tombstone/7b9c018d7774454517039fb700d1d145"> Joseph's Tombstone </a>"&gt;
+ &lt;foaf:depiction rdf:resource="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Image/47c58aa16a883758c73dbb5dbdc806ef"> Picture of the grave </a>"/&gt;
+ &lt;graves:inscription&gt;LIEUTNANT HAROLD HOWE 66TH REGT. CDN. MILITIA 
+ 27TH NOVEMBER 1915 AGE 27&lt;/graves:inscription&gt;
+ &lt;graves:isCommemorationOf rdf:resource="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Soldier/47c58aa16a883758c73dbb5dbdc806ef"> Pvt. Joseph Preston </a>"/&gt;
+&lt;/graves:Tombstone&gt;
+
+&lt;graves:Remains rdf:about="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Remains/7b9c018d7774454517039fb700d1d145"> Joseph's Remains </a>"&gt;
+ &lt;rdfs:label xml:lang="en"&gt;Remains of Joseph Preston (Halifax, Canada)&lt;/rdfs:label&gt;
+ &lt;org:name&gt;Remains of Joseph Preston&lt;/org:name&gt;
+ &lt;graves:isRemainsOf rdf:resource="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Soldier/7b9c018d7774454517039fb700d1d145"> Pvt. Joseph Preston </a>"/&gt;
+ &lt;graves:remainsIn rdf:resource="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Grave/7b9c018d7774454517039fb700d1d145"> Joseph's Grave </a>"/&gt;
+&lt;graves:Remains&gt;
+
+&lt;mil:Soldier rdf:about="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Soldier/7b9c018d7774454517039fb700d1d145"> Pvt. Joseph Preston </a>"&gt;
+ &lt;rdfs:label xml:lang="en"&gt;Joseph Preston (Soldier, British Army)&lt;/rdfs:label&gt;
+ &lt;graves:hisRemains rdf:resource="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Remains/7b9c018d7774454517039fb700d1d145"> Joseph's Remains </a>"/&gt;
+ &lt;mil:heldRank rdf:resource="<a href="http://rdf.muninn-project.org/ontologies/military#Rank_Private_England"> Rank of Private, British Army </a>"/&gt;
+ &lt;mil:isPrincipalOf rdf:resource="<a href="http://rdf.muninn-project.org/bna/2011/11/11/PostToUnit/7b9c018d7774454517039fb700d1d145"> Pvt. Preston joins the Regt. </a>"/&gt;
+ &lt;mil:name&gt;Joseph Preston&lt;/mil:name&gt;
+ &lt;mil:firstName&gt;Joseph&lt;/mil:firstName&gt;
+ &lt;mil:lastName&gt;Preston&lt;/mil:lastName&gt;
+ &lt;mil:deathday rdf:resource="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Death/7b9c018d7774454517039fb700d1d145"> Joseph's Death </a>"/&gt;
+ &lt;mil:birthday rdf:resource="<a href="http://rdf.muninn-project.org/bna/2011/11/11/Birth/7b9c018d7774454517039fb700d1d145"> Joseph's Birth </a>"/&gt;
+&lt;/mil:Soldier&gt;
+
+(...)
+</pre>
+</div>
+
+        <p>The complete RDF dump of this example can be queried <a HREF="http://rdf.muninn-project.org/dump.php?query=http://rdf.muninn-project.org/ww1/2011/11/11/Cemetery/HolyCrossHalifaxNS&output=rdfxml">here</a>.
+
+<!--
+
+
+-->

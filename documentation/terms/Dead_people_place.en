@@ -1,0 +1,6 @@
+
+A rather poorly named class, this is the super-class of all other classes. It
+is not meant to be instantiated but groups the subclasses together in a
+common purpose.
+
+This should be the reverse of a <a href="http://www.geonames.org/ontology#P.PPL">populated place</a> according to the <a href="http://www.geonames.org/ontology/ontology_v2.2.1.rdf">Geonames ontology</a>.
