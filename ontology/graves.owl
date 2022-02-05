@@ -560,7 +560,7 @@
  <rdfs:label xml:lang="en">Eliminated</rdfs:label>
  <rdfs:label xml:lang="fr">Éliminé</rdfs:label>
  <rdfs:label xml:lang="de">Eliminiert</rdfs:label>
- <skos:definition xml:lang="en">The object was completely and permanently destroyed or disassembled. No remains or traces of the object exists.</skos:definition>
+ <skos:definition xml:lang="en">The object was completely and permanently destroyed or disassembled. No remains or traces of the object exist.</skos:definition>
  <skos:definition xml:lang="de">Das Objekt wurde vollständig und dauerhaft zerstört oder demontiert. Es sind keine Reste oder Spuren des Objekts vorhanden.</skos:definition>
  <skos:definition xml:lang="fr">L'objet a été complètement et définitivement détruit ou démonté. Aucune trace de l'objet n'existe.</skos:definition>
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
@@ -1884,25 +1884,25 @@
 <!-- This section according to time/prov -->
 <rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity">
  <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
- <rdfs:comment xml:lang="en">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
  <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://www.w3.org/ns/prov#InstantaneousEvent">
  <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
- <rdfs:comment xml:lang="en">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
  <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Instant"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://www.w3.org/ns/prov#atTime">
  <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
- <rdfs:comment xml:lang="en">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#inXSDDateTime"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://www.w3.org/ns/prov#endedAtTime">
  <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
- <rdfs:comment xml:lang="en">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
  <owl:propertyChainAxiom rdf:parseType="Collection">
   <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasEnd"/>
   <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTime"/>
@@ -1911,7 +1911,7 @@
 
 <rdf:Description rdf:about="http://www.w3.org/ns/prov#startedAtTime">
  <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
- <rdfs:comment xml:lang="en">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
  <owl:propertyChainAxiom rdf:parseType="Collection">
   <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasBeginning"/>
   <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTime"/>
