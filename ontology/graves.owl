@@ -72,14 +72,14 @@
    <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <void:inDataset rdf:resource="#datasetdefinition"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85066566"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85124583"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85018080"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85135935"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh96002721"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh00006370"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85056548"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/childrensSubjects/sj2013050003"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85066566"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85124583"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85018080"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85135935"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh96002721"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh00006370"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85056548"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/childrensSubjects/sj2013050003"/>
   </owl:Ontology>
 
   
@@ -120,14 +120,14 @@
    <loc:ctb rdf:resource="#gates"/>
    <schema:contributor rdf:resource="#gates"/>
    <schema:version>ONTOLOGY_VERSION</schema:version>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85066566"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85124583"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85018080"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85135935"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh96002721"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh00006370"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85056548"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/childrensSubjects/sj2013050003"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85066566"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85124583"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85018080"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85135935"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh96002721"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh00006370"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85056548"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/childrensSubjects/sj2013050003"/>
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves"/>
    <void:sparqlEndpoint rdf:resource="http://rdf.muninn-project.org/sparql"/>
    <void:triples>TOTAL_TRIPLES_ONTOLOGY</void:triples>
