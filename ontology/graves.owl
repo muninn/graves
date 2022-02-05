@@ -54,7 +54,7 @@
    <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">ONTOLOGY_DATE</dcterms:date>
    <void:inDataset rdf:resource="#datasetdefinition"/>
    <foaf:logo rdf:resource="http://rdf.muninn-project.org/ontologies/UnknownGrave.png"/>
-   <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/> 
+   <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/> 
    <cc:Jurisdiction rdf:resource="http://dbpedia.org/resource/Canada"/>
    <cc:attributionURL rdf:resource="http://www.muninn-project.org/"/>
    <dcterms:creator rdf:resource="#warren"/>
@@ -107,8 +107,8 @@
    <schema:description xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</schema:description>
    <schema:description xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</schema:description>
    <schema:description xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</schema:description>
-   <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/> 
-   <schema:license>https://creativecommons.org/licenses/by/3.0/</schema:license>
+   <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/> 
+   <schema:license>https://creativecommons.org/licenses/by/4.0/</schema:license>
    <cc:Jurisdiction rdf:resource="http://dbpedia.org/resource/Canada"/>
    <cc:attributionURL rdf:resource="http://www.muninn-project.org/"/>
    <dcterms:creator rdf:resource="#warren"/>
