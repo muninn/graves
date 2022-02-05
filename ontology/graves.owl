@@ -42,12 +42,12 @@
    <rdfs:label xml:lang="en">The Muninn Graves Ontology</rdfs:label>
    <rdfs:label xml:lang="fr">L'ontologie Graves de Muninn</rdfs:label> 
    <rdfs:label xml:lang="de">Die Muninn Graves Ontologie</rdfs:label>  
-   <rdfs:comment xml:lang="en">The Muninn Graves Ontology is meant to deal with the remains of human beings.</rdfs:comment>
-   <rdfs:comment xml:lang="fr">L'ontologie Graves de Muninn se soucie des restes humain.</rdfs:comment>
-   <rdfs:comment xml:lang="de">Die Muninn Graves Ontology soll sich mit den Überresten von Menschen befassen.</rdfs:comment>
-   <dcterms:description xml:lang="en">The Muninn Graves Ontology is meant to deal with the remains of human beings.</dcterms:description>
-   <dcterms:description xml:lang="fr">L'ontologie Graves de Muninn se soucie des restes humain.</dcterms:description>
-   <dcterms:description xml:lang="de">Die Muninn Graves Ontology soll sich mit den Überresten von Menschen befassen.</dcterms:description>
+   <rdfs:comment xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</rdfs:comment>
+   <dcterms:description xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</dcterms:description>
+   <dcterms:description xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</dcterms:description>
+   <dcterms:description xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</dcterms:description>
    <owl:priorVersion rdf:resource="https://rdf.muninn-project.org/ontologies/graves-20121031"/>
    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">ONTOLOGY_VERSION</owl:versionInfo>
    <vs:term_status>Stable</vs:term_status>
@@ -98,15 +98,15 @@
    <schema:name xml:lang="en">The Muninn Graves Ontology</schema:name>
    <schema:name xml:lang="fr">L'ontologie Graves de Muninn</schema:name>
    <schema:name xml:lang="de">Die Muninn Graves Ontologie</schema:name>
-   <rdfs:comment xml:lang="en">The Muninn Graves Ontology is meant to deal with the remains of human beings.</rdfs:comment>
-   <rdfs:comment xml:lang="fr">L'ontologie Graves de Muninn se soucie des restes humain.</rdfs:comment>
-   <rdfs:comment xml:lang="de">Die Muninn Graves Ontology soll sich mit den Überresten von Menschen befassen.</rdfs:comment>
-   <dcterms:description xml:lang="en">The Muninn Graves Ontology is meant to deal with the remains of human beings.</dcterms:description>
-   <dcterms:description xml:lang="fr">L'ontologie Graves de Muninn se soucie des restes humain.</dcterms:description>
-   <dcterms:description xml:lang="de">Die Muninn Graves Ontology soll sich mit den Überresten von Menschen befassen.</dcterms:description>
-   <schema:description xml:lang="en">The Muninn Graves Ontology is meant to deal with the remains of human beings.</schema:description>
-   <schema:description xml:lang="fr">L'ontologie Graves de Muninn se soucie des restes humain.</schema:description>
-   <schema:description xml:lang="de">Die Muninn Graves Ontology soll sich mit den Überresten von Menschen befassen.</schema:description>
+   <rdfs:comment xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</rdfs:comment>
+   <dcterms:description xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</dcterms:description>
+   <dcterms:description xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</dcterms:description>
+   <dcterms:description xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</dcterms:description>
+   <schema:description xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</schema:description>
+   <schema:description xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</schema:description>
+   <schema:description xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</schema:description>
    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/> 
    <schema:license>https://creativecommons.org/licenses/by/3.0/</schema:license>
    <cc:Jurisdiction rdf:resource="http://dbpedia.org/resource/Canada"/>
