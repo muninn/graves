@@ -59,7 +59,7 @@
    <cc:attributionURL rdf:resource="http://www.muninn-project.org/"/>
    <dcterms:creator rdf:resource="#warren"/>
    <dcterms:publisher rdf:resource="#muninn"/>
-   <loc:ctb rdf:resource="#jakes"/>
+   <loc:ctb rdf:resource="#jackes"/>
    <loc:ctb rdf:resource="#gates"/>
    <vann:preferredNamespacePrefix>graves</vann:preferredNamespacePrefix>
    <vann:preferredNamespaceUri>https://rdf.muninn-project.org/ontologies/graves#</vann:preferredNamespaceUri>
@@ -115,8 +115,8 @@
    <schema:creator rdf:resource="#warren"/>
    <schema:creator rdf:resource="#muninn"/>
    <dcterms:publisher rdf:resource="#muninn"/>
-   <loc:ctb rdf:resource="#jakes"/>
-   <schema:contributor rdf:resource="#jakes"/>
+   <loc:ctb rdf:resource="#jackes"/>
+   <schema:contributor rdf:resource="#jackes"/>
    <loc:ctb rdf:resource="#gates"/>
    <schema:contributor rdf:resource="#gates"/>
    <schema:version>ONTOLOGY_VERSION</schema:version>
@@ -222,7 +222,7 @@
    <owl:sameAs rdf:resource="https://orcid.org/0000-0002-2615-5022"/>
   </foaf:Person>
 
-  <foaf:Person rdf:about="#jakes">
+  <foaf:Person rdf:about="#jackes">
    <rdf:type rdf:resource="https://schema.org/Person"/>
    <foaf:name>Mary Jackes</foaf:name>
    <rdfs:label>Mary Jackes</rdfs:label>
