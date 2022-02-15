@@ -1,17 +1,20 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rdf:RDF
-    xmlns       ="http://rdf.muninn-project.org/ontologies/graves#"
+    xmlns       ="https://rdf.muninn-project.org/ontologies/graves#"
     xmlns:person="http://rdf.muninn-project.org/ontologies/person#"
+    xmlns:schema="https://schema.org/"
+    xmlns:vann="http://purl.org/vocab/vann/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:org="http://rdf.muninn-project.org/ontologies/organization#"
     xmlns:mil="http://rdf.muninn-project.org/ontologies/military#"
     xmlns:muninn="http://rdf.muninn-project.org/ontologies/muninn#"
-    xmlns:foaf="http://xmlns.com/foaf/spec/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:religion="http://rdf.muninn-project.org/ontologies/religion#"
     xmlns:dbpedia="http://dbpedia.org/resource/"
-    xmlns:graves="http://rdf.muninn-project.org/ontologies/graves#"
+    xmlns:graves="https://rdf.muninn-project.org/ontologies/graves#"
     xmlns:time = "http://www.w3.org/2006/time#"   
     xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:loc="http://id.loc.gov/vocabulary/relators/"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
@@ -19,49 +22,298 @@
     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"   
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:cc="http://creativecommons.org/ns#"
     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xml:base="http://rdf.muninn-project.org/ontologies/graves#">
+    xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+    xmlns:sf="http://www.opengis.net/ont/sf#"
+    xml:base="https://rdf.muninn-project.org/ontologies/graves#">
 
   <owl:Ontology rdf:about="">
-   <dc:title>The Muninn Graves Ontology</dc:title> 
-   <owl:priorVersion rdf:resource="http://rdf.muninn-project.org/ontologies/graves-20120118.owl"/>
-   <dc:description>The Muninn Graves Ontology is meant to deal with the remains of human beings.</dc:description>
+   <foaf:name xml:lang="en">Graves</foaf:name>
+   <dcterms:title xml:lang="en">The Muninn Graves Ontology</dcterms:title> 
+   <dcterms:title xml:lang="fr">L'ontologie Graves de Muninn</dcterms:title> 
+   <dcterms:title xml:lang="de">Die Muninn Graves Ontologie</dcterms:title> 
    <rdfs:label xml:lang="en">The Muninn Graves Ontology</rdfs:label>
-   <rdfs:comment xml:lang="en">The Muninn Graves Ontology is meant to deal with the remains of human beings.</rdfs:comment>
-   <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+   <rdfs:label xml:lang="fr">L'ontologie Graves de Muninn</rdfs:label> 
+   <rdfs:label xml:lang="de">Die Muninn Graves Ontologie</rdfs:label>  
+   <rdfs:comment xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</rdfs:comment>
+   <dcterms:description xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</dcterms:description>
+   <dcterms:description xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</dcterms:description>
+   <dcterms:description xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</dcterms:description>
+   <owl:priorVersion rdf:resource="https://rdf.muninn-project.org/ontologies/graves-20121031"/>
+   <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">ONTOLOGY_VERSION</owl:versionInfo>
    <vs:term_status>Stable</vs:term_status>
-   <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">20121031</dc:date>
+   <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">ONTOLOGY_DATE</dcterms:date>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <foaf:logo rdf:resource="http://rdf.muninn-project.org/ontologies/UnknownGrave.png"/>
+   <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/> 
+   <cc:Jurisdiction rdf:resource="http://dbpedia.org/resource/Canada"/>
+   <cc:attributionURL rdf:resource="http://www.muninn-project.org/"/>
+   <dcterms:creator rdf:resource="#warren"/>
+   <dcterms:publisher rdf:resource="#muninn"/>
+   <loc:ctb rdf:resource="#jackes"/>
+   <loc:ctb rdf:resource="#gates"/>
+   <vann:preferredNamespacePrefix>graves</vann:preferredNamespacePrefix>
+   <vann:preferredNamespaceUri>https://rdf.muninn-project.org/ontologies/graves#</vann:preferredNamespaceUri>
+   <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+   <owl:imports rdf:resource="http://www.w3.org/2006/time#"/>
+   <owl:imports rdf:resource="http://www.opengis.net/ont/geosparql#"/>
+   <owl:imports rdf:resource="http://www.opengis.net/ont/sf#"/>
+   <owl:imports rdf:resource="http://www.w3.org/2008/05/skos-xl"/>
+   <owl:imports rdf:resource="http://www.w3.org/ns/prov#"/>
+   <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85066566"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85124583"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85018080"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85135935"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh96002721"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh00006370"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85056548"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/childrensSubjects/sj2013050003"/>
   </owl:Ontology>
 
+  
+
+
+  <void:Dataset rdf:about="#datasetdefinition">
+   <rdf:type rdf:resource="https://schema.org/Dataset"/>
+   <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+   <foaf:name xml:lang="en">Graves</foaf:name>
+   <dcterms:title xml:lang="en">The Muninn Graves Ontology</dcterms:title> 
+   <dcterms:title xml:lang="fr">L'ontologie Graves de Muninn</dcterms:title> 
+   <dcterms:title xml:lang="de">Die Muninn Graves Ontologie</dcterms:title> 
+   <rdfs:label xml:lang="en">The Muninn Graves Ontology</rdfs:label>
+   <rdfs:label xml:lang="fr">L'ontologie Graves de Muninn</rdfs:label> 
+   <rdfs:label xml:lang="de">Die Muninn Graves Ontologie</rdfs:label>  
+   <schema:name xml:lang="en">The Muninn Graves Ontology</schema:name>
+   <schema:name xml:lang="fr">L'ontologie Graves de Muninn</schema:name>
+   <schema:name xml:lang="de">Die Muninn Graves Ontologie</schema:name>
+   <rdfs:comment xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</rdfs:comment>
+   <dcterms:description xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</dcterms:description>
+   <dcterms:description xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</dcterms:description>
+   <dcterms:description xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</dcterms:description>
+   <schema:description xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</schema:description>
+   <schema:description xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</schema:description>
+   <schema:description xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</schema:description>
+   <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/> 
+   <schema:license>https://creativecommons.org/licenses/by/4.0/</schema:license>
+   <cc:Jurisdiction rdf:resource="http://dbpedia.org/resource/Canada"/>
+   <cc:attributionURL rdf:resource="http://www.muninn-project.org/"/>
+   <dcterms:creator rdf:resource="#warren"/>
+   <schema:creator rdf:resource="#warren"/>
+   <schema:creator rdf:resource="#muninn"/>
+   <dcterms:publisher rdf:resource="#muninn"/>
+   <loc:ctb rdf:resource="#jackes"/>
+   <schema:contributor rdf:resource="#jackes"/>
+   <loc:ctb rdf:resource="#gates"/>
+   <schema:contributor rdf:resource="#gates"/>
+   <schema:version>ONTOLOGY_VERSION</schema:version>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85066566"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85124583"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85018080"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85135935"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh96002721"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh00006370"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85056548"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/childrensSubjects/sj2013050003"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves"/>
+   <void:sparqlEndpoint rdf:resource="http://rdf.muninn-project.org/sparql"/>
+   <void:triples>TOTAL_TRIPLES_ONTOLOGY</void:triples>
+   <void:entities>TOTAL_ENTITIES_ONTOLOGY</void:entities>
+   <foaf:logo rdf:resource="http://rdf.muninn-project.org/ontologies/UnknownGrave.png"/>
+   <schema:url>https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE</schema:url>
+   <schema:identifier>https://rdf.muninn-project.org/ontologies/graves</schema:identifier>
+   <vann:preferredNamespacePrefix>graves</vann:preferredNamespacePrefix>
+   <vann:preferredNamespaceUri>https://rdf.muninn-project.org/ontologies/graves#</vann:preferredNamespaceUri>
+   <schema:identifier>ONTOLOGY_DOI</schema:identifier> 
+   <void:uriRegexPattern>https://rdf.muninn-project.org/ontologies/graves+</void:uriRegexPattern>
+   <void:exampleResource rdf:resource="https://rdf.muninn-project.org/ontologies/graves#Grave"/>
+   <void:feature rdf:resource="http://www.w3.org/ns/formats/N3"/>
+   <void:feature rdf:resource="http://www.w3.org/ns/formats/N-Triples"/>
+   <void:feature rdf:resource="http://www.w3.org/ns/formats/RDF_XML"/>
+   <void:feature rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
+   <void:feature rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_XML"/>
+   <void:feature rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_JSON"/>
+   <void:feature rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_TSV"/>
+   <dcat:distribution>
+    <dcat:Distribution rdf:about="#datasetdefinition-sparql">
+     <dcat:accessURL rdf:resource="http://rdf.muninn-project.org/sparql"/>
+     <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>   
+    </dcat:Distribution>
+   </dcat:distribution>
+   <schema:distribution>
+    <schema:DataDownload rdf:about="#gravesXML">
+     <schema:encodingFormat>XML</schema:encodingFormat>
+     <schema:contentUrl>https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE.owl</schema:contentUrl>
+    </schema:DataDownload>
+   </schema:distribution>
+   <schema:distribution>   
+    <schema:DataDownload rdf:about="#gravesXMLTTL">
+     <schema:encodingFormat>application/x-turtle</schema:encodingFormat>
+     <schema:contentUrl>https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE.ttl</schema:contentUrl>
+    </schema:DataDownload>
+   </schema:distribution>
+   <schema:distribution>   
+    <schema:DataDownload rdf:about="#gravesXMLRDF">
+     <schema:encodingFormat>application/rdf+xml</schema:encodingFormat>
+     <schema:contentUrl>https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE.owl</schema:contentUrl>
+    </schema:DataDownload>
+   </schema:distribution>   
+   <schema:distribution>
+    <schema:DataDownload rdf:about="#gravesJsonld">
+     <schema:encodingFormat>application/ld+json</schema:encodingFormat>
+     <schema:contentUrl>https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE.jsonld</schema:contentUrl>
+    </schema:DataDownload>
+   </schema:distribution>
+   <schema:distribution>
+    <schema:DataDownload rdf:about="#gravesntriples">
+     <schema:encodingFormat>application/n-triples</schema:encodingFormat>
+     <schema:contentUrl>https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE.nt</schema:contentUrl>
+    </schema:DataDownload>
+   </schema:distribution>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/> 
+   <!-- schema:citation -->
+   <!-- schema:keywords -->
+   <!-- void:vocabulary -->
+  </void:Dataset>
+
+  <bibo:Collection rdf:about="#bibliography">
+   <rdfs:label xml:lang="en">The Graves Ontology</rdfs:label>
+   <rdfs:label xml:lang="fr">L'Ontologie Graves</rdfs:label>
+   <rdfs:label xml:lang="de">Die Graves Ontology</rdfs:label>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </bibo:Collection>
+
+  <foaf:Person rdf:about="#gates">
+   <rdf:type rdf:resource="https://schema.org/Person"/>
+   <foaf:name>Stephen Gates</foaf:name>
+   <rdfs:label>Stephen Gates</rdfs:label>
+   <schema:affiliation>Friends of Toowong Cemetery</schema:affiliation>
+   <foaf:img rdf:resource="https://avatars.githubusercontent.com/u/9379524?v=4" />
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </foaf:Person>
+
+  
+  <foaf:Person rdf:about="#warren">
+   <rdf:type rdf:resource="https://schema.org/Person"/>
+   <foaf:name>Rob Warren</foaf:name>
+   <rdfs:label>Rob Warren</rdfs:label>
+   <schema:affiliation>The Muninn Project</schema:affiliation>
+   <foaf:homepage rdf:resource="http://www.dbdump.org/" />
+   <foaf:img rdf:resource="http://www.dbdump.org/sites/one.dbdump.org/images/rob.jpeg" />
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <owl:sameAs rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Person/Warren"/>
+   <owl:sameAs rdf:resource="https://orcid.org/0000-0002-2615-5022"/>
+  </foaf:Person>
+
+  <foaf:Person rdf:about="#jackes">
+   <rdf:type rdf:resource="https://schema.org/Person"/>
+   <foaf:name>Mary Jackes</foaf:name>
+   <rdfs:label>Mary Jackes</rdfs:label>
+   <schema:affiliation>Department of Anthropology, University of Waterloo</schema:affiliation>
+   <foaf:homepage rdf:resource="http://www.arts.uwaterloo.ca/~mkjackes/"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </foaf:Person>
+
+  
+  <foaf:Organization rdf:about="#muninn">
+   <rdf:type rdf:resource="https://schema.org/Organization"/>
+   <foaf:name>The Muninn Project</foaf:name>
+   <schema:name>The Muninn Project</schema:name>
+   <rdfs:label>The Muninn Project</rdfs:label>
+   <foaf:member rdf:resource="#warren"/>
+   <schema:contactPoint>
+    <schema:ContactPoint rdf:about="#muninnContactPoint">
+     <schema:contactType>Generic Email</schema:contactType>
+     <schema:email>data@muninn-project.org</schema:email>
+    </schema:ContactPoint>
+   </schema:contactPoint>
+   <owl:sameAs rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Organization/Muninn"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </foaf:Organization>
+
+
   <owl:Class rdf:ID="Dead_people_place">
+   <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
    <rdfs:label xml:lang="en">Dead people place</rdfs:label>
-   <rdfs:label xml:lang="fr">Endroit aves des gens mort</rdfs:label>
+   <rdfs:label xml:lang="fr">Endroit avec des gens mort</rdfs:label>
    <rdfs:label xml:lang="de">Menschen starben</rdfs:label>
-   <rdfs:comment xml:lang="en">A physical and administrative place with dead people in it. Of the non-zombie kind.</rdfs:comment>
+   <skos:definition xml:lang="en">A physical and / or administrative place with dead people in it. Of the non-zombie kind.</skos:definition>
+   <skos:definition xml:lang="fr">Un endroit physique et/ou administratif qui contient des restes humains.</skos:definition>
+   <skos:definition xml:lang="de">Ein physischer und / oder administrativer Ort mit toten Menschen darin. </skos:definition>   
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
   <owl:Class rdf:ID="Monument">
+   <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
    <rdfs:label xml:lang="en">Monument</rdfs:label> 
-   <rdfs:comment xml:lang="en">A physical feature commemorating something or someone.</rdfs:comment>
    <rdfs:label xml:lang="fr">Monument</rdfs:label>
    <rdfs:label xml:lang="de">Monument</rdfs:label>
+   <skos:definition xml:lang="en">A physical feature commemorating something or someone.</skos:definition>
+   <skos:definition xml:lang="fr">Un monument physique qui commémorer une person ou événement.</skos:definition>
+   <skos:definition xml:lang="de">Ein physisches Denkmal, das an eine Person oder ein Ereignis erinnert.</skos:definition>
    <owl:equivalentClass muninn:wikipedia_version="500351354" rdf:resource="http://dbpedia.org/resource/Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
+
+  <owl:Class rdf:ID="TemporalName">
+   <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#"/>
+   <rdfs:subClassOf rdf:resource="http://www.w3.org/2008/05/skos-xl"/>
+   <rdfs:label xml:lang="en">Name</rdfs:label>
+   <rdfs:label xml:lang="fr">Nom</rdfs:label>
+   <rdfs:label xml:lang="de">Name</rdfs:label>
+   <skos:definition xml:lang="en">The name of a feature, place or thing that has a temporal validity.</skos:definition>
+   <skos:definition xml:lang="fr">Le nom d'un toponyme, d'un lieu ou d'une chose qui a une validité temporelle.</skos:definition>
+   <skos:definition xml:lang="de">Der Name eines Merkmals, Ortes oder Dings, das eine zeitliche Gültigkeit hat.</skos:definition>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:Class>  
+
   <owl:Class rdf:ID="Container_for_human_remains">
+   <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
    <rdfs:label xml:lang="en">Container of human remains</rdfs:label>
    <rdfs:label xml:lang="de">Container von menschlichen Überresten</rdfs:label>
    <rdfs:label xml:lang="fr">Un contenant pour des restes humains.</rdfs:label>
-   <rdfs:comment xml:lang="en">A generic class to unify all containers of human remains.</rdfs:comment>
-   <rdfs:comment xml:lang="de">Eine generische Klasse für alle Container von menschlichen Überresten zu vereinheitlichen.</rdfs:comment>
-   <rdfs:comment xml:lang="fr">Une classe générique pour tout les restes humains.</rdfs:comment>   
+   <skos:definition xml:lang="en">A generic class to unify all containers of human remains.</skos:definition>
+   <skos:definition xml:lang="de">Eine generische Klasse für alle Container von menschlichen Überresten zu vereinheitlichen.</skos:definition>
+   <skos:definition xml:lang="fr">Une classe générique pour tout les restes humains.</skos:definition>   
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
   <owl:Class rdf:ID="Remains">
+   <rdfs:subClassOf rdf:resource="http://www.opengis.net/ont/geosparql#Feature"/>
    <rdfs:label xml:lang="en">Human remains</rdfs:label>
    <rdfs:label xml:lang="fr">Restes Humains</rdfs:label>
    <rdfs:label xml:lang="de">Die Überreste eines Menschen.</rdfs:label>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
 <!-- SubClasses -->
@@ -71,7 +323,10 @@
    <rdfs:label xml:lang="de">Krypta</rdfs:label>
    <owl:subClassOf rdf:resource="#Dead_people_place" />
    <owl:subClassOf rdf:resource="#Memorial" />
-    <owl:equivalentClass muninn:wikipedia_version="509719217" rdf:resource="http://dbpedia.org/resource/Crypt"/>
+   <owl:equivalentClass muninn:wikipedia_version="509719217" rdf:resource="http://dbpedia.org/resource/Crypt"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
   <owl:Class rdf:ID="ShipWreck"> 
@@ -85,22 +340,35 @@
 <!-- Subblass ship. state unsuable -->
   <!-- HistoricWreck -->
    <owl:subClassOf>
-    <owl:Restriction>
+    <owl:Restriction rdf:ID="internalGraves001">
      <owl:onProperty rdf:resource="#hasState" />
      <owl:hasValue rdf:resource="#Wrecked"/>
+     <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
    </owl:Restriction>
  </owl:subClassOf>
-
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
-<owl:ObjectProperty rdf:ID="atDepth">
- <foaf:name>At Depth</foaf:name>
+<owl:DatatypeProperty rdf:ID="atDepth">
  <rdfs:label xml:lang="en">At Depth</rdfs:label>
  <rdfs:label xml:lang="fr">A une profondeur</rdfs:label>
- <rdfs:label xml:lang="de"></rdfs:label>
- <rdfs:comment xml:lang="en">Record the approximate depth that the wreck lies at.</rdfs:comment>
+ <rdfs:label xml:lang="de">In der Tiefe</rdfs:label>
+ <skos:definition xml:lang="en">Record the approximate depth that the wreck lies at.</skos:definition>
+ <skos:definition xml:lang="fr">Notez la profondeur approximative à laquelle se trouve l'épave.</skos:definition>
+ <skos:definition xml:lang="de">Notieren Sie die ungefähre Tiefe, in der das Wrack liegt.</skos:definition>
+ <rdfs:comment xml:lang="en">This is a convenience property to record depth without the overhead of a full Coordinate Reference System or Datum reference. This is a common practice in documenting historical shipwrecks.</rdfs:comment>
+ <rdfs:comment xml:lang="fr">Une propriété pratique pour enregistrer la profondeur sans la complexité d'un système de référence de coordonnées complet. C'est une pratique courante dans la documentation des épaves historiques.</rdfs:comment>
+ <rdfs:comment xml:lang="de">Dies ist eine praktische Eigenschaft, um die Tiefe ohne den Overhead von aufzuzeichnen ein vollständiges Koordinatenreferenzsystem oder eine Datumsreferenz. Dies ist eine gängige Praxis bei der Dokumentation historischer Schiffswracks.</rdfs:comment>
+ <vs:term_status>stable</vs:term_status> 
  <rdfs:domain rdf:resource="#ShipWreck"/>
-</owl:ObjectProperty>
+ <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+ <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+ <void:inDataset rdf:resource="#datasetdefinition"/>
+</owl:DatatypeProperty>
 
 
   <owl:Class rdf:ID="Statue"> 
@@ -110,31 +378,41 @@
    <owl:subClassOf rdf:resource="#Monument" />
    <owl:equivalentClass muninn:wikipedia_version="509775553" rdf:resource="http://dbpedia.org/resource/Statue"/>
   <!-- HistoricStatue -->
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
-  <owl:Class rdf:ID="Burial_mound">
-   <rdfs:label xml:lang="en">Burial Mound</rdfs:label>     
-   <owl:sameAs rdf:resource="#Tumulus"/> 
-   <owl:subClassOf rdf:resource="#Memorial" />
-   <owl:subClassOf rdf:resource="#Dead_people_place"/>
-  </owl:Class>
 
   <owl:Class rdf:ID="Tumulus"> 
-   <rdfs:comment xml:lang="en">Tumulus is actually the Latin word, but unclear what the appropriate English label is here.</rdfs:comment>
    <rdfs:label xml:lang="fr">Tumulus</rdfs:label>   
    <rdfs:label xml:lang="de">Hügelgrab</rdfs:label>
-   <rdfs:label xml:lang="en">Tumulus</rdfs:label>   
-   <owl:subClassOf rdf:resource="#Memorial" />
+   <rdfs:label xml:lang="en">Barrow</rdfs:label>
+   <rdfs:label xml:lang="la">Tumulus</rdfs:label>   
+   <skos:altLabel xml:lang="en">Burial Mound</skos:altLabel>
+   <skos:definition xml:lang="en">A mound of earth and stones raised over a grave or graves.</skos:definition>
+   <skos:definition xml:lang="fr">Un monticule de terre et de pierres élevé sur une ou plusieurs tombes.</skos:definition>
+   <skos:definition xml:lang="de">Ein Hügel aus Erde und Steinen, der über einem Grab oder mehreren Gräbern erhoben wurde.</skos:definition>      
+   <owl:subClassOf rdf:resource="#Memorial"/>
    <owl:subClassOf rdf:resource="#Dead_people_place"/>
-    <owl:equivalentClass   muninn:wikipedia_version="515641451"   rdf:resource="http://dbpedia.org/resource/Tumulus"/>
+   <owl:equivalentProperty rdf:resource="#Burial_mound"/>
+   <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Tumulus"/>
+   <muninn:wikipedia_version>515641451</muninn:wikipedia_version>
+   <vs:term_status>stable</vs:term_status> 
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
-  <owl:Class rdf:ID="Shrine"> 
+  <owl:Class rdf:ID="Shrine">
    <rdfs:label xml:lang="en">Shrine</rdfs:label>
    <rdfs:label xml:lang="fr">Sanctuaire</rdfs:label>
    <rdfs:label xml:lang="de">Schrein</rdfs:label>
    <owl:subClassOf rdf:resource="#Memorial" />
    <owl:equivalentClass  muninn:wikipedia_version="515137037"   rdf:resource="http://dbpedia.org/resource/Shrine"/> 
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
  
 
@@ -142,349 +420,474 @@
    <rdfs:label xml:lang="en">Memorial</rdfs:label> 
    <rdfs:label xml:lang="fr">Mémorial</rdfs:label> 
    <rdfs:label xml:lang="de">Gedenkstätte</rdfs:label> 
-   <rdfs:comment xml:lang="en">A physical feature commemorating a person or group of people who have died.</rdfs:comment>
+   <skos:definition xml:lang="en">A physical feature commemorating a person or group of people who have died.</skos:definition>
    <owl:subClassOf rdf:resource="#Monument" />
    <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Memorial" muninn:wikipedia_version="506256644"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
 <!-- Properties-->
 
 <owl:ObjectProperty rdf:ID="hasState">
- <foaf:name>has State</foaf:name>
+ <foaf:name xml:lang="en">has State</foaf:name>
  <rdfs:label xml:lang="en">Object is in a state</rdfs:label>
  <rdfs:label xml:lang="fr">L'état de l'object</rdfs:label>
  <rdfs:label xml:lang="de">Zustand des Objekts</rdfs:label>
- <rdfs:comment xml:lang="en">The state of the object in terms of in construction, ruined, destroyed.</rdfs:comment>
+ <skos:definition xml:lang="en">The state of the object in terms of in construction, ruined, destroyed.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:domain rdf:resource="#Dead_people_place"/>
  <rdfs:domain rdf:resource="#Container_for_human_remains"/>
  <rdfs:range rdf:resource="#ObjectState"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
  
-<skos:ConceptScheme rdf:about="ObjectStatesScheme">
- <foaf:name>Object States</foaf:name>
+<skos:ConceptScheme rdf:about="#ObjectStatesScheme">
+ <foaf:name xml:lang="en">Object States</foaf:name>
  <rdfs:label xml:lang="en">Object states</rdfs:label>
  <rdfs:label xml:lang="fr">Les états possibles des objets</rdfs:label>
  <rdfs:label xml:lang="de">Die möglichen Zustände der Gegenstände</rdfs:label>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </skos:ConceptScheme>
 
   <owl:Class rdf:ID="ObjectState">
    <rdfs:label xml:lang="en">Object States</rdfs:label> 
    <rdfs:label xml:lang="fr">état possible des objects</rdfs:label> 
-   <rdfs:comment xml:lang="en">A set of states that an object can be in.</rdfs:comment>
+   <skos:definition xml:lang="en">A set of states that an object can be in.</skos:definition>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
 
 <!-- InUse Use -->
-<graves:ObjectState rdf:about="UnServicable">
- <rdf:type rdf:resource="skos:Concept"/>
- <foaf:name>unserviceable</foaf:name>
+
+<graves:ObjectState rdf:about="#UnServicable"  vs:term_status="archaic">
+ <foaf:name xml:lang="en">Unserviceable</foaf:name>
  <rdfs:label xml:lang="en">unserviceable</rdfs:label>
  <skos:prefLabel xml:lang="en">unserviceable</skos:prefLabel>
- <rdfs:comment xml:lang="en">The object is incapable of functioning but may be repairable.</rdfs:comment>
+ <skos:definition xml:lang="en">The object is incapable of functioning but may be repairable.</skos:definition>
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
  <skos:topConceptOf rdf:resource="#ObjectStatesScheme"/>
+ <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+ <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+ <void:inDataset rdf:resource="#datasetdefinition"/>
+ <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+ <owl:equivalentProperty rdf:resource="#UnServiceable"/>
 </graves:ObjectState>
 
-<graves:ObjectState rdf:about="Unbuilt">
- <rdf:type rdf:resource="skos:Concept"/>
- <foaf:name>Unbuilt</foaf:name>
+<graves:ObjectState rdf:about="#UnServiceable">
+ <foaf:name xml:lang="en">Unserviceable</foaf:name>
+ <rdfs:label xml:lang="en">unserviceable</rdfs:label>
+ <skos:prefLabel xml:lang="en">unserviceable</skos:prefLabel>
+ <skos:definition xml:lang="en">The object is incapable of functioning but may be repairable.</skos:definition>
+ <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
+ <skos:topConceptOf rdf:resource="#ObjectStatesScheme"/>
+ <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+ <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+ <void:inDataset rdf:resource="#datasetdefinition"/>
+</graves:ObjectState>
+
+
+<graves:ObjectState rdf:about="#Unbuilt">
+ <foaf:name xml:lang="en">Unbuilt</foaf:name>
  <rdfs:label xml:lang="en">Unbuilt</rdfs:label>
  <skos:prefLabel xml:lang="en">Unbuilt</skos:prefLabel>
- <rdfs:comment xml:lang="en">The object is planned for construction but work has not begun (and / or may never be built).</rdfs:comment>
+ <skos:definition xml:lang="en">The object is planned for construction but work has not begun (and / or may never be built).</skos:definition>
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
  <skos:topConceptOf rdf:resource="#ObjectStatesScheme"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </graves:ObjectState>
 
-<graves:ObjectState rdf:about="Rebuilt">
- <foaf:name>Rebuilt</foaf:name>
+<graves:ObjectState rdf:about="#Rebuilt">
+ <foaf:name xml:lang="en">Rebuilt</foaf:name>
  <rdfs:label xml:lang="en">Rebuilt</rdfs:label>
  <skos:prefLabel xml:lang="en">Rebuilt</skos:prefLabel>
- <rdfs:comment xml:lang="en">The object has been made servicable after damage through repairs.</rdfs:comment>
+ <skos:definition xml:lang="en">The object has been made serviceable after damage through repairs.</skos:definition>
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
  <skos:topConceptOf rdf:resource="#ObjectStatesScheme"/>
- <rdf:type rdf:resource="skos:Concept"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </graves:ObjectState>
 
-<graves:ObjectState rdf:about="Abandoned">
- <foaf:name>Abandoned</foaf:name>
+<graves:ObjectState rdf:about="#Abandoned">
+ <foaf:name xml:lang="en">Abandoned</foaf:name>
  <rdfs:label xml:lang="en">Abandoned</rdfs:label>
  <skos:prefLabel xml:lang="en">Abandoned</skos:prefLabel>
- <rdfs:comment xml:lang="en">The object still exists but is not in use.</rdfs:comment>
+ <skos:definition xml:lang="en">The object still exists but is not in use.</skos:definition>
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
  <skos:topConceptOf rdf:resource="#ObjectStatesScheme"/>
- <rdf:type rdf:resource="skos:Concept"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </graves:ObjectState>
 
-<graves:ObjectState rdf:about="Servicable">
- <foaf:name>Serviceable</foaf:name>
+<graves:ObjectState rdf:about="#Servicable"  vs:term_status="archaic">
+ <foaf:name xml:lang="en">Serviceable</foaf:name>
  <rdfs:label xml:lang="en">Serviceable</rdfs:label>
  <skos:prefLabel xml:lang="en">Serviceable</skos:prefLabel>
- <rdfs:comment xml:lang="en">The object is capable of performing its function (but may not be activated or in use).</rdfs:comment>
+ <skos:definition xml:lang="en">The object is capable of performing its function (but may not be activated or in use).</skos:definition>
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
  <skos:topConceptOf rdf:resource="#ObjectStatesScheme"/>
- <rdf:type rdf:resource="skos:Concept"/>
+ <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+ <owl:equivalentProperty rdf:resource="#UnServiceable"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </graves:ObjectState>
 
-<graves:ObjectState rdf:about="Eliminated">
- <foaf:name>Eliminated</foaf:name>
+<graves:ObjectState rdf:about="#Serviceable">
+ <foaf:name xml:lang="en">Serviceable</foaf:name>
+ <rdfs:label xml:lang="en">Serviceable</rdfs:label>
+ <skos:prefLabel xml:lang="en">Serviceable</skos:prefLabel>
+ <skos:definition xml:lang="en">The object is capable of performing its function (but may not be activated or in use).</skos:definition>
+ <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
+ <skos:topConceptOf rdf:resource="#ObjectStatesScheme"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+</graves:ObjectState>
+
+<graves:ObjectState rdf:about="#Eliminated">
  <rdfs:label xml:lang="en">Eliminated</rdfs:label>
- <skos:prefLabel xml:lang="en">Eliminated</skos:prefLabel>
- <rdfs:comment xml:lang="en">The object was completely and permanently destroyed or disassmbled. No remains or traces of the object exists.</rdfs:comment>
+ <rdfs:label xml:lang="fr">Éliminé</rdfs:label>
+ <rdfs:label xml:lang="de">Eliminiert</rdfs:label>
+ <skos:definition xml:lang="en">The object was completely and permanently destroyed or disassembled. No remains or traces of the object exist.</skos:definition>
+ <skos:definition xml:lang="de">Das Objekt wurde vollständig und dauerhaft zerstört oder demontiert. Es sind keine Reste oder Spuren des Objekts vorhanden.</skos:definition>
+ <skos:definition xml:lang="fr">L'objet a été complètement et définitivement détruit ou démonté. Aucune trace de l'objet n'existe.</skos:definition>
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
  <skos:topConceptOf rdf:resource="#ObjectStatesScheme"/>
- <rdf:type rdf:resource="skos:Concept"/>
+ <vs:term_status>stable</vs:term_status> 
+ <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+ <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+ <void:inDataset rdf:resource="#datasetdefinition"/>
 </graves:ObjectState>
 
-<graves:ObjectState rdf:about="Demolished">
- <foaf:name>Demolished</foaf:name>
+<graves:ObjectState rdf:about="#Demolished">
  <rdfs:label xml:lang="en">Demolished</rdfs:label>
- <skos:prefLabel xml:lang="en">Demolished</skos:prefLabel>
- <rdfs:comment xml:lang="en">The object was destroyed or disassmbled and remains or traces of the object may exists.</rdfs:comment>
+ <rdfs:label xml:lang="fr">Démoli</rdfs:label>
+ <rdfs:label xml:lang="de">Niederreißen</rdfs:label>
+ <skos:definition xml:lang="en">The object was destroyed or disassembled and remains or traces of the object may exists.</skos:definition>
+ <skos:definition xml:lang="fr">L'objet a été détruit ou démoli et des restes ou des traces de l'objet peuvent exister.</skos:definition>
+ <skos:definition xml:lang="de">Das Objekt wurde zerstört oder demontiert und es können Reste oder Spuren des Objekts vorhanden sein.</skos:definition>
+ <vs:term_status>stable</vs:term_status> 
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
  <skos:topConceptOf rdf:resource="#ObjectStatesScheme"/>
- <rdf:type rdf:resource="skos:Concept"/>
+ <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+ <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+ <void:inDataset rdf:resource="#datasetdefinition"/>
 </graves:ObjectState>
 
-<graves:ObjectState rdf:about="Wrecked">
- <foaf:name>Wrecked</foaf:name>
+<graves:ObjectState rdf:about="#Wrecked">
+ <foaf:name xml:lang="en">Wrecked</foaf:name>
  <rdfs:label xml:lang="en">Wrecked</rdfs:label>
  <skos:prefLabel xml:lang="en">Wrecked</skos:prefLabel>
  <rdfs:label xml:lang="fr">Démoli</rdfs:label>
  <rdfs:label xml:lang="de">zerstört</rdfs:label>
- <rdfs:comment xml:lang="en">The object is wrecked, crashed or in a state of disrepair because something collided with it or the ship sank.</rdfs:comment>
+ <skos:definition xml:lang="en">The object is wrecked, crashed or in a state of disrepair because something collided with it or the ship sank.</skos:definition>
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
- <rdf:type rdf:resource="skos:Concept"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </graves:ObjectState>
 
-<graves:ObjectState rdf:about="Burned">
- <foaf:name>Burned</foaf:name>
+<graves:ObjectState rdf:about="#Burned">
+ <foaf:name xml:lang="en">Burned</foaf:name>
  <rdfs:label xml:lang="en">Burned</rdfs:label>
  <skos:prefLabel xml:lang="en">Burned</skos:prefLabel>
- <rdfs:comment xml:lang="en">The object was damaged by fire and it either permanently or temporarely unservicable.</rdfs:comment>
+ <skos:definition xml:lang="en">The object was damaged by fire and it either permanently or temporarily unserviceable.</skos:definition>
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
- <rdf:type rdf:resource="skos:Concept"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </graves:ObjectState>
 
-<graves:ObjectState rdf:about="Ruins">
- <foaf:name>Ruins</foaf:name>
+<graves:ObjectState rdf:about="#Ruins">
+ <foaf:name xml:lang="en">Ruins</foaf:name>
  <rdfs:label xml:lang="en">Ruins</rdfs:label>
  <skos:prefLabel xml:lang="en">Ruins</skos:prefLabel>
- <rdfs:comment xml:lang="en">The object has been unservicable for some time and cannot be repaired, but some traces of the objects can still be observed.</rdfs:comment>
+ <skos:definition xml:lang="en">The object has been unserviceable for some time and cannot be repaired, but some traces of the objects can still be observed.</skos:definition>
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
- <rdf:type rdf:resource="skos:Concept"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </graves:ObjectState>
 
 <owl:ObjectProperty rdf:ID="hasMap">
- <foaf:name>hasMap</foaf:name>
+ <foaf:name xml:lang="en">hasMap</foaf:name>
  <rdfs:label xml:lang="en">has Map</rdfs:label>
  <rdfs:label xml:lang="fr">A une carte</rdfs:label>
  <rdfs:label xml:lang="de">eine Karte</rdfs:label>
- <rdfs:comment xml:lang="en">Pointer to a instances or class that describes the map or grid reference system in use. Primarily meant for use with archeological digs and cemeteries, it is potentially useful for very large monuments.</rdfs:comment>
+ <skos:definition xml:lang="en">Pointer to a instances or class that describes the map or grid reference system in use. Primarily meant for use with archaeological digs and cemeteries, it is potentially useful for very large monuments.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:domain rdf:resource="#Dead_people_place"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 
 
 
 <owl:ObjectProperty rdf:ID="hasPart">
- <foaf:name>Has a part</foaf:name> 
+ <foaf:name xml:lang="en">Has a part</foaf:name> 
  <rdfs:label xml:lang="en">Has an additional part</rdfs:label>
  <rdfs:label xml:lang="fr">A une partie additionnelle</rdfs:label>
  <rdfs:label xml:lang="de">Ein Teil Zusätzliche</rdfs:label>
- <rdfs:comment xml:lang="en">When dealing with complex monuments, use this to attach a main monument instance to a sub-monument.</rdfs:comment>
+ <skos:definition xml:lang="en">When dealing with complex monuments, use this to attach a main monument instance to a sub-monument.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="isPartOf">
- <foaf:name>Is a part of </foaf:name> 
+ <foaf:name xml:lang="en">Is a part of </foaf:name> 
  <rdfs:label xml:lang="en">is Part of a monument</rdfs:label>
  <rdfs:label xml:lang="fr">Fait partie d'un monument additionnel</rdfs:label>
  <rdfs:label xml:lang="de">Teil eines Denkmals zusätzliche</rdfs:label>
- <rdfs:comment xml:lang="en">When dealing with complex monuments, use this to attach a sub-monument to the main instance.</rdfs:comment>
+ <skos:definition xml:lang="en">When dealing with complex monuments, use this to attach a sub-monument to the main instance.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
  <owl:inverseOf rdf:resource="#hasPart"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="hasNorthFace">
- <foaf:name>Has a North Face</foaf:name>
+ <foaf:name xml:lang="en">Has a North Face</foaf:name>
  <rdfs:label xml:lang="en">Has a north-facing surface</rdfs:label>
  <rdfs:label xml:lang="fr">A une surface qui fait face au nord</rdfs:label>
  <rdfs:label xml:lang="de">Es hat eine Oberfläche, die die Nordwände</rdfs:label>
- <rdfs:comment xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link a Monument instance to another Monument instance describing that perticular surface that faces north.</rdfs:comment>
+ <skos:definition xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link a Monument instance to another Monument instance describing that particular surface that faces north.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="isNorthFaceOf">
- <foaf:name>Is the North Face of</foaf:name>
+ <foaf:name xml:lang="en">Is the North Face of</foaf:name>
  <rdfs:label xml:lang="en">Is the north-facing surface of a Monument</rdfs:label>
  <rdfs:label xml:lang="fr">Est la surface nord du monument</rdfs:label>
  <rdfs:label xml:lang="de">Ist das Gebiet nördlich des Denkmals</rdfs:label>
- <rdfs:comment xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link the north-facing surface to the main Monument instance.</rdfs:comment>
+ <skos:definition xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link the north-facing surface to the main Monument instance.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
  <owl:inverseOf rdf:resource="#hasNorthFace"/>
  <rdfs:subPropertyOf rdf:resource="#isPartOf"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 
 <owl:ObjectProperty rdf:ID="hasSouthFace">
- <foaf:name>Has a South Face</foaf:name>
+ <foaf:name xml:lang="en">Has a South Face</foaf:name>
  <rdfs:label xml:lang="en">Has a south-facing surface</rdfs:label>
  <rdfs:label xml:lang="fr">A une surface qui fait face au sud</rdfs:label>
  <rdfs:label xml:lang="de">Es hat eine Oberfläche, die die nach Süden ausgerichtet</rdfs:label>
- <rdfs:comment xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link a Monument instance to another Monument instance describing the perticular surface that faces south.</rdfs:comment>
+ <skos:definition xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link a Monument instance to another Monument instance describing the particular surface that faces south.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="isSouthFaceOf">
- <foaf:name>Is the South Face of</foaf:name>
+ <foaf:name xml:lang="en">Is the South Face of</foaf:name>
  <rdfs:label xml:lang="en">Is the south-facing surface of a Monument</rdfs:label>
  <rdfs:label xml:lang="fr">Est la surface sud du monument</rdfs:label>
  <rdfs:label xml:lang="de">Ist das Gebiet südlich des Denkmals</rdfs:label>
- <rdfs:comment xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link the south-facing surface to the main Monument instance.</rdfs:comment>
+ <skos:definition xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link the south-facing surface to the main Monument instance.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
  <owl:inverseOf rdf:resource="#hasSouthFace"/>
  <rdfs:subPropertyOf rdf:resource="#isPartOf"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="hasWestFace">
- <foaf:name>Has a West Face</foaf:name>
+ <foaf:name xml:lang="en">Has a West Face</foaf:name>
  <rdfs:label xml:lang="en">Has a west-facing surface</rdfs:label>
  <rdfs:label xml:lang="fr">A une surface qui fait face à l'ouest</rdfs:label>
  <rdfs:label xml:lang="de">Auf eine Oberfläche nach Westen</rdfs:label>
- <rdfs:comment xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link a Monument instance to another Monument instance describing the perticular surface that faces west.</rdfs:comment>
+ <skos:definition xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link a Monument instance to another Monument instance describing the particular surface that faces west.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="isWestFaceOf">
- <foaf:name>Is the West Face of</foaf:name>
+ <foaf:name xml:lang="en">Is the West Face of</foaf:name>
  <rdfs:label xml:lang="en">Is the west-facing surface of a Monument</rdfs:label>
  <rdfs:label xml:lang="fr">Est la surface west du monument</rdfs:label>
  <rdfs:label xml:lang="de">Ist das Gebiet westlich des Denkmals</rdfs:label>
- <rdfs:comment xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link the west-facing surface to the main Monument instance.</rdfs:comment>
+ <skos:definition xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link the west-facing surface to the main Monument instance.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
  <owl:inverseOf rdf:resource="#hasWestFace"/>
  <rdfs:subPropertyOf rdf:resource="#isPartOf"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 
 <owl:ObjectProperty rdf:ID="hasEastFace">
- <foaf:name>Has a East Face</foaf:name>
+ <foaf:name xml:lang="en">Has a East Face</foaf:name>
  <rdfs:label xml:lang="en">Has a east-facing surface</rdfs:label>
  <rdfs:label xml:lang="fr">A une surface qui fait face à l'est</rdfs:label>
  <rdfs:label xml:lang="de">Es hat eine Fläche, die östlich Gesichter</rdfs:label>
- <rdfs:comment xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link a Monument instance to another Monument instance describing the perticular surface that faces east.</rdfs:comment>
+ <skos:definition xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link a Monument instance to another Monument instance describing the particular surface that faces east.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="isEastFaceOf">
- <foaf:name>Is the East Face of</foaf:name>
+ <foaf:name xml:lang="en">Is the East Face of</foaf:name>
  <rdfs:label xml:lang="en">Is the east-facing surface of a Monument</rdfs:label>
  <rdfs:label xml:lang="fr">Est la surface est du monument</rdfs:label>
  <rdfs:label xml:lang="de">Ist die Oberfläche des Denkmals</rdfs:label>
- <rdfs:comment xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link the east-facing surface to the main Monument instance.</rdfs:comment>
+ <skos:definition xml:lang="en">When dealing with monuments with multiple surfaces bearing inscriptions, use this property to link the east-facing surface to the main Monument instance.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
  <owl:inverseOf rdf:resource="#hasEastFace"/>
  <rdfs:subPropertyOf rdf:resource="#isPartOf"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="hasFrontFace">
- <foaf:name>Has a Front Face</foaf:name>
+ <foaf:name xml:lang="en">Has a Front Face</foaf:name>
  <rdfs:label xml:lang="en">Has a front-facing surface</rdfs:label>
  <rdfs:label xml:lang="fr">A une surface qui est le devant du monument</rdfs:label>
  <rdfs:label xml:lang="de">Es hat eine Oberfläche, die die vor dem Denkmal ist</rdfs:label>
- <rdfs:comment xml:lang="en">Use this property to link a Monument instance to another Monument instance that describes the front of the monument. The front of the monument is defined as the surface that the monument designer intended the visitor to see as a first surface.</rdfs:comment>
+ <skos:definition xml:lang="en">Use this property to link a Monument instance to another Monument instance that describes the front of the monument. The front of the monument is defined as the surface that the monument designer intended the visitor to see as a first surface.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="isFrontFaceOf">
- <foaf:name>Is the Front Face of</foaf:name>
+ <foaf:name xml:lang="en">Is the Front Face of</foaf:name>
  <rdfs:label xml:lang="en">Is the front-facing surface of</rdfs:label>
  <rdfs:label xml:lang="fr">Est la surface qui est le devant du monument</rdfs:label>
  <rdfs:label xml:lang="de">Ist die Oberfläche, die vor dem Denkmal ist</rdfs:label>
- <rdfs:comment xml:lang="en">Use this property to link the monument instance describing the front surface of the monument to the main monument instance.</rdfs:comment>
+ <skos:definition xml:lang="en">Use this property to link the monument instance describing the front surface of the monument to the main monument instance.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
  <owl:inverseOf rdf:resource="#hasFrontFace"/>
  <rdfs:subPropertyOf rdf:resource="#isPartOf"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="hasRearFace">
- <foaf:name>Has a Rear Face</foaf:name>
+ <foaf:name xml:lang="en">Has a Rear Face</foaf:name>
  <rdfs:label xml:lang="en">Has a rear-facing surface</rdfs:label>
  <rdfs:label xml:lang="fr">A une surface qui est le derrière du monument</rdfs:label>
  <rdfs:label xml:lang="de">Auf einer Fläche, die sich hinter dem Denkmal</rdfs:label>
- <rdfs:comment xml:lang="en">Use this property to link a Monument instance to another Monument instance that describes the rear-facing surface of the monument. The front of the monument is defined as the surface that the monument designer intended the visitor to see as a first surface.</rdfs:comment>
+ <skos:definition xml:lang="en">Use this property to link a Monument instance to another Monument instance that describes the rear-facing surface of the monument. The front of the monument is defined as the surface that the monument designer intended the visitor to see as a first surface.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="isRearFaceOf">
- <foaf:name>Is the Rear Face of</foaf:name>
+ <foaf:name xml:lang="en">Is the Rear Face of</foaf:name>
  <rdfs:label xml:lang="en">Is the rear-facing surface of</rdfs:label>
  <rdfs:label xml:lang="fr">Est la surface qui est le derrière du monument</rdfs:label>
  <rdfs:label xml:lang="de">Ist die Fläche, die hinter dem Denkmal ist</rdfs:label>
- <rdfs:comment xml:lang="en">Use this property to link the monument instance describing the rear-facing surface of the monument to the main monument instance.</rdfs:comment>
+ <skos:definition xml:lang="en">Use this property to link the monument instance describing the rear-facing surface of the monument to the main monument instance.</skos:definition>
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
  <owl:inverseOf rdf:resource="#hasRearFace"/>
  <rdfs:subPropertyOf rdf:resource="#isPartOf"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="hasTopPart">
- <foaf:name>Has a Top Face</foaf:name>
+ <foaf:name xml:lang="en">Has a Top Face</foaf:name>
  <rdfs:label xml:lang="en">Has a Top Face</rdfs:label>
  <rdfs:label xml:lang="fr">A une surface qui est supérieure au monument</rdfs:label>
  <rdfs:label xml:lang="de">Es hat eine Oberfläche, die über dem Denkmal ist</rdfs:label>
- <rdfs:comment xml:lang="en">Use this property to link the main monument to a monument instance that is on top of the main one. Generally done for statues that are mounted to a pedestal with a plaque.</rdfs:comment> 
+ <skos:definition xml:lang="en">Use this property to link the main monument to a monument instance that is on top of the main one. Generally done for statues that are mounted to a pedestal with a plaque.</skos:definition> 
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="isTopPartOf">
- <foaf:name>Is the Top Part of</foaf:name>
+ <foaf:name xml:lang="en">Is the Top Part of</foaf:name>
  <rdfs:label xml:lang="en">Is the top-facing surface of</rdfs:label>
  <rdfs:label xml:lang="fr">Est la surface supérieure du monument</rdfs:label>
  <rdfs:label xml:lang="de">Ist der oberen Oberfläche des Bauwerks</rdfs:label>
- <rdfs:comment xml:lang="en">Use this property to link the monument instance describing the top-part of the monument to the main monument instance. Usually used for statues.</rdfs:comment> 
+ <skos:definition xml:lang="en">Use this property to link the monument instance describing the top-part of the monument to the main monument instance. Usually used for statues.</skos:definition> 
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
  <owl:inverseOf rdf:resource="#hasTopPart"/>
  <rdfs:subPropertyOf rdf:resource="#isPartOf"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="hasBottomPart">
- <foaf:name>Has a Bottom Face</foaf:name>
+ <foaf:name xml:lang="en">Has a Bottom Face</foaf:name>
  <rdfs:label xml:lang="en">Has a Bottom Face</rdfs:label>
  <rdfs:label xml:lang="fr">A une surface qui est inférieur au monument</rdfs:label>
  <rdfs:label xml:lang="de">Es hat eine Oberfläche, die unter dem Bauwerk</rdfs:label>
- <rdfs:comment xml:lang="en">Use this property to link the main monument to a monument instance that is on the bottom of the main one. Generally used by artists to sign their work.</rdfs:comment> 
+ <skos:definition xml:lang="en">Use this property to link the main monument to a monument instance that is on the bottom of the main one. Generally used by artists to sign their work.</skos:definition> 
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:ID="isBottomPartOf">
- <foaf:name>Is the Top Face of</foaf:name>
+ <foaf:name xml:lang="en">Is the Top Face of</foaf:name>
  <rdfs:label xml:lang="en">Is the bottom-facing surface of</rdfs:label>
  <rdfs:label xml:lang="fr">Est la surface inférieur du monument</rdfs:label>
  <rdfs:label xml:lang="de">Liegt unter der Oberfläche des Denkmals</rdfs:label>
- <rdfs:comment xml:lang="en">Use this property to link the monument instance describing the bottom-part of the monument to the main monument instance. Generally used by artists to sign their work.</rdfs:comment> 
+ <skos:definition xml:lang="en">Use this property to link the monument instance describing the bottom-part of the monument to the main monument instance. Generally used by artists to sign their work.</skos:definition> 
  <rdfs:domain rdf:resource="#Monument"/>
  <rdfs:range rdf:resource="#Monument"/>
  <owl:inverseOf rdf:resource="#hasBottomPart"/>
  <rdfs:subPropertyOf rdf:resource="#isPartOf"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 </owl:ObjectProperty>
 
 
@@ -496,6 +899,9 @@
    <owl:subClassOf rdf:resource="#Memorial" />
    <owl:disjointWith rdf:resource="#Tombstone"/>
    <owl:equivalentClass muninn:wikipedia_version="513340641" rdf:resource="http://dbpedia.org/resource/Cenotaph"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
   <owl:Class rdf:ID="Sarcophagus">
@@ -505,6 +911,9 @@
    <owl:subClassOf rdf:resource="#Dead_people_place" />
    <owl:subClassOf rdf:resource="#Memorial" />
    <owl:equivalentClass muninn:wikipedia_version="511906061"  rdf:resource="http://dbpedia.org/resource/Sarcophagus"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
 
@@ -513,8 +922,11 @@
    <rdfs:label xml:lang="en">Commemorative plaque</rdfs:label> 
    <rdfs:label xml:lang="fr">Plaque commémorative</rdfs:label>
    <rdfs:label xml:lang="de">Gedenktafel</rdfs:label>
-   <rdfs:comment xml:lang="en">A plaque commemorating a person, thing or event.</rdfs:comment>
+   <skos:definition xml:lang="en">A plaque commemorating a person, thing or event.</skos:definition>
    <owl:equivalentClass  muninn:wikipedia_version="511073020"   rdf:resource="http://dbpedia.org/resource/Commemorative_plaque"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
   <owl:Class rdf:ID="Tombstone">
@@ -523,196 +935,265 @@
    <rdfs:label xml:lang="de">Grabstein</rdfs:label>
    <owl:equivalentClass muninn:wikipedia_version="204275896" rdf:resource="http://dbpedia.org/resource/Tombstone"/>
    <owl:subClassOf rdf:resource="#Memorial" />
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
+
+  <owl:Class rdf:ID="Marker">
+   <rdfs:label xml:lang="en">Marker</rdfs:label> 
+   <rdfs:label xml:lang="fr">Marqueur</rdfs:label>
+   <rdfs:label xml:lang="de">Markierstift</rdfs:label>
+   <skos:definition xml:lang="en">A marker is a stake, flag, sign or peg indicating the location of a grave.</skos:definition>
+   <skos:definition xml:lang="fr">Un marqueur est un pieu, une petite enseigne ou un piquet indiquant l'emplacement d'une tombe.</skos:definition>
+   <skos:definition xml:lang="de">Ein Marker ist ein Pfahl, eine Flagge, ein Schild oder ein Stift, der die Position eines Grabes anzeigt.</skos:definition>
+   <owl:subClassOf rdf:resource="#Memorial" />
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:Class>
+
+
 
   <owl:Class rdf:ID="Headstone">
    <rdfs:label xml:lang="en">Headstone</rdfs:label> 
    <rdfs:label xml:lang="fr">Pierre Tombale</rdfs:label>
    <rdfs:label xml:lang="de">Grabstein</rdfs:label>
-   <rdfs:comment xml:lang="en">Convinience class - redirects to #tombstone.</rdfs:comment>
-   <owl:sameAs rdf:resource="#Tombstone" />
+   <skos:definition xml:lang="en">A stone or wooden marker used to locate a grave and placed at the top (head) of the deceased's remains.</skos:definition>
+   <skos:definition xml:lang="fr">Une pierre ou un marqueur en bois utilisé pour localiser une tombe et placé au sommet (tête) de la dépouille du défunt.</skos:definition>
+   <skos:definition xml:lang="de">Ein Stein- oder Holzmarker, der verwendet wird, um ein Grab zu finden und der oben (Kopf) der Überreste des Verstorbenen platziert wird.</skos:definition>
+   <owl:subClassOf rdf:resource="#Tombstone" />
+   <owl:disjointWith rdf:resource="#Footstone"/>
+   <vs:term_status>stable</vs:term_status> 
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
+
+  <owl:Class rdf:ID="Footstone">
+   <rdfs:label xml:lang="en">Footstone</rdfs:label> 
+   <rdfs:label xml:lang="de">Fußstein</rdfs:label>
+   <skos:definition xml:lang="en">A stone or wooden marker used to locate a grave and placed at the bottom (feet) of the deceased's remains.</skos:definition>
+   <skos:definition xml:lang="fr">Une pierre ou un marqueur en bois utilisé pour localiser une tombe et placé au bas (pied) de la dépouille du défunt.</skos:definition>
+   <skos:definition xml:lang="de">Ein Stein- oder Holzmarker, der verwendet wird, um ein Grab zu finden und am Boden (Füße) der Überreste des Verstorbenen platziert wird.</skos:definition>
+   <vs:term_status>stable</vs:term_status> 
+   <owl:disjointWith rdf:resource="#Footstone"/>
+   <owl:subClassOf rdf:resource="#Tombstone" />
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:Class>  
 
   <owl:Class rdf:ID="Gravestone">
    <rdfs:label xml:lang="en">Gravestone</rdfs:label> 
    <rdfs:label xml:lang="fr">Pierre Tombale</rdfs:label>
    <rdfs:label xml:lang="de">Grabstein</rdfs:label>
-   <rdfs:comment xml:lang="en">Convinience class - redirects to #tombstone.</rdfs:comment>
+   <skos:definition xml:lang="en">Convenience class - redirects to #tombstone.</skos:definition>
    <owl:sameAs rdf:resource="#Tombstone" />
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
+
+  <owl:Class rdf:ID="Khachkar">
+   <rdfs:label xml:lang="en">Khachkar</rdfs:label> 
+   <rdfs:label xml:lang="fr">Khatchkar</rdfs:label>
+   <rdfs:label xml:lang="de">Chatschkar</rdfs:label>
+   <skos:definition xml:lang="en">An Armenian cross-stone used to mark a grave or as a commemoration.</skos:definition>
+   <skos:definition xml:lang="fr">Une croix de pierre arménienne utilisée pour marquer une tombe ou comme commémoration.</skos:definition>
+   <skos:definition xml:lang="de">Ein armenischer Kreuzstein, der zur Markierung eines Grabes oder als Gedenkstein verwendet wurde.</skos:definition>
+   <vs:term_status>stable</vs:term_status>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <owl:equivalentClass muninn:wikipedia_version="811938757" rdf:resource="http://dbpedia.org/resource/Khachkar"/>
+   <owl:subClassOf rdf:resource="#Tombstone"/>
+  </owl:Class>
+
 
   <owl:Class rdf:ID="Dig_site">
    <rdfs:label xml:lang="en">Archaeological dig site</rdfs:label>
    <rdfs:label xml:lang="fr">Site de fouilles archéologiques</rdfs:label>
    <rdfs:label xml:lang="de">Archäologische Ausgrabungsstätte</rdfs:label>
-   <rdfs:comment xml:lang="en">A physical location under the administration of an Archaeological organization where graves are being exhumed.</rdfs:comment> 
-   <rdfs:comment xml:lang="fr">Un site archéologiques sous le controle d'un groupe de recherche où des fouilles prennent place.</rdfs:comment>
-   <rdfs:comment xml:lang="de">Eine archäologische Ausgrabungsstätte unter der Kontrolle von einer Arbeitsgruppe, wo Ausgrabungen stattfinden.</rdfs:comment>
+   <skos:definition xml:lang="en">A physical location under the administration of an Archaeological organization where graves are being exhumed or ruined monuments may be found.</skos:definition> 
+   <skos:definition xml:lang="fr">Un emplacement physique sous l'administration d'une organisation archéologique où des tombes sont exhumées ou des monuments en ruine peuvent être trouvés.</skos:definition>
+   <skos:definition xml:lang="de">Es kann ein physischer Ort unter der Verwaltung einer archäologischen Organisation gefunden werden, an dem Gräber exhumiert oder Denkmäler zerstört werden.</skos:definition>
    <owl:subClassOf rdf:resource="#Dead_people_place"/>
+   <vs:term_status>stable</vs:term_status>
    <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/ArchaeologicalSite"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
   <owl:Class rdf:ID="Cemetery">
-   <foaf:name>Cemetery</foaf:name>
+   <foaf:name xml:lang="en">Cemetery</foaf:name>
    <rdfs:label xml:lang="en">Cemetery</rdfs:label>
    <rdfs:label xml:lang="fr">Cimetière</rdfs:label>
    <rdfs:label xml:lang="de">Friedhof</rdfs:label>
-   <rdfs:comment xml:lang="en">A collection of graves in a single administrative unit. Distinct from a mass-grave.</rdfs:comment> 
-   <rdfs:comment xml:lang="fr">Une collection de tombes dans une unitée administrative (et non pas un charnier).</rdfs:comment>
-   <rdfs:comment xml:lang="de">Eine Sammlung von Gräbern in einer administrativen Einheit (keine Masse).</rdfs:comment>
+   <skos:definition xml:lang="en">A collection of graves in a single administrative unit. Distinct from a mass-grave.</skos:definition> 
+   <skos:definition xml:lang="fr">Une collection de tombes dans une unitée administrative (et non pas un charnier).</skos:definition>
+   <skos:definition xml:lang="de">Eine Sammlung von Gräbern in einer administrativen Einheit (keine Masse).</skos:definition>
    <owl:equivalentClass muninn:wikipedia_version="514561782" rdf:resource="http://dbpedia.org/resource/Cemetery"/>
    <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/LanduseCemetery"/>
    <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Cemetery"/>
    <owl:disjointWith rdf:resource="#Mass_grave"/>
    <owl:subClassOf rdf:resource="#Dead_people_place"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
   <owl:Class rdf:ID="Graveyard">
-   <foaf:name>Graveyard</foaf:name>
+   <foaf:name xml:lang="en">Graveyard</foaf:name>
    <rdfs:label xml:lang="en">Graveyard (Small, Religious or Unofficial)</rdfs:label>
    <rdfs:label xml:lang="fr">Cimetière (Petit, Religieu or non-officiel)</rdfs:label>
    <rdfs:label xml:lang="de">Kirchhof</rdfs:label>
-   <rdfs:comment xml:lang="en">A collection of graves in a single location, smaller in number than a cemetery that is usually attached to a place of worship and non longer used for new burials.</rdfs:comment> 
+   <skos:definition xml:lang="en">A collection of graves in a single location, smaller in number than a cemetery that is usually attached to a place of worship and non longer used for new burials.</skos:definition> 
    <owl:equivalentClass muninn:wikipedia_version="510068969" rdf:resource="http://dbpedia.org/resource/Graveyard"/>
    <owl:equivalentClass rdf:resource="http://linkedgeodata.org/ontology/Graveyard"/>
    <owl:disjointWith rdf:resource="#Mass_grave"/>
    <owl:disjointWith rdf:resource="#Cemetery"/>
    <owl:subClassOf rdf:resource="#Dead_people_place"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
   <owl:Class rdf:ID="Churchyard">
-   <foaf:name>Churchyard</foaf:name>
+   <foaf:name xml:lang="en">Churchyard</foaf:name>
    <rdfs:label xml:lang="en">Churchyard (Small, Religious or Unofficial)</rdfs:label>
    <rdfs:label xml:lang="fr">Cimetière d'église (Petit, Religieu or non-officiel)</rdfs:label>
    <rdfs:label xml:lang="de">Kirchhof</rdfs:label>
-   <rdfs:comment xml:lang="en">A collection of graves in a single location, smaller in number than a cemetery that is attached to a place of worship and non longer used for new burials. Must have a denomination.</rdfs:comment> 
+   <skos:definition xml:lang="en">A collection of graves in a single location, smaller in number than a cemetery that is attached to a place of worship and non longer used for new burials. Must have a denomination.</skos:definition> 
    <owl:disjointWith rdf:resource="#Mass_grave"/>
    <owl:disjointWith rdf:resource="#Cemetery"/>
    <owl:subClassOf rdf:resource="#Graveyard"/>
    <owl:subClassOf>
-    <owl:Restriction>
+    <owl:Restriction rdf:ID="internalGraves002">
      <owl:onProperty rdf:resource="#denomination" />
-     <owl:minCardinality rdf:datatype="xsd:nonNegativeInteger">1</owl:minCardinality>
+     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+     <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+     <void:inDataset rdf:resource="#datasetdefinition"/>
    </owl:Restriction>
  </owl:subClassOf>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
 
   </owl:Class>
 
   <owl:Class rdf:ID="MilitaryCemetery">
-   <foaf:name>Cemetery</foaf:name>
+   <foaf:name xml:lang="en">Cemetery</foaf:name>
    <rdfs:label xml:lang="en">Cemetery (Military)</rdfs:label>
    <rdfs:label xml:lang="fr">Cimetière (Militare)</rdfs:label>
    <rdfs:label xml:lang="de">Friedhof (Militär)</rdfs:label>
-   <rdfs:comment xml:lang="en">A collection of graves of soldiers in a single administrative unit. Distinct from a mass-grave. May also contain civilian graves, but the primary purpose of the cemetary must be military.</rdfs:comment> 
+   <skos:definition xml:lang="en">A collection of graves of soldiers in a single administrative unit. Distinct from a mass-grave. May also contain civilian graves, but the primary purpose of the cemetery must be military.</skos:definition> 
    <owl:disjointWith rdf:resource="#Mass_grave"/>
    <owl:subClassOf rdf:resource="#Cemetery"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
-  <owl:DeprecatedProperty rdf:ID="site_name"  vs:term_status="archaic">
-   <rdfs:label xml:lang="en">Site Name</rdfs:label>
-   <rdfs:label xml:lang="fr">Nom du site</rdfs:label>
-   <rdfs:label xml:lang="de">Site-Namen</rdfs:label>
-   <rdfs:comment xml:lang="en">The name of the site / monument.</rdfs:comment>
-   <rdfs:domain rdf:resource="#Dead_people_place"/>
-   <rdfs:domain rdf:resource="#Monument"/>
-   <rdfs:range rdf:resource="xsd:string"/>
-  </owl:DeprecatedProperty>
-
-
-  <owl:DatatypeProperty rdf:ID="siteName">
-   <rdfs:label xml:lang="en">Site Name</rdfs:label>
-   <rdfs:label xml:lang="fr">Nom du site</rdfs:label>
-   <rdfs:label xml:lang="de">Site-Namen</rdfs:label>
-   <rdfs:comment xml:lang="en">The name of the site / monument.</rdfs:comment>
-   <rdfs:domain rdf:resource="#Dead_people_place"/>
-   <rdfs:domain rdf:resource="#Monument"/>
-    <owl:equivalentProperty rdf:resource="#site_name"/>
-  </owl:DatatypeProperty>
-
-
-
-
-  <owl:DatatypeProperty rdf:ID="id">
-   <rdfs:label xml:lang="en">ID</rdfs:label>
-   <rdfs:comment xml:lang="en">Local ID number for non linked open data processing.</rdfs:comment>
-   <rdfs:domain rdf:resource="#Dead_people_place"/>
-   <rdfs:domain rdf:resource="#Remains"/>
-   <rdfs:domain rdf:resource="#Container_for_human_remains"/>
-   <rdfs:domain rdf:resource="#Monument"/>
-   <rdfs:range rdf:resource="xsd:string"/>
-  </owl:DatatypeProperty>
-
-  <owl:DeprecatedProperty rdf:ID="moved_from" vs:term_status="archaic">
-   <rdfs:label xml:lang="en">Moved from</rdfs:label>
-   <rdfs:comment xml:lang="en">Use this to relate a grave or remains to its original instance elsewhere. Use this for disinterments.</rdfs:comment>
-   <rdfs:domain rdf:resource="#Dead_people_place"/>
-   <rdfs:domain rdf:resource="#Container_for_human_remains"/>
-   <rdfs:domain rdf:resource="#Remains"/>
-   <rdfs:domain rdf:resource="#Monument"/>
-   <owl:inverseOf rdf:resource="#moved_to"/>
-  </owl:DeprecatedProperty>
-   
-  <owl:DeprecatedProperty rdf:ID="moved_to" vs:term_status="archaic">
-   <rdfs:label xml:lang="en">Moved from</rdfs:label>
-   <rdfs:comment xml:lang="en">Use this to relate a grave or remains to its original instance elsewhere. Use this for disinterments.</rdfs:comment>
-   <rdfs:domain rdf:resource="#Dead_people_place"/>
-   <rdfs:domain rdf:resource="#Container_for_human_remains"/>
-   <rdfs:domain rdf:resource="#Remains"/> 
-   <rdfs:domain rdf:resource="#Monument"/>
-  </owl:DeprecatedProperty>
 
   <owl:ObjectProperty rdf:ID="movedFrom">
    <rdfs:label xml:lang="en">Moved from</rdfs:label>
-   <rdfs:comment xml:lang="en">Use this to relate a grave or remains to its original instance elsewhere. Use this for disinterments, relocation, storage, etc...</rdfs:comment>
+   <skos:definition xml:lang="en">Use this to relate a grave or remains to its original instance elsewhere. Use this for disinterments, relocation, storage, etc...</skos:definition>
    <rdfs:domain rdf:resource="#Dead_people_place"/>
    <rdfs:domain rdf:resource="#Container_for_human_remains"/>
    <rdfs:domain rdf:resource="#Remains"/>
    <rdfs:domain rdf:resource="#Monument"/>
    <owl:inverseOf rdf:resource="#movedTo"/>
    <owl:equivalentProperty rdf:resource="#moved_from"/> 
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
  </owl:ObjectProperty>
    
   <owl:ObjectProperty rdf:ID="movedTo">
    <rdfs:label xml:lang="en">Moved to</rdfs:label>
-   <rdfs:comment xml:lang="en">Use this to relate a grave or remains to its next instance elsewhere. Use this for disinterments, relocation, storage, etc...</rdfs:comment>
+   <skos:definition xml:lang="en">Use this to relate a grave or remains to its next instance elsewhere. Use this for disinterments, relocation, storage, etc...</skos:definition>
    <rdfs:domain rdf:resource="#Dead_people_place"/>
    <rdfs:domain rdf:resource="#Container_for_human_remains"/>
    <rdfs:domain rdf:resource="#Remains"/> 
    <rdfs:domain rdf:resource="#Monument"/>
    <owl:equivalentProperty rdf:resource="#moved_to"/> 
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:ObjectProperty>
 
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#endedAtTime">
+   <rdfs:label xml:lang="en">End Date</rdfs:label>
+   <rdfs:label xml:lang="fr">Date de Fin</rdfs:label>
+   <rdfs:label xml:lang="de">Endtermin</rdfs:label>
+   <skos:definition xml:lang="en">The date at which the thing ceased to exist or the event ended..</skos:definition>
+   <skos:definition xml:lang="fr">La date à laquelle la chose a cessé d'exister ou l'événement a pris fin.</skos:definition>
+   <skos:definition xml:lang="de">Das Datum, an dem die Sache aufhörte zu existieren oder das Ereignis endete.</skos:definition>
+   <rdfs:comment xml:lang="en">This ontological glue allows the use of simple XML schema datetimes.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">Cette colle ontologique permet l'utilisation de simples dates-heures de schéma XML.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Dieser ontologische Kleber ermöglicht die Verwendung einfacher XML-Schema-Datetimes.</rdfs:comment>
+   <owl:equivalentProperty rdf:resource="#endDate"/>
+   <vs:term_status>stable</vs:term_status>
+   <rdfs:domain rdf:resource="#Dead_people_place"/>
+   <rdfs:domain rdf:resource="#Container_for_human_remains"/>
+   <rdfs:domain rdf:resource="#Remains"/> 
+   <rdfs:domain rdf:resource="#Monument"/>  
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </rdf:Description>
 
-  <owl:DeprecatedProperty rdf:ID="when_moved" vs:term_status="archaic">
-   <rdfs:label xml:lang="en">Moved on</rdfs:label>
-   <rdfs:label xml:lang="en">Date or interval when the objects were moved.</rdfs:label>
-   <rdfs:domain rdf:resource="#moved_from"/>
-   <rdfs:domain rdf:resource="#moved_to"/>
-   <rdfs:range rdf:resource="time:TemporalEntity"/>
-  </owl:DeprecatedProperty>
 
-
-  <owl:DatatypeProperty rdf:ID="endDate">
+  <owl:DeprecatedProperty rdf:ID="endDate">
    <rdfs:label xml:lang="en">End Date</rdfs:label>
    <rdfs:label xml:lang="en">The date on which this monument description is no longer valid (destroyed, moved, etc...).</rdfs:label>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <rdfs:comment xml:lang="en">Deprecated in favour of a solution that aligns directly with the prov and time ontologies.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Veraltet zugunsten einer Lösung, die direkt mit den prov- und time-Ontologien übereinstimmt.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">Obsolète en faveur d'une solution qui s'aligne directement sur les ontologies prov et time.</rdfs:comment>    
+   <vs:term_status>archaic</vs:term_status>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:DeprecatedProperty>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#startedAtTime">
+   <rdfs:label xml:lang="en">Start Date</rdfs:label>
+   <rdfs:label xml:lang="fr">Date de Début</rdfs:label>
+   <rdfs:label xml:lang="de">Startdatum</rdfs:label>
+   <skos:definition xml:lang="en">The date at which the thing or event begins to exist or occur.</skos:definition>
+   <skos:definition xml:lang="fr">La date à laquelle la chose commence à exister ou l'événement débute.</skos:definition>
+   <skos:definition xml:lang="de">Das Datum, an dem die Sache oder das Ereignis zu existieren oder einzutreten beginnt.</skos:definition>
+   <rdfs:comment xml:lang="en">This ontological glue allows the use of simple XML schema datetimes.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">Cette colle ontologique permet l'utilisation de simples dates-heures de schéma XML.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Dieser ontologische Kleber ermöglicht die Verwendung einfacher XML-Schema-Datetimes.</rdfs:comment>
+   <owl:equivalentProperty rdf:resource="#startDate"/>
+   <vs:term_status>stable</vs:term_status>
    <rdfs:domain rdf:resource="#Dead_people_place"/>
    <rdfs:domain rdf:resource="#Container_for_human_remains"/>
    <rdfs:domain rdf:resource="#Remains"/> 
-   <rdfs:domain rdf:resource="#Monument"/>
-   <rdfs:range rdf:resource="time:TemporalEntity"/>
-   <rdfs:range rdf:resource="xsd:dateTime"/>
-  </owl:DatatypeProperty>
+   <rdfs:domain rdf:resource="#Monument"/>  
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </rdf:Description>
 
-  <owl:DatatypeProperty rdf:ID="startDate">
+
+  <owl:DeprecatedProperty rdf:ID="startDate">
    <rdfs:label xml:lang="en">Start Date</rdfs:label>
    <rdfs:label xml:lang="en">The date on which this monument description is valid (destroyed, moved, etc...).</rdfs:label>
-   <rdfs:domain rdf:resource="#Dead_people_place"/>
-   <rdfs:domain rdf:resource="#Container_for_human_remains"/>
-   <rdfs:domain rdf:resource="#Remains"/> 
-   <rdfs:domain rdf:resource="#Monument"/>
-   <rdfs:range rdf:resource="time:TemporalEntity"/>
-   <rdfs:range rdf:resource="xsd:dateTime"/>
-  </owl:DatatypeProperty>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <rdfs:comment xml:lang="en">Deprecated in favour of a solution that aligns directly with the prov and time ontologies.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Veraltet zugunsten einer Lösung, die direkt mit den prov- und time-Ontologien übereinstimmt.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">Obsolète en faveur d'une solution qui s'aligne directement sur les ontologies prov et time.</rdfs:comment>    
+   <vs:term_status>archaic</vs:term_status>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:DeprecatedProperty>
 
    <!-- http://en.wikipedia.org/wiki/Canadian_Tomb_of_the_Unknown_Soldier
  The body of the soldier was formerly buried in Plot 8, Row E, Grave 7, of the Cabaret-Rouge British Cemetery in Souchez, France, near the memorial at Vimy Ridge, the site of the first major battle where Canadian troops fought as a combined force.
@@ -720,59 +1201,74 @@
 
   <owl:DeprecatedProperty rdf:ID="obfuscated" vs:term_status="archaic">
    <rdfs:label xml:lang="en">Location obfuscated (Deprecated)</rdfs:label>
-   <rdfs:comment xml:lang="en">The precision of the location informaton has been degraded but the data owner has the original information. (Deprecated, See #locationObfuscated)</rdfs:comment>
+   <skos:definition xml:lang="en">The precision of the location information has been degraded but the data owner has the original information. (Deprecated, See #locationObfuscated)</skos:definition>
    <rdfs:domain rdf:resource="#Location"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DeprecatedProperty>
 
   <owl:DeprecatedProperty rdf:ID="location" vs:term_status="archaic">
    <rdfs:label xml:lang="en">Location</rdfs:label>
    <rdfs:label xml:lang="fr">Emplacement</rdfs:label>
    <rdfs:label xml:lang="de">Lage</rdfs:label>
-   <rdfs:comment xml:lang="en">Location in terms of longitude, latitude or geonames or street address.</rdfs:comment>
-   <rdfs:comment xml:lang="fr">Emplacement en terme de longitude, latitude ou attribut geonames ou addresse physique.</rdfs:comment>
-   <rdfs:comment xml:lang="de">Lage in Bezug auf Länge, Breite oder Attribut geonames oder physikalische Adresse.</rdfs:comment>
+   <skos:definition xml:lang="en">Location in terms of longitude, latitude or geonames or street address.</skos:definition>
+   <skos:definition xml:lang="fr">Emplacement en terme de longitude, latitude ou attribut geonames ou addresse physique.</skos:definition>
+   <skos:definition xml:lang="de">Lage in Bezug auf Länge, Breite oder Attribut geonames oder physikalische Adresse.</skos:definition>
    <rdfs:domain rdf:resource="#Dead_people_place"/>
    <rdfs:domain rdf:resource="#Grave"/>
    <rdfs:domain rdf:resource="#Monument"/>
    <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
    <rdfs:range rdf:resource="http://www.geonames.org/ontology"/>
-   <rdfs:range rdf:resource="xsd:string"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
   </owl:DeprecatedProperty>
 
   <owl:ObjectProperty rdf:ID="hasLocation">
    <rdfs:label xml:lang="en">Location</rdfs:label>
    <rdfs:label xml:lang="fr">Emplacement</rdfs:label>
    <rdfs:label xml:lang="de">Lage</rdfs:label>
-   <rdfs:comment xml:lang="en">Location in terms of longitude, latitude or geonames or street address.</rdfs:comment>
-   <rdfs:comment xml:lang="fr">Emplacement en terme de longitude, latitude ou attribut geonames ou addresse physique.</rdfs:comment>
-   <rdfs:comment xml:lang="de">Lage in Bezug auf Länge, Breite oder Attribut geonames oder physikalische Adresse.</rdfs:comment>
+   <skos:definition xml:lang="en">Location in terms of longitude, latitude or geonames or street address.</skos:definition>
+   <skos:definition xml:lang="fr">Emplacement en terme de longitude, latitude ou attribut geonames ou addresse physique.</skos:definition>
+   <skos:definition xml:lang="de">Lage in Bezug auf Länge, Breite oder Attribut geonames oder physikalische Adresse.</skos:definition>
    <rdfs:domain rdf:resource="#Dead_people_place"/>
    <rdfs:domain rdf:resource="#Grave"/>
    <rdfs:domain rdf:resource="#Monument"/>
    <rdfs:range rdf:resource="http://www.w3.org/2003/01/geo/wgs84_pos"/>
    <rdfs:range rdf:resource="http://www.geonames.org/ontology"/>
-   <rdfs:range rdf:resource="xsd:string"/>
+   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
    <owl:equivalentProperty rdf:resource="#location"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:ObjectProperty>
 
 
  <owl:ObjectProperty rdf:ID="hasLocationObfuscated">
-  <foaf:name>Obfuscated Location</foaf:name>
+  <foaf:name xml:lang="en">Obfuscated Location</foaf:name>
   <rdfs:label xml:lang="en">Obfuscated Location</rdfs:label>
   <rdfs:label xml:lang="fr">Emplacement obscurci</rdfs:label>
   <rdfs:label xml:lang="de">Verdecktes Standort</rdfs:label>
-  <rdfs:comment xml:lang="en">This property provides location information which is accurate but whos precision has been degraded for some reason. Replaces previous #obfuscated property.</rdfs:comment>
+  <skos:definition xml:lang="en">This property provides location information which is accurate but whos precision has been degraded for some reason. Replaces previous #obfuscated property.</skos:definition>
   <rdfs:subPropertyOf rdf:resource="#hasLocation"/>
   <owl:equivalentProperty rdf:resource="#obfuscated"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
  </owl:ObjectProperty>
 
  <owl:ObjectProperty rdf:ID="denomination">
-  <foaf:name>Denomination</foaf:name>
+  <foaf:name xml:lang="en">Denomination</foaf:name>
   <rdfs:label xml:lang="en">Denomination</rdfs:label>
   <rdfs:label xml:lang="fr">Dénomination</rdfs:label>
   <rdfs:label xml:lang="de">Konfession</rdfs:label>
-  <rdfs:comment xml:lang="en">The religious denomination of the #Dead_people_place. For example, a Catholic cemetery."</rdfs:comment>
+  <skos:definition xml:lang="en">The religious denomination of the #Dead_people_place. For example, a Catholic cemetery."</skos:definition>
   <rdfs:domain rdf:resource="#Dead_people_place"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
  </owl:ObjectProperty>
 
 
@@ -780,11 +1276,14 @@
    <rdfs:label xml:lang="en">Skeleton.</rdfs:label>
    <rdfs:label xml:lang="fr">Un squelette complet.</rdfs:label>
    <rdfs:label xml:lang="de">Ein Skelett complet.</rdfs:label>
-   <rdfs:comment xml:lang="en">This property is meant to record that all of the larger bones of the skeleton were present. A body part seperatly buried or a skeleton missing a cranium would not be an instance of this property.</rdfs:comment>
-   <rdfs:comment xml:lang="fr">Cette propriété rapporte le fait que la dépouille comprend tout les gros os du squelette humain, même si quelques petit os manque. Les os d'un membre du corps humain ou un squelette sans crane ne serait pas classes dans cette propriété.</rdfs:comment>
-   <rdfs:comment xml:lang="de">Diese Eigenschaft bezieht sich auf die Tatsache, dass der Körper all der großen Knochen des menschlichen Skeletts enthält, obwohl einige kleine Knochen fehlt. Die Knochen eines Mitglieds des menschlichen Körpers, ohne ein Skelett oder Schädel-Klassen nicht in dieser Eigenschaft werden.</rdfs:comment>
+   <skos:definition xml:lang="en">This property is meant to record that all of the larger bones of the skeleton were present. A body part separately buried or a skeleton missing a cranium would not be an instance of this property.</skos:definition>
+   <skos:definition xml:lang="fr">Cette propriété rapporte le fait que la dépouille comprend tout les gros os du squelette humain, même si quelques petit os manque. Les os d'un membre du corps humain ou un squelette sans crane ne serait pas classes dans cette propriété.</skos:definition>
+   <skos:definition xml:lang="de">Diese Eigenschaft bezieht sich auf die Tatsache, dass der Körper all der großen Knochen des menschlichen Skeletts enthält, obwohl einige kleine Knochen fehlt. Die Knochen eines Mitglieds des menschlichen Körpers, ohne ein Skelett oder Schädel-Klassen nicht in dieser Eigenschaft werden.</skos:definition>
    <owl:subClassOf rdf:resource="#Remains" />
    <owl:disjointWith rdf:resource="#Partial_remains"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
   <owl:Class rdf:ID="Ashes">
@@ -792,34 +1291,77 @@
    <rdfs:label xml:lang="fr">Les cendres dispersées d'un corps humain. Les cendres peuvent être partielle or complète.</rdfs:label>
    <rdfs:label xml:lang="de">Streute die Asche eines menschlichen Körpers. Die Asche kann teilweise oder vollständig.</rdfs:label>
    <rdfs:subClass rdf:resource="#Remains" />
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
   <owl:Class rdf:ID="Partial_remains">
    <rdfs:label xml:lang="en">Partial remains</rdfs:label>
    <rdfs:label xml:lang="fr">Morceau de squelette</rdfs:label>
    <rdfs:label xml:lang="de">Teilweise bleibt</rdfs:label>
-   <rdfs:comment xml:lang="en">Indicates partial remains of an entity, some additional ontologies would be needed to extend this for part of remains information.</rdfs:comment>
+   <skos:definition xml:lang="en">Indicates partial remains of an entity, some additional ontologies would be needed to extend this for part of remains information.</skos:definition>
    <rdfs:subClass rdf:resource="#Remains"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
+
+  <owl:Class rdf:ID="Columbarium">
+   <rdfs:label xml:lang="en">Columbarium</rdfs:label>
+   <rdfs:label xml:lang="fr">Columbarium</rdfs:label>
+   <rdfs:label xml:lang="de">Kolumbarium</rdfs:label>
+   <skos:definition xml:lang="en">A structure for the respectful and usually public storage of funerary urns.</skos:definition> 
+   <skos:definition xml:lang="fr">Un lieu où sont conservées les urnes cinéraires.</skos:definition>
+   <skos:definition xml:lang="de">Eine Struktur zur respektvollen und meist öffentlichen Aufbewahrung von Bestattungsurnen.</skos:definition>
+   <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Columbarium"/>
+   <owl:subClassOf rdf:resource="#Dead_people_place"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:Class>
+
+  <owl:Class rdf:ID="FuneraryUrn">
+   <rdfs:label xml:lang="en">Urn</rdfs:label>
+   <rdfs:label xml:lang="fr">Urnes</rdfs:label>
+   <rdfs:label xml:lang="de">Grab</rdfs:label>
+   <skos:definition xml:lang="en">A vessel to hold cremated ashes.</skos:definition> 
+   <skos:definition xml:lang="fr">Un contenant pour cendres humaines.</skos:definition>
+   <skos:definition xml:lang="de">Ein Behälter für menschliche Asche.</skos:definition>
+   <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Grave"/>
+   <owl:subClassOf rdf:resource="#Container_for_human_remains"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:Class>
+
 
   <owl:Class rdf:ID="Grave">
    <rdfs:label xml:lang="en">Grave</rdfs:label>
    <rdfs:label xml:lang="fr">Tombe</rdfs:label>
    <rdfs:label xml:lang="de">Grab</rdfs:label>
-   <rdfs:comment xml:lang="en">A single or mass grave with the remains of human beings.</rdfs:comment> 
-   <rdfs:comment xml:lang="fr">Une tombe d'une ou de plusieurs personne.</rdfs:comment>
-   <rdfs:comment xml:lang="de">Ein Grab aus einer oder mehreren Personen.</rdfs:comment>
+   <skos:definition xml:lang="en">A single or mass grave with the remains of human beings.</skos:definition> 
+   <skos:definition xml:lang="fr">Une tombe d'une ou de plusieurs personne.</skos:definition>
+   <skos:definition xml:lang="de">Ein Grab aus einer oder mehreren Personen.</skos:definition>
    <owl:equivalentClass muninn:wikipedia_version="515046345" rdf:resource="http://dbpedia.org/resource/Grave"/>
    <owl:subClassOf rdf:resource="#Container_for_human_remains"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
+
+
 
   <owl:Class rdf:ID="WarGrave">
    <rdfs:label xml:lang="en">War Grave</rdfs:label>
    <rdfs:label xml:lang="fr">Tombe Militare</rdfs:label>
    <rdfs:label xml:lang="de">Grab</rdfs:label>
-   <rdfs:comment xml:lang="en">A grave of a soldier or person involved in a war. This can include non-combatants.</rdfs:comment> 
+   <skos:definition xml:lang="en">A grave of a soldier or person involved in a war. This can include non-combatants.</skos:definition> 
    <owl:subClassOf rdf:resource="#Grave"/>
    <owl:equivalentClass muninn:wikipedia_version="501583144" rdf:resource="http://dbpedia.org/resource/War_grave"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
  
 
@@ -827,69 +1369,90 @@
    <rdfs:label xml:lang="en">Epitaph</rdfs:label>
    <rdfs:label xml:lang="fr">Épitaphe</rdfs:label>
    <rdfs:label xml:lang="de">Epitaph</rdfs:label>
-   <rdfs:comment xml:lang="en">The short text honoring the deceased person or persons.</rdfs:comment> 
-   <rdfs:comment xml:lang="fr">Une inscription funéraire, placée sur une pierre tombale, qui éloge les personne(s) dans la tombe.</rdfs:comment> 
-   <rdfs:comment xml:lang="de">Eine Grabinschrift, auf einem Grabstein gesetzt, der diese in das Grab gelobt.</rdfs:comment>
-    <rdfs:range rdf:resource="xsd:string"/>
+   <skos:definition xml:lang="en">The short text honoring the deceased person or persons.</skos:definition> 
+   <skos:definition xml:lang="fr">Une inscription funéraire, placée sur une pierre tombale, qui éloge les personne(s) dans la tombe.</skos:definition> 
+   <skos:definition xml:lang="de">Eine Grabinschrift, auf einem Grabstein gesetzt, der diese in das Grab gelobt.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="#Monument"/>
     <rdfs:subPropertyOf rdf:resource="#inscription"/>
     <owl:equivalentProperty muninn:wikipedia_version="514190813" rdf:resource="http://dbpedia.org/resource/Epitaph"/>
     <!-- is this true -->
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DatatypeProperty>
 
   <owl:DatatypeProperty rdf:ID="monument_title"  >
    <rdfs:label xml:lang="en">Monument title</rdfs:label>
    <rdfs:label xml:lang="fr">Titre du Monument</rdfs:label>
    <rdfs:label xml:lang="de">Titel des Denkmals</rdfs:label>
-   <rdfs:comment xml:lang="en">The name of the monument; distinct from the inscription on it.</rdfs:comment> 
-   <rdfs:comment xml:lang="fr">Le nom du monument, à ne pas confondre avec le nom inscris sur le monument.</rdfs:comment> 
-   <rdfs:comment xml:lang="de">der Name des Denkmals, die nicht mit dem Namen auf dem Denkmal zu verwechseln beizutreten.</rdfs:comment>
-    <rdfs:range rdf:resource="xsd:string"/>
+   <skos:definition xml:lang="en">The name of the monument; distinct from the inscription on it.</skos:definition> 
+   <skos:definition xml:lang="fr">Le nom du monument, à ne pas confondre avec le nom inscris sur le monument.</skos:definition> 
+   <skos:definition xml:lang="de">der Name des Denkmals, die nicht mit dem Namen auf dem Denkmal zu verwechseln beizutreten.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DatatypeProperty>
 
   <owl:DeprecatedProperty rdf:ID="monument_name" vs:term_status="archaic">
    <rdfs:label xml:lang="en">Monument person name</rdfs:label>
    <rdfs:label xml:lang="fr">Nom de la personne</rdfs:label>
    <rdfs:label xml:lang="de">Name der Person</rdfs:label>
-   <rdfs:comment xml:lang="en">The name of the person(s) being honored by the monument.</rdfs:comment> 
-   <rdfs:comment xml:lang="fr">Le nom de la personne/des personnes qui est/sont honoré par le monument.</rdfs:comment> 
-   <rdfs:comment xml:lang="de">der Name der Person / Personen ist / sind durch die Denkmal geehrt.</rdfs:comment>
-    <rdfs:range rdf:resource="xsd:string"/>
+   <skos:definition xml:lang="en">The name of the person(s) being honored by the monument.</skos:definition> 
+   <skos:definition xml:lang="fr">Le nom de la personne/des personnes qui est/sont honoré par le monument.</skos:definition> 
+   <skos:definition xml:lang="de">der Name der Person / Personen ist / sind durch die Denkmal geehrt.</skos:definition>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
    <rdfs:domain rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DeprecatedProperty>
 
 
   <owl:ObjectProperty rdf:ID="inscription">  
-   <foaf:name>Inscription</foaf:name>
+   <foaf:name xml:lang="en">Inscription</foaf:name>
    <rdfs:label xml:lang="en">Inscription on Monument</rdfs:label>
    <rdfs:label xml:lang="fr">Inscription sur le Monument</rdfs:label>
    <rdfs:label xml:lang="de">Anmeldung auf dem Denkmal</rdfs:label>
-   <rdfs:comment xml:lang="en">The inscription on the moment. Can be a string or point to another document.</rdfs:comment>
+   <skos:definition xml:lang="en">The inscription on the moment. Can be a string or point to another document.</skos:definition>
    <rdfs:domain rdf:resource="#Monument"/>
    <owl:equivalentProperty rdf:resource="#monument_name"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:ObjectProperty>
 
 
-  <owl:Class rdf:ID="Mass_grave"  >
+  <owl:Class rdf:ID="Mass_grave">
    <rdfs:label xml:lang="en">Mass Grave</rdfs:label>
    <rdfs:label xml:lang="fr">Fosse commune</rdfs:label>
    <rdfs:label xml:lang="de">Massengrab</rdfs:label>
+   <skos:definition xml:lang="en">A mass graves is a burial pit where multiple bodies were thrown in without regard to identity or status. For example: plague pits or war crimes sites.</skos:definition>
+   <skos:definition xml:lang="fr">Une fosse commune est une fosse funéraire où plusieurs corps ont été jetés sans distinction d'identité ou de statut. Par exemple : fosses à peste ou sites de crimes de guerre.</skos:definition>
+   <skos:definition xml:lang="de">Ein Massengrab ist eine Grabgrube, in die mehrere Leichen ohne Rücksicht auf Identität oder Status geworfen wurden. Zum Beispiel: Pestgruben oder Kriegsverbrechen.</skos:definition>
    <rdfs:comment xml:lang="en">True if the grave contains more than the remains of one person. This limit is arbitrary and needs debate.</rdfs:comment> 
    <rdfs:comment xml:lang="fr">Vrai si la tombe contient plus d'un corps. Cette limite est arbitraire et doit être discuté.</rdfs:comment> 
    <rdfs:comment xml:lang="de">True, wenn das Grab enthält mehr als ein Körper. Diese Grenze ist willkürlich und sollte diskutiert werden.</rdfs:comment>
-   <owl:equivalentClass muninn:wikipedia_version="499197251" rdf:resource="http://dbpedia.org/resource/Mass_grave"/>
+   <owl:equivalentClass rdf:resource="http://dbpedia.org/resource/Mass_grave"/>
+   <muninn:wikipedia_version>499197251</muninn:wikipedia_version>
+   <vs:term_status>stable</vs:term_status>
    <owl:subClassOf rdf:resource="#Dead_people_place"/>
    <owl:subClassOf rdf:resource="#Container_for_human_remains"/>
    <owl:subClassOf>
-   <owl:Restriction>
-    <owl:onProperty rdf:resource="#containsRemains" />
-    <owl:minCardinality rdf:datatype="xsd:nonNegativeInteger">2</owl:minCardinality>
-   </owl:Restriction>
- </owl:subClassOf>
+    <owl:Restriction rdf:ID="internalGraves003">
+     <owl:onProperty rdf:resource="#containsRemains" />
+     <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
+    </owl:Restriction>
+   </owl:subClassOf>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
   <owl:Class rdf:ID="Ossuary">
+   <foaf:name xml:lang="en">Ossuary</foaf:name>
    <rdfs:label xml:lang="en">Ossuary</rdfs:label>
    <rdfs:label xml:lang="fr">Charnier</rdfs:label>
    <rdfs:label xml:lang="fr">Ossuaire</rdfs:label>  
@@ -898,63 +1461,83 @@
    <owl:subClassOf rdf:resource="#Dead_people_place"/>
    <owl:subClassOf rdf:resource="#Container_for_human_remains"/>
    <owl:subClassOf>
-   <owl:Restriction>
+   <owl:Restriction rdf:ID="internalGraves004">
     <owl:onProperty rdf:resource="#containsRemains" />
-    <owl:minCardinality rdf:datatype="xsd:nonNegativeInteger">2</owl:minCardinality>
+    <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minCardinality>
    </owl:Restriction>
  </owl:subClassOf>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
   <owl:DeprecatedClass rdf:ID="Empty_grave" vs:term_status="archaic">
+   <foaf:name xml:lang="en">Empty Grave</foaf:name>
    <rdfs:label xml:lang="en">Empty Grave</rdfs:label>
    <rdfs:label xml:lang="fr">Tombe vide</rdfs:label>
    <rdfs:label xml:lang="de">leere Grab</rdfs:label>
-   <rdfs:comment xml:lang="en">Use this for empty graves.</rdfs:comment> 
+   <skos:definition xml:lang="en">Use this for empty graves.</skos:definition> 
    <owl:subClassOf rdf:resource="#Container_for_human_remains"/>
    <owl:subClassOf>
-    <owl:Restriction>
+    <owl:Restriction rdf:ID="internalGraves005">
      <owl:onProperty rdf:resource="#containsRemains" />
-     <owl:maxCardinality rdf:datatype="xsd:integer">0</owl:maxCardinality>
+     <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:maxCardinality>
     </owl:Restriction> 
    </owl:subClassOf>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DeprecatedClass>
 
-  <owl:Class rdf:ID="EmptyGrave" >
+  <owl:Class rdf:ID="EmptyGrave">
+   <foaf:name xml:lang="en">Empty Grave</foaf:name>
    <rdfs:label xml:lang="en">Empty Grave</rdfs:label>
    <rdfs:label xml:lang="fr">Tombe vide</rdfs:label>
    <rdfs:label xml:lang="de">leere Grab</rdfs:label>
-   <rdfs:comment xml:lang="en">Use this for empty graves.</rdfs:comment> 
+   <skos:definition xml:lang="en">Use this for empty graves.</skos:definition> 
    <owl:subClassOf rdf:resource="#Container_for_human_remains"/>
    <owl:subClassOf>
-    <owl:Restriction>
+    <owl:Restriction rdf:ID="internalGraves006">
      <owl:onProperty rdf:resource="#containsRemains" />
-     <owl:maxCardinality rdf:datatype="xsd:integer">0</owl:maxCardinality>
+     <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</owl:maxCardinality>
     </owl:Restriction> 
    </owl:subClassOf>
    <owl:equivalentClass rdf:resource="#Empty_grave"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:Class>
 
  
  <!-- graves and the people in them -->
 
   <owl:ObjectProperty rdf:ID="containsRemains">
+   <foaf:name xml:lang="en">Grave contains remains</foaf:name>
     <rdfs:label xml:lang="en">Grave contains remains</rdfs:label>
     <rdfs:label xml:lang="fr">Contient les restes</rdfs:label>
     <rdfs:label xml:lang="de">enthält die Überreste</rdfs:label> 
     <rdfs:domain rdf:resource="#Container_for_human_remains"/>
     <rdfs:range rdf:resource="#Remains"/>
     <owl:equivalentProperty rdf:resource="#contains_remains"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:ObjectProperty>
 
   <owl:DeprecatedProperty rdf:ID="contains_remains" vs:term_status="archaic">
+   <foaf:name xml:lang="en">Grave contains remains</foaf:name>
     <rdfs:label xml:lang="en">Grave contains remains</rdfs:label>
     <rdfs:label xml:lang="fr">Contient les restes</rdfs:label>
     <rdfs:label xml:lang="de">enthält die Überreste</rdfs:label> 
     <rdfs:domain rdf:resource="#Container_for_human_remains"/>
     <rdfs:range rdf:resource="#Remains"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DeprecatedProperty>
 
   <owl:ObjectProperty rdf:ID="remainsIn">
+   <foaf:name xml:lang="en">remainsIn</foaf:name>
     <rdfs:label xml:lang="en">Remains are in Grave</rdfs:label>
     <rdfs:label xml:lang="fr">Les restes dans la tombe</rdfs:label>
     <rdfs:label xml:lang="de">bleibt, sind in Grab</rdfs:label> 
@@ -962,45 +1545,65 @@
     <rdfs:domain rdf:resource="#Remains"/>
     <owl:inverseOf rdf:resource="#containsRemains"/>
     <owl:equivalentProperty rdf:resource="#remains_in"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:ObjectProperty>
 
   <owl:DeprecatedProperty rdf:ID="remains_in" vs:term_status="archaic">
+   <foaf:name xml:lang="en">remains_in</foaf:name>
     <rdfs:label xml:lang="en">Remains are in Grave</rdfs:label>
     <rdfs:label xml:lang="fr">Les restes dans la tombe</rdfs:label>
     <rdfs:label xml:lang="de">bleibt, sind in Grab</rdfs:label> 
     <rdfs:range rdf:resource="#Container_for_human_remains"/>
     <rdfs:domain rdf:resource="#Remains"/>
     <owl:inverseOf rdf:resource="#contains_remains"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DeprecatedProperty>
 
 <!-- Graves and Grave Containers -->
   <owl:ObjectProperty rdf:ID="containsGrave">
+   <foaf:name xml:lang="en">containsGrave</foaf:name>
    <rdfs:label xml:lang="en">contains grave</rdfs:label>
    <rdfs:label xml:lang="fr">Contient tombeau</rdfs:label>
    <rdfs:label xml:lang="de">Grab enthielt in</rdfs:label>
    <rdfs:domain rdf:resource="#Dead_people_place"/>
    <rdfs:range rdf:resource="#Container_for_human_remains"/>
    <owl:equivalentProperty rdf:resource="#contains_grave"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:ObjectProperty>
 
   <owl:DeprecatedProperty rdf:ID="contains_grave" vs:term_status="archaic">
+   <foaf:name xml:lang="en">contains_grave</foaf:name>
    <rdfs:label xml:lang="en">contains grave</rdfs:label>
    <rdfs:label xml:lang="fr">Contient tombeau</rdfs:label>
    <rdfs:label xml:lang="de">Grab enthielt in</rdfs:label>
    <rdfs:domain rdf:resource="#Dead_people_place"/>
    <rdfs:range rdf:resource="#Container_for_human_remains"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DeprecatedProperty>
 
   <owl:DeprecatedProperty rdf:ID="grave_in" vs:term_status="archaic">
+   <foaf:name xml:lang="en">grave_in</foaf:name>
    <rdfs:label xml:lang="en">Grave contained by</rdfs:label>
    <rdfs:label xml:lang="fr">Tombeau contenue par</rdfs:label>
    <rdfs:label xml:lang="de">Tomb durch enthaltenen</rdfs:label>
    <rdfs:range rdf:resource="#Dead_people_place"/>
    <rdfs:domain rdf:resource="#Container_for_human_remains"/>
    <owl:inverseOf rdf:resource="#contains_grave"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DeprecatedProperty>
 
   <owl:ObjectProperty rdf:ID="graveContainedIn">
+   <foaf:name xml:lang="en">graveContainedIn</foaf:name>
    <rdfs:label xml:lang="en">Grave contained by</rdfs:label>
    <rdfs:label xml:lang="fr">Tombeau contenue par</rdfs:label>
    <rdfs:label xml:lang="de">Tomb durch enthaltenen</rdfs:label>
@@ -1008,94 +1611,315 @@
    <rdfs:domain rdf:resource="#Container_for_human_remains"/>
    <owl:inverseOf rdf:resource="#containsGrave"/>
    <owl:equivalentProperty rdf:resource="#grave_in"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:ObjectProperty>
 
 
   <owl:DeprecatedProperty rdf:ID="remains_of" vs:term_status="archaic">
+   <foaf:name xml:lang="en">remains_of</foaf:name>
    <rdfs:label xml:lang="en">Remains of this Person</rdfs:label>
    <rdfs:label xml:lang="fr">Les restes de cette personne</rdfs:label>
    <rdfs:label xml:lang="de">Die Überreste dieser Person</rdfs:label>
-   <rdfs:comment xml:lang="en">A place holder for any information related to the identity of the remains.</rdfs:comment>
-   <rdfs:comment xml:lang="fr">Une reference a l'identité de la personne a qui la depouille appartient.</rdfs:comment>
-   <rdfs:comment xml:lang="de">Ein Verweis auf die Identität der Person, die den Körper gehört.</rdfs:comment>
+   <skos:definition xml:lang="en">A place holder for any information related to the identity of the remains.</skos:definition>
+   <skos:definition xml:lang="fr">Une reference a l'identité de la personne a qui la depouille appartient.</skos:definition>
+   <skos:definition xml:lang="de">Ein Verweis auf die Identität der Person, die den Körper gehört.</skos:definition>
    <rdfs:domain rdf:resource="#Remains"/>
-   <rdfs:range rdf:resource="org:Person"/>
-   <rdfs:range rdf:resource="foaf:Agent"/>
+   <rdfs:range rdf:resource="http://www.w3.org/ns/org#Person"/>
+   <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DeprecatedProperty>
 
   <owl:ObjectProperty rdf:ID="isRemainsOf">
+   <foaf:name xml:lang="en">isRemainsOf</foaf:name>
    <rdfs:label xml:lang="en">Remains of this Person</rdfs:label>
    <rdfs:label xml:lang="fr">Les restes de cette personne</rdfs:label>
    <rdfs:label xml:lang="de">Die Überreste dieser Person</rdfs:label>
-   <rdfs:comment xml:lang="en">A place holder for any information related to the identity of the remains.</rdfs:comment>
-   <rdfs:comment xml:lang="fr">Une reference a l'identité de la personne a qui la depouille appartient.</rdfs:comment>
-   <rdfs:comment xml:lang="de">Ein Verweis auf die Identität der Person, die den Körper gehört.</rdfs:comment>
+   <skos:definition xml:lang="en">A place holder for any information related to the identity of the remains.</skos:definition>
+   <skos:definition xml:lang="fr">Une reference a l'identité de la personne a qui la depouille appartient.</skos:definition>
+   <skos:definition xml:lang="de">Ein Verweis auf die Identität der Person, die den Körper gehört.</skos:definition>
    <rdfs:domain rdf:resource="#Remains"/>
-   <rdfs:range rdf:resource="org:Person"/>
-   <rdfs:range rdf:resource="foaf:Agent"/>
+   <rdfs:range rdf:resource="http://www.w3.org/ns/org#Person"/>
+   <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
    <owl:equivalentProperty rdf:resource="#remains_of"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:ObjectProperty>
 
 
   <owl:DeprecatedProperty rdf:ID="has_remains" vs:term_status="archaic">
+   <foaf:name xml:lang="en">has_remains</foaf:name>
    <rdfs:label xml:lang="en">Person has remains</rdfs:label>
    <rdfs:label xml:lang="fr">La personne a ces restes</rdfs:label>
    <rdfs:label xml:lang="de">Person hat, bleibt</rdfs:label>
    <rdfs:range rdf:resource="#Remains"/>
    <rdfs:domain rdf:resource="http://rdf.muninn-project.org/ontologies/muninn#person"/>
-   <rdfs:domain rdf:resource="foaf:Agent"/>
+   <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
    <owl:inverseOf rdf:resource="#remains_of"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:DeprecatedProperty>
 
-  <owl:ObjectProperty rdf:ID="hisRemains">
+  <owl:ObjectProperty rdf:ID="hasRemains">
+   <foaf:name xml:lang="en">has Remains</foaf:name>
    <rdfs:label xml:lang="en">Person has remains</rdfs:label>
    <rdfs:label xml:lang="fr">La personne a ces restes</rdfs:label>
    <rdfs:label xml:lang="de">Person hat, bleibt</rdfs:label>
    <rdfs:range rdf:resource="#Remains"/>
-   <rdfs:domain rdf:resource="org:Person"/>
-   <rdfs:domain rdf:resource="foaf:Agent"/>
+   <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Person"/>
+   <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
    <owl:inverseOf rdf:resource="#isRemainsOf"/>
    <owl:equivalentProperty rdf:resource="#has_remains"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:ObjectProperty>
 
 
   <owl:ObjectProperty rdf:ID="isCommemorationOf">
+   <foaf:name xml:lang="en">isCommemorationOf</foaf:name>
    <rdfs:label xml:lang="en">Is a commemoration of</rdfs:label>
    <rdfs:label xml:lang="fr">Est une commémoration de</rdfs:label>
    <rdfs:label xml:lang="de">Gedenken</rdfs:label>
-   <rdfs:comment xml:lang="en">Records any information as to the Person, Group, Event being commemorated or represented.</rdfs:comment>
+   <skos:definition xml:lang="en">Records any information as to the Person, Group, Event being commemorated or represented.</skos:definition>
    <rdfs:domain rdf:resource="#Monument"/>
    <owl:equivalentProperty rdf:resource="#commemorates"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:ObjectProperty>
 
   <owl:ObjectProperty rdf:ID="hasCommemoration">
+   <foaf:name xml:lang="en">hasCommemoration</foaf:name>
    <rdfs:label xml:lang="en">Has a commemoration</rdfs:label>
    <rdfs:label xml:lang="fr">A une commémoration</rdfs:label>
    <rdfs:label xml:lang="de">Ein Gedenken</rdfs:label>
-   <rdfs:comment xml:lang="en">Records a monument that commemorates or represents the Person, Group or Event.</rdfs:comment>
+   <skos:definition xml:lang="en">Records a monument that commemorates or represents the Person, Group or Event.</skos:definition>
    <rdfs:domain rdf:resource="#Monument"/>
    <owl:inverseOf rdf:resource="#isCommemorationOf"/>
    <owl:equivalentProperty rdf:resource="#commemorated_by"/> 
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
   </owl:ObjectProperty>
 
-  <owl:DeprecatedProperty rdf:ID="commemorates" vs:term_status="archaic">
+  <owl:DeprecatedClass rdf:ID="Burial_mound">
+   <rdfs:label xml:lang="en">Burial Mound</rdfs:label>     
+   <owl:sameAs rdf:resource="#Tumulus"/> 
+   <owl:subClassOf rdf:resource="#Memorial" />
+   <owl:subClassOf rdf:resource="#Dead_people_place"/>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <vs:term_status>archaic</vs:term_status>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:DeprecatedClass>
+
+  <owl:DeprecatedProperty rdf:ID="commemorates">
+   <foaf:name xml:lang="en">commemorates</foaf:name>
    <rdfs:label xml:lang="en">Commemorates</rdfs:label>
    <rdfs:label xml:lang="fr">Commémore</rdfs:label>
    <rdfs:label xml:lang="de">erinnert</rdfs:label>
-   <rdfs:comment xml:lang="en">Records any information as to the Person or Group being commemorated.</rdfs:comment>
+   <skos:definition xml:lang="en">Records any information as to the Person or Group being commemorated.</skos:definition>
    <rdfs:domain rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <vs:term_status>archaic</vs:term_status>
   </owl:DeprecatedProperty>
 
-  <owl:DeprecatedProperty rdf:ID="commemorated_by" vs:term_status="archaic">
+  <owl:DeprecatedProperty rdf:ID="commemorated_by">
+   <foaf:name xml:lang="en">commemorated_by</foaf:name>
    <rdfs:label xml:lang="en">Commemorated by</rdfs:label>
    <rdfs:label xml:lang="fr">Commémoré par</rdfs:label>
    <rdfs:label xml:lang="de">erinnert</rdfs:label>
-   <rdfs:comment xml:lang="en">Records any information as to the Person or Group being commemorated.</rdfs:comment>
+   <skos:definition xml:lang="en">Records any information as to the Person or Group being commemorated.</skos:definition>
    <rdfs:range rdf:resource="#Monument"/>
-   <rdfs:domain rdf:resource="org:Person"/>
-   <rdfs:domain rdf:resource="foaf:Agent"/>
+   <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
    <rdfs:domain rdf:resource="#Container_for_human_remains"/>
    <owl:inverseOf rdf:resource="#commemorates"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <vs:term_status>archaic</vs:term_status>
   </owl:DeprecatedProperty>
+
+  <owl:DeprecatedProperty rdf:ID="site_name">
+   <rdfs:label xml:lang="en">Site Name</rdfs:label>
+   <rdfs:label xml:lang="fr">Nom du site</rdfs:label>
+   <rdfs:label xml:lang="de">Site-Namen</rdfs:label>
+   <skos:definition xml:lang="en">The name of the site / monument.</skos:definition>
+   <rdfs:domain rdf:resource="#Dead_people_place"/>
+   <rdfs:domain rdf:resource="#Monument"/>
+   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <vs:term_status>archaic</vs:term_status>
+  </owl:DeprecatedProperty>
+
+
+  <owl:DeprecatedProperty rdf:ID="siteName">
+   <rdfs:label xml:lang="en">Site Name</rdfs:label>
+   <rdfs:label xml:lang="fr">Nom du site</rdfs:label>
+   <rdfs:label xml:lang="de">Site-Namen</rdfs:label>
+   <skos:definition xml:lang="en">The name of the site / monument.</skos:definition>
+   <rdfs:domain rdf:resource="#Dead_people_place"/>
+   <rdfs:domain rdf:resource="#Monument"/>
+   <owl:equivalentProperty rdf:resource="#site_name"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <vs:term_status>archaic</vs:term_status>
+  </owl:DeprecatedProperty>
+
+  <rdf:Description rdf:about="http://xmlns.com/foaf/0.1/name">
+   <rdfs:label xml:lang="en">Name</rdfs:label>
+   <rdfs:label xml:lang="fr">Nom</rdfs:label>
+   <rdfs:label xml:lang="de">Name</rdfs:label>
+   <skos:definition xml:lang="en">The name of a feature, place or thing.</skos:definition>
+   <skos:definition xml:lang="fr">Le nom d'un toponyme, d'un lieu ou d'une chose.</skos:definition>
+   <skos:definition xml:lang="de">Der Name eines Merkmals, Ortes oder Dings.</skos:definition>
+   <rdfs:comment xml:lang="en">Links foaf term to ontology.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">Relie le terme de foaf à l'ontologie.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Verbindet den foaf mit der Ontologie. </rdfs:comment>
+   <owl:equivalentProperty rdf:resource="#siteName"/>
+   <vs:term_status>stable</vs:term_status>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </rdf:Description>
+
+
+
+
+  <owl:DeprecatedProperty rdf:ID="id">
+   <rdfs:label xml:lang="en">ID</rdfs:label>
+   <skos:definition xml:lang="en">Local ID number for non linked open data processing.</skos:definition>
+   <skos:definition xml:lang="fr">Numéro d'identification local pour le traitement des données ouvertes non liées.</skos:definition>
+   <skos:definition xml:lang="de">Lokale ID-Nummer für die nicht verknüpfte offene Datenverarbeitung.</skos:definition>
+   <rdfs:comment xml:lang="en">Replaced by standard dc:identifier as a generic term.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">Remplacé par le standard dc:identifier comme terme générique.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Ersetzt durch Standard dc:identifier als Oberbegriff.</rdfs:comment>
+   <rdfs:domain rdf:resource="#Dead_people_place"/>
+   <rdfs:domain rdf:resource="#Remains"/>
+   <rdfs:domain rdf:resource="#Container_for_human_remains"/>
+   <rdfs:domain rdf:resource="#Monument"/>
+   <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <vs:term_status>archaic</vs:term_status>
+  </owl:DeprecatedProperty>
+  
+  <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/identifier">
+   <skos:definition xml:lang="en">Local ID number for non linked open data processing.</skos:definition>
+   <skos:definition xml:lang="fr">Numéro d'identification local pour le traitement des données ouvertes non liées.</skos:definition>
+   <skos:definition xml:lang="de">Lokale ID-Nummer für die nicht verknüpfte offene Datenverarbeitung.</skos:definition>
+   <rdfs:comment xml:lang="en">Links dublin core term to ontology.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">Relie le terme de Dublin Core à l'ontologie.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Verbindet den Dublin-Core mit der Ontologie. </rdfs:comment>
+   <owl:equivalentProperty rdf:resource="#id"/>
+   <vs:term_status>stable</vs:term_status>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+  </owl:DatatypeProperty>
+
+  
+  <owl:DeprecatedProperty rdf:ID="moved_from">
+   <rdfs:label xml:lang="en">Moved from</rdfs:label>
+   <skos:definition xml:lang="en">Use this to relate a grave or remains to its original instance elsewhere. Use this for disinterment.</skos:definition>
+   <rdfs:domain rdf:resource="#Dead_people_place"/>
+   <rdfs:domain rdf:resource="#Container_for_human_remains"/>
+   <rdfs:domain rdf:resource="#Remains"/>
+   <rdfs:domain rdf:resource="#Monument"/>
+   <owl:inverseOf rdf:resource="#moved_to"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <vs:term_status>archaic</vs:term_status>
+  </owl:DeprecatedProperty>
+   
+  <owl:DeprecatedProperty rdf:ID="moved_to">
+   <rdfs:label xml:lang="en">Moved from</rdfs:label>
+   <skos:definition xml:lang="en">Use this to relate a grave or remains to its original instance elsewhere. Use this for disinterments.</skos:definition>
+   <rdfs:domain rdf:resource="#Dead_people_place"/>
+   <rdfs:domain rdf:resource="#Container_for_human_remains"/>
+   <rdfs:domain rdf:resource="#Remains"/> 
+   <rdfs:domain rdf:resource="#Monument"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <vs:term_status>archaic</vs:term_status>
+  </owl:DeprecatedProperty>
+
+  <owl:DeprecatedProperty rdf:ID="when_moved">
+   <rdfs:label xml:lang="en">Moved on</rdfs:label>
+   <rdfs:label xml:lang="en">Date or interval when the objects were moved.</rdfs:label>
+   <rdfs:domain rdf:resource="#moved_from"/>
+   <rdfs:domain rdf:resource="#moved_to"/>
+   <rdfs:range rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+   <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
+   <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+   <void:inDataset rdf:resource="#datasetdefinition"/>
+   <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+   <vs:term_status>archaic</vs:term_status>   
+  </owl:DeprecatedProperty>
+
+
+
+<!-- This section according to time/prov -->
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity">
+ <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#InstantaneousEvent">
+ <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Instant"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#atTime">
+ <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#inXSDDateTime"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#endedAtTime">
+ <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <owl:propertyChainAxiom rdf:parseType="Collection">
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasEnd"/>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTime"/>
+ </owl:propertyChainAxiom>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/ns/prov#startedAtTime">
+ <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <owl:propertyChainAxiom rdf:parseType="Collection">
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasBeginning"/>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTime"/>
+ </owl:propertyChainAxiom>
+</rdf:Description>
+
+<!-- End prov / time block -->
+
+
 </rdf:RDF>
 

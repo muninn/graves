@@ -1,0 +1,83 @@
+<p>This class is equivalent to the dbpedia instance <a href="http://dbpedia.org/resource/Commemorative_plaque">http://dbpedia.org/resource/Commemorative_plaque</a> based on the <a href="http://en.wikipedia.org/w/index.php?title=Commemorative_plaque&oldid=511073020">511073020</a> version of the <a href="http://en.wikipedia.org/wiki/Main_Page">Wikipedia</a> page.</p>
+<p>This class is a subclass of <a href="#term_Monument">Monument</a>.</p>
+
+Plaques are often used to commemorate individuals where a new structure
+would not be practical.  Here is an example of one of the plaques at
+Dalhousie University in the Hicks building. I used Dublin Core mark-up to
+record the year of unveiling of the plaque.
+<h3 id="dalhousie_example">6.9. Dalhousie University Great War Memorial, Plaque Example</h3>
+<div class="example" style="white-space: pre-wrap;" id="dalhousie_plaques">
+<pre>
+&lt;graves:Plaque rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Plaque/623fdc574d52ff69c38972bc293c6eb2">A Dal Plaque</a>"&gt;
+        &lt;dc:date&gt;1918&lt;/dc:date&gt;
+        &lt;foaf:depiction rdf:resource="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Image/40f148948b06f936340ae7c738755651">Image of Plaque</a>"/&gt;
+        &lt;graves:hasLocation&gt;
+         &lt;geo:Point rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Point/623fdc574d52ff69c38972bc293c6eb2">Building Location</a>"&gt;
+          &lt;geo:lat&gt;44.636214&lt;/geo:lat&gt;
+          &lt;geo:long&gt;-63.593207&lt;/geo:long&gt;
+         &lt;/geo:Point&gt;
+        &lt;/graves:hasLocation&gt;
+        &lt;graves:hasLocation rdf:resource="http://linkedgeodata.org/triplify/way8039061"/&gt;
+        &lt;graves:hasLocation&gt;
+         &lt;rnews:PostalAddress rdf:about="<a href="http://rdf.muninn-project.org/modern/2011/11/11/PostalAddress/544d839129ca5579293e36566504a275">Building Address</a>"&gt;
+          &lt;foaf:name&gt;Henry Hicks Academic Building, Dalhousie University&lt;/foaf:name&gt;
+          &lt;rnews:postalCode&gt;B3H4H6&lt;/rnews:postalCode&gt;
+          &lt;rnews:streetAddress&gt;6299 South Street&lt;/rnews:streetAddress&gt;
+          &lt;rnews:addressCountry rdf:resource="http://sws.geonames.org/6251999/"/&gt;
+          &lt;rnews:addressLocality rdf:resource="http://sws.geonames.org/6324729/"/&gt;
+          &lt;rnews:addressRegion rdf:resource="http://sws.geonames.org/6091530/"/&gt;
+         &lt;/rnews:PostalAddress&gt; 
+        &lt;/graves:hasLocation&gt;
+        &lt;graves:siteName xml:lang="en"&gt;Dalhousie University Great War Memorial
+        Plaques&lt;/graves:siteName&gt;
+        &lt;graves:inscription&gt;IN PROUD REMEMBRANCE OF OUR CLASSMATES WHO GAVE 
+        THEIR LIVES IN THE GREAT WAR. 1914 - 1918 JOHN BURGESS CALKIN CARSON VERNON
+        ARTHUR GRIERSON CYRIL HYDE HENRY ARTHUR MOSELY - "THEIR NAME LIVETH FOR 
+        EVERMORE" DALHOUSIE CLASS 1918&lt;/graves:inscription&gt;
+        &lt;graves:isCommemorationOf&gt;
+         &lt;foaf:Group rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Group/9b64f2f16ac1385ca5774257e4faaab9">All Dal Great War Vet.</a>"&gt;
+          &lt;foaf:name&gt;Dalhousie students that died in the Great War&lt;/foaf:name&gt;
+          &lt;foaf:member&gt;
+           &lt;foaf:Person rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Person/563107_John_Burgess_Colkin_Carson_CEF">John Carson</a>"&gt;
+            &lt;foaf:lastName&gt;Carson&lt;/foaf:lastName&gt;
+            &lt;foaf:firstName&gt;John&lt;/foaf:firstName&gt;
+            &lt;foaf:middleName1&gt;Burgess&lt;/foaf:middleName1&gt;
+            &lt;foaf:middleName2&gt;Calkin&lt;/foaf:middleName2&gt;
+            &lt;org:allegiance rdf:resource="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Dominion/canada">Canada as it was in 1918</a>"/&lt;
+           &lt;/foaf:Person&gt;
+          &lt;/foaf:member&gt;
+
+          &lt;foaf:member&gt;
+           &lt;foaf:Person rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Person/342245_Vernon_Arthur_Grierson_CEF">Vernom Grierson</a>"&gt;
+            &lt;foaf:familyName&gt;Grierson&lt;/foaf:familyName&gt;
+            &lt;foaf:givenName&gt;Vernon&lt;/foaf:givenName&gt;
+            &lt;foaf:middleName1&gt;Arthur&lt;/foaf:middleName1&gt;
+            &lt;org:allegiance rdf:resource="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Dominion/canada">Canada as it was in 1918</a>"/&lt;
+           &lt;/foaf:Person&gt;
+          &lt;/foaf:member&gt;
+
+          &lt;foaf:member&gt;
+           &lt;foaf:Person rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Person/134238_Cyril_Hyde_CEF">Cyril Hyde</a>"&gt;
+            &lt;foaf:familyName&gt;Hyde&lt;/foaf:familyName&gt;
+            &lt;foaf:givenName&gt;Cyril&lt;/foaf:givenName&gt;
+            &lt;org:allegiance rdf:resource="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Dominion/canada">Canada as it was in 1918</a>"/&lt;
+           &lt;/foaf:Person&gt;
+          &lt;/foaf:member&gt;
+
+          &lt;foaf:member&gt;
+           &lt;foaf:Person rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Person/948223_Henry_Arthur_Moseley_CEF">Henry Moseley</a>"&gt;
+            &lt;foaf:familyName&gt;Moseley&lt;/foaf:familyName&gt;
+            &lt;foaf:givenName&gt;Henry&lt;/foaf:givenName&gt;
+            &lt;foaf:middleName1&gt;Arthur&lt;/foaf:middleName1&gt;
+            &lt;org:allegiance rdf:resource="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Dominion/canada">Canada as it was in 1918</a>"/&lt;
+           &lt;/foaf:Person&gt;
+          &lt;/foaf:member&gt;
+
+         &lt;/foaf:Group&gt;
+        &lt;/graves:isCommemorationOf&gt;
+        &lt;graves:inscription&gt;in proud remembrance of our classmates who gave their lives 
+        in the great war 1914 - 1918 Their name liveth for evermore&lt;/graves:inscription&gt;
+       &lt;/graves:Plaque&gt;
+
+      </pre>
+    </div>

@@ -1,0 +1,38 @@
+<p>This class is equivalent to the dbpedia instance <a href="http://dbpedia.org/resource/Shipwreck">http://dbpedia.org/resource/Shipwreck</a> based on the <a href="http://en.wikipedia.org/w/index.php?title=Shipwreck&oldid=513841901">513841901</a> version of the <a href="http://en.wikipedia.org/wiki/Main_Page">Wikipedia</a> page.</p>
+<p>This class is a subclass of <a href="#term_Dead_people_place">Dead people place</a>.</p>
+<p>This class is a subclass of <a href="#term_hasState">Object is in a state</a>.</p>
+<p>Records the location of a ship wreck, including the depth at which the wreck is expected to rest. As some ship wrecks are classified as war graves by their home country, the WarGrave class should be extended to the instance when necessary.</p>
+
+<h3 id="u86_example">6.10. Submarine U86, A ShipWreck Example</h3>
+
+<div class="example" style="white-space: pre-wrap;">
+ <pre>
+&lt;graves:ShipWreck rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/ShipWreck/7622626846a37239d6af3df0b1f3ea1a">U68 ShipWreck</a>"&gt;
+ &lt;foaf:siteName&gt;Shipwreck of the U68&lt;/foaf:siteName&gt;
+ &lt;rdfs:label xml:lang="en"&gt;Shipwreck of the U68 (1915)&lt;/rdfs:label&gt;
+ &lt;owl:sameAs rdf:resource="<a href="http://dbpedia.org/ontology/SM_U-68">Dbpedia</a>"/&gt; 
+ &lt;graves:hasApproximateLocation&gt; 
+  &lt;geo:Point rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Point/7622626846a37239d6af3df0b1f3ea1a-a">Approximate location from G. Campbell</a>"&gt;
+   &lt;geo:lat&gt;57.933333&lt;/geo:lat&gt;
+   &lt;geo:long&gt;-10.883333&lt;/geo:long&gt;
+   &lt;documents:source&gt;
+    &lt;dc:bibliographicCitation rdf:about="<A href="http://rdf.muninn-project.org/ww1/2011/11/11/bibliographicCitation/7622626846a37239d6af3df0b1f3ea1a-ac">In Campbell's book</a>"&gt;
+     &lt;dc:title&gt;My Mystery Ship&lt;/dc:title&gt;
+     &lt;documents:createdBy rdf:resource="<a href="http://dbpedia.org/resource/Gordon_Campbell_(Royal_Navy_officer)">Dbpedia</a>"/&gt;  
+     &lt;dc:page&gt;102&lt;/dc:page&gt;
+    &lt;/dc:bibliographicCitation&gt;
+   &lt;/documents:source&gt;
+  &lt;/geo:Point&gt;
+ &lt;/graves:hasApproximateLocation&gt;
+ &lt;graves:hasLocation&gt;
+  &lt;geo:Point rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Point/7622626846a37239d6af3df0b1f3ea1a-b">Precise? Location by uboat.net</a>"&gt;
+   &lt;geo:lat&gt;51.9&lt;/geo:lat&gt; 
+   &lt;geo:long&gt;-10.883333&lt;/geo:long&gt;
+   &lt;documents:source rdf:resource="<a href="http://uboat.net/wwi/boats/index.html?boat=68">uboat.net</a>"/&gt;
+  &lt;/geo:Point&gt;
+ &lt;/graves:hasLocation&gt;
+ &lt;graves:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date"&gt;19160322&lt;/graves:startDate&gt;
+&lt;/graves:ShipWreck&gt;
+
+ </pre>
+</div>

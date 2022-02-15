@@ -1,0 +1,86 @@
+This property is an alternative means of creating a relationship between the
+monuments and the person(s) being remembered.  This property is primarily
+meant to refer to people or groups of people, but referencing an event is also
+possible. Two examples dealing with memorials in <A href="http://www.geonames.org/2653942/cambridge.html">Cambridge,
+England follow.</a>
+
+<h3 id="cambridge_example">Commemorative Statue Example: The Cambridge War Memorial</h3>
+
+<p>The memorial is a statue in a roadway island, in this example it commemorates local war veterans. The interesting bits here are that the model for the statue is known and so is the Sculptor. </p&lt;
+<!--http://christsatwar.wordpress.com/2011/08/10/the-cambridge-war-memorial/ -->
+<div class="example" style="white-space: pre-wrap;" id="cambridge__memorial">
+      <pre>
+&lt;graves:Statue rdf:about="<A href="http://rdf.muninn-project.org/ww1/2011/11/11/Statue/32fe57daeba7dd92f43030c21329410d">The Statue</a>"&lt;
+ &lt;owl:sameAs rdf:resource="<A href="http://linkedgeodata.org/triplify/node298888663">The Status is OSM.</a>"/>;
+ &lt;dc:date&lt;1922&lt;/dc:date&lt;
+ &lt;graves:hasTitle&lt;The Homecoming&lt;/graves:hasTitle&lt;
+ &lt;graves:siteName&lt;Cambridge War Memorial&lt;/graves:siteName&lt;
+ &lt;rdfs:label xml:lang="en"&lt;Cambridge War Memorial (Cambridge, UK)&lt;/rdfs:label&lt;
+ &lt;foaf:depiction rdf:resource="<A href="http://rdf.muninn-project.org/ww1/2011/11/11/Image/b9abb0fd44deeec062b3c3863ebf538c">Picture of the statue</a>"/&lt;
+ &lt;foaf:depicts&lt;
+  &lt;org:Person rdf:about="<A href="http://rdf.muninn-project.org/ww1/2011/11/11/Person/747175ab1d3bfd59c33452d4149b0bf1">Kenneth was the model for the statue.</a>"&lt;
+   &lt;foaf:familyName&lt;Hamilton&lt;/foaf:familyName&lt;
+   &lt;foaf:givenName&lt;Kenneth&lt;/foaf:givenName&lt;
+  &lt;/org:Person&lt;         
+ &lt;/foaf:depicts&lt; 
+ &lt;graves:hasLocation&lt;
+  &lt;geo:Point rdf:about="<A href="http://rdf.muninn-project.org/ww1/2011/11/11/Point/32fe57daeba7dd92f43030c21329410d">Statue Location</a>"&lt;
+   &lt;geo:lat&lt;52.195005&lt;/geo:lat&lt;
+   &lt;geo:long&lt;0.131273&lt;/geo:long&lt;
+  &lt;/geo:Point&lt;
+ &lt;/graves:hasLocation&lt;
+ &lt;graves:inscription&lt;to the men of cambridgeshire. the isle of ely. the borough and university of cambridge who served in the great war 1914-1919 and in the world war 1939-1945 &lt;/graves:inscription&lt;
+ &lt;graves:isCommemorationOf&lt;
+  &lt;foaf:Group rdf:about="<A href="http://rdf.muninn-project.org/ww1/2011/11/11/Group/32fe57daeba7dd92f43030c21329410d">Group Commemorated</A>"&lt;
+   &lt;foaf:name&lt;Isle of Ely, Cambridge Area Combattants&lt;/foaf:name&lt;
+  &lt;/foaf:Group&lt;
+ &lt;/graves:isCommemorationOf&lt;
+ &lt;documents:createdBy rdf:resource="<a href="http://dbpedia.org/resource/R._Tait_McKenzie">The Sculptor</a>"/&lt;
+&lt;/graves:Statue&lt;
+      </pre>
+    </div>
+<p>Note that here we've created a group with only a name and no restrictions on memberships. It is possible to build some very creative owl statements to locate all persons that are commemorated by this monument by using a series of restrictions based on place and date of birth.</p>
+
+
+<!-- http://rdf.muninn-project.org/ww1/2011/11/11/Image/904d911e421a49e2afbdd176ee2980fa -->
+
+<h3 id="gasworks_example">Memorials by disbanded organizations: The Cambridge Gasworks Memorial</h3>
+
+
+
+Some memorials are problematic in that they reference organizations and buildings that no longer exist, such as the Cambridge Gas
+works.  The site is now occupied by a Tesco's, so we can abuse Linked Geo Data's ontology to reference the area of the Tesco
+without referencing the supermarket itself.
+
+
+<div class="example" style="white-space: pre-wrap;" id="cambridge_gas_memorial">
+<pre>
+&lt;graves:Cenotaph rdf:about="&lt;a href="http://rdf.muninn-project.org/ww1/2011/11/11/Cenotaph/ab9bd1984c151f46f30a8f3247e254b9">Cenotaph Itself</a>"&lt;
+ &lt;owl:sameAs rdf:resource="<a href="http://linkedgeodata.org/triplify/node298290470">Linked Geo Data Cenotaph</a>;"/&lt;
+ &lt;graves:siteName&lt;Cambridge War Memorial&lt;/graves:siteName&lt;
+ &lt;graves:inscription&lt;In remembrance of our fellow workers that fell in the Great War and in the Second World War&lt;/graves:inscription&lt;
+ &lt;graves:inCommemorationOf&lt;
+  &lt;foaf:Group rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Group/ab9bd1984c151f46f30a8f3247e254b9">Commemorated Group</a>"&lt;
+   &lt;foaf:name&lt;Cambridge Gas Works Employees&lt;/foaf:name&lt;
+  &lt;/foaf:Group&lt;      
+ &lt;/graves:inCommemorationOf&lt;
+ &lt;graves:hasLocation&lt;
+  &lt;geo:Point rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Point/ab9bd1984c151f46f30a8f3247e254b9">Cenotaph Location</a>"&lt;
+   &lt;geo:lat&lt;52.209986&lt;/geo:lat&lt;
+   &lt;geo:long&lt;0.144213&lt;/geo:long&lt;
+  &lt;/geo:Point&lt;
+ &lt;/graves:hasLocation&lt;
+ &lt;documents:createdBy&lt;
+  &lt;org:Group rdf:about="<a href="http://rdf.muninn-project.org/ww1/2011/11/11/Group/ab9bd1984c151f46f30a8f3247e254b9-c">Employees of defunct gasworks</a>"&lt;
+   &lt;org:name&lt;The employees of the Cambridge Gasworks&lt;/org:name&lt;
+   &lt;!-- Gasworks taken down circa 1971 --&lt;
+   &lt;org:deathday rdf:datatype="http://www.w3.org/2001/XMLSchema#gYear">1971&lt;/org:deathday&lt;
+   &lt;!-- About in the same area as the Tesco supermarket and its parking lot. 
+        Link to the location and not the object. --&lt;
+   &lt;graves:hasLocation rdf:resource="<A href="http://linkedgeodata.org/geometry/way3875404">Linked Geo Data Geometry</a>"/&lt;
+  &lt;/org:Group&lt;
+ &lt;/documents:createdBy&lt;
+&lt;/graves:Cenotaph&lt;
+</pre>
+</div>
+

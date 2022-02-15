@@ -1,0 +1,14 @@
+<p>There is currently no standard for the markup or recording of information about the location of graves within cemeteries or dig sites. This property is meant as a pointer to a map or geographic reference system used by the collection of graves to record location.</p>
+
+<h3>Givenchy Road Canadian Cemetery Map Example</h3>
+
+<div class="example" style="white-space: pre-wrap;">
+<pre>
+&lt;graves:MilitaryCemetery rdf:About="<a href="http://rdf.muninn-project.org/modern/2011/11/11/MilitaryCemetery/82b2db43b076dd098e1f6bcca561ddbd">Givenchy Road Canadian Cemetery</a>"&gt;
+ &lt;graves:siteName&lt;Givenchy Road Canadian Cemetery&lt;/graves:siteName&gt;
+ (...)
+ &lt;!-- Map of grave locations according to the cwwg website --&gt;
+ &lt;graves:hasMap rdf:resource="<a href="http://www.cwgc.org/plans/15-98/M005.GIF">Givenchy Cemetery Map</a>"/&gt;
+&lt;/graves:MilitaryCemetery&gt;
+</pre>
+</div>

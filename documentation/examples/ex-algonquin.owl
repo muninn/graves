@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns       ="https://rdf.muninn-project.org/ontologies/graves#"
+    xmlns:person="http://rdf.muninn-project.org/ontologies/person#"
+    xmlns:schema="https://schema.org/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:org="http://rdf.muninn-project.org/ontologies/organization#"
+    xmlns:mil="http://rdf.muninn-project.org/ontologies/military#"
+    xmlns:muninn="http://rdf.muninn-project.org/ontologies/muninn#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:religion="http://rdf.muninn-project.org/ontologies/religion#"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:graves="https://rdf.muninn-project.org/ontologies/graves#"
+    xmlns:time = "http://www.w3.org/2006/time#"   
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:loc="http://id.loc.gov/vocabulary/relators/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:documents="http://rdf.muninn-project.org/ontologies/documents#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"   
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+    xmlns:sf="http://www.opengis.net/ont/sf#"
+    xml:base="https://rdf.muninn-project.org/ontologies/graves#">
+<graves:Grave>
+ <!-- Cedar Lake -->
+ <graves:hasLocation rdf:resource="http://sws.geonames.org/5918868/"/>
+ <!-- Algonquin Park Boundaries--> 
+ <graves:hasLocation rdf:resource="http://sws.geonames.org/5883649/"/>
+ <graves:siteName>Grave of A. Corbeil</graves:siteName>
+ <foaf:name>Grave of A. Corbeil</foaf:name>
+ <rdfs:label xml:lang="en">Grave of A. Corbeil (Algonquin Park, Canada)</rdfs:label>
+ <!-- The actual location of the grave -->
+ <graves:hasLocation>
+  <geo:Point>
+   <geo:lat>46.004756708462466</geo:lat>
+   <geo:long>-78.4839677810669</geo:long>
+  </geo:Point>
+ </graves:hasLocation>
+ <!-- Grave has a wooden marker -->
+ <graves:hasCommemoration>
+  <graves:Tombstone>
+   <graves:hasName>A Corbeil June 1 1888</graves:hasName>
+   <graves:epitaph>IHS</graves:epitaph>
+  </graves:Tombstone>
+ </graves:hasCommemoration>  
+ <graves:containsRemains> 
+  <graves:Skeleton>
+   <rdfs:label xml:lang="en">A. Corbeil's remains</rdfs:label>
+  </graves:Skeleton>
+ </graves:containsRemains>               
+</graves:Grave>
+</rdf:RDF>

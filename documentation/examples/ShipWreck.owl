@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns:person="http://rdf.muninn-project.org/ontologies/person#"
+    xmlns:schema="https://schema.org/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:org="http://rdf.muninn-project.org/ontologies/organization#"
+    xmlns:mil="http://rdf.muninn-project.org/ontologies/military#"
+    xmlns:muninn="http://rdf.muninn-project.org/ontologies/muninn#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:religion="http://rdf.muninn-project.org/ontologies/religion#"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:graves="https://rdf.muninn-project.org/ontologies/graves#"
+    xmlns:time = "http://www.w3.org/2006/time#"   
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:loc="http://id.loc.gov/vocabulary/relators/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:documents="http://rdf.muninn-project.org/ontologies/documents#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"   
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+    xmlns:sf="http://www.opengis.net/ont/sf#">
+<graves:ShipWreck>
+ <foaf:siteName>Shipwreck of the U68</foaf:siteName>
+ <rdfs:label xml:lang="en">Shipwreck of the U68 (1915)</rdfs:label>
+ <owl:sameAs rdf:resource="http://dbpedia.org/ontology/SM_U-68"/> 
+ <graves:hasApproximateLocation> 
+  <geo:Point>
+   <geo:lat>57.933333</geo:lat>
+   <geo:long>-10.883333</geo:long>
+   <prov:hadPrimarySource>
+    <dc:bibliographicCitation rdf:about="http://rdf.muninn-project.org/ww1/2011/11/11/bibliographicCitation/7622626846a37239d6af3df0b1f3ea1a-ac">
+     <dc:title>My Mystery Ship</dc:title>
+     <documents:createdBy rdf:resource="http://dbpedia.org/resource/Gordon_Campbell_(Royal_Navy_officer)"/>  
+     <dc:page>102</dc:page>
+    </dc:bibliographicCitation>
+   </prov:hadPrimarySource>
+  </geo:Point>
+ </graves:hasApproximateLocation>
+ <graves:hasLocation>
+  <geo:Point rdf:about="http://rdf.muninn-project.org/ww1/2011/11/11/Point/7622626846a37239d6af3df0b1f3ea1a-b">
+   <rdfs:comment>Precise? Location by uboat.net</rdfs:comment>
+   <geo:lat>51.9</geo:lat> 
+   <geo:long>-10.883333</geo:long>
+   <prov:hadPrimarySource rdf:resource="http://uboat.net/wwi/boats/index.html?boat=68"/>
+  </geo:Point>
+ </graves:hasLocation>
+ <graves:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">19160322</graves:startDate>
+</graves:ShipWreck>
+</rdf:RDF>

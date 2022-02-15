@@ -1,0 +1,58 @@
+In certain circumstances it desirable that the location of the grave or dig
+site remain hidden to prevent souvenir hunters or sightseers from harassing
+the land owner.
+
+However, this same location information forms part and parcel of the
+identity of many cemetery or graves: "Peking Man", "The Frog Lake Grave" or
+"The Red River Dig".
+
+The obfuscated property allows the data owner to publish a complete
+description, retain a partial description of the location and state that a
+precise location is known but not published.
+
+Please note that the obfuscation is meant to be in the precision and not
+accuracy.  The location data is expected to be accurate in that the right
+country might be provided as a location but without an exact location within
+the country.
+
+In the following example, we define a dig site near the Red Deer River using
+the Geonames database in Alberta but not exactly where.  By using the
+obfuscated property we indicate that we are aware of the exact location of
+the site but aren't revealing it.
+
+<div class="example" style="white-space: pre-wrap;" id="redriverdig">
+ <pre>
+  &lt;graves:dig_site&gt;
+   &lt;graves:site_name&gt;Red River &lt;/graves:site_name&gt;
+   &lt;graves:location&gt;
+    &lt;gn:Feature rdf:about="http://sws.geonames.org/6118186/"/&gt;
+    &lt;graves:obfuscated/&gt;
+   &lt;/graves:location&gt;
+   &lt;graves:contains_grave&gt;
+    &lt;graves:grave&gt;
+    .....
+    &lt;/graves:grave&gt;   
+   &lt;/graves:contains_grave&gt;
+  &lt;/graves:dig_site&gt;
+ </pre>
+</div>
+
+The property is also useful in identifying information which is not known to
+the data owner.  In this other example, we reference the grave of a soldier
+who is known to have died in a battle in France (location in France Unknown)
+but who's grave remains to be found:
+
+<div class="example" style="white-space: pre-wrap;">
+ <pre>
+  &lt;graves:grave&gt;
+   &lt;graves:grave_id&gt;2a88db3f8aeb87c9&lt;/graves:grave_id&gt; 
+   &lt;graves:location&gt;France&lt;/graves:location&gt;
+   &lt;graves:contains_remains&gt;
+    &lt;graves:human_remains&gt;
+     &lt;graves:person rdf:about="http://rdf.muninn-project.org/ww1/2011/11/11/person/35628"/&gt;
+    &lt;/graves:human_remains&gt;          
+   &lt;/graves:contains_remains&gt;
+  &lt;/graves:grave&gt;
+ </pre>
+</div>
+

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+    xmlns       ="https://rdf.muninn-project.org/ontologies/graves#"
+    xmlns:person="http://rdf.muninn-project.org/ontologies/person#"
+    xmlns:schema="https://schema.org/"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:org="http://rdf.muninn-project.org/ontologies/organization#"
+    xmlns:mil="http://rdf.muninn-project.org/ontologies/military#"
+    xmlns:muninn="http://rdf.muninn-project.org/ontologies/muninn#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:religion="http://rdf.muninn-project.org/ontologies/religion#"
+    xmlns:dbpedia="http://dbpedia.org/resource/"
+    xmlns:graves="https://rdf.muninn-project.org/ontologies/graves#"
+    xmlns:time = "http://www.w3.org/2006/time#"   
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:loc="http://id.loc.gov/vocabulary/relators/"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+    xmlns:documents="http://rdf.muninn-project.org/ontologies/documents#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:void="http://rdfs.org/ns/void#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#"
+    xmlns:bibo="http://purl.org/ontology/bibo/"   
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:geosparql="http://www.opengis.net/ont/geosparql#"
+    xmlns:sf="http://www.opengis.net/ont/sf#"
+    xml:base="https://rdf.muninn-project.org/ontologies/graves#">
+  <graves:grave>
+   <graves:grave_id>2a88db3f8aeb87c9</graves:grave_id> 
+   <graves:location>France</graves:location>
+   <graves:contains_remains>
+    <graves:human_remains>
+     <graves:isRemainsOf>
+      <foaf:Person rdf:about="http://rdf.muninn-project.org/ww1/2011/11/11/person/35628">
+       <rdfs:label xml:lang="en">A Canadian soldier of the Great War</rdfs:label>
+      </foaf:Person>
+     </graves:isRemainsOf>
+    </graves:human_remains>          
+   </graves:contains_remains>
+  </graves:grave>
+</rdf:RDF>

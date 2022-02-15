@@ -1,0 +1,82 @@
+
+Due to graves registration, redevelopment or archaeological research both
+graves and cemeteries are moved over time.  The moved_from and moved_to
+ObjectProperties are used to indicate that the objects have been moved or
+the remains separated.
+
+Taking our <a href="#ottawa_memorial">previous examples about the Canadian
+War Memorial</a>, the remains of the Unknown Soldier were actually moved
+from one of the graves in the Cabaret-Rouge British Cemetery in Souchez,
+France. We use the property to indicate the provenance of the grave.
+
+ <div class="example" style="white-space: pre-wrap;" id="ottawa_memorial_moved_from">
+      <pre>
+      &lt;graves:grave&gt;
+       &lt;owl:sameAs&gt; 
+       http://dbpedia.org/resource/National_War_Memorial_&#37;28Canada&#37;28
+       &lt;owl:sameAs&gt;
+       &lt;graves:location&gt;
+        &lt;geo:Point&gt;
+         &lt;geo:lat&gt;45.424036&lt;/geo:lat&gt;
+         &lt;geo:long&gt;-75.695497&lt;/geo:long&gt;
+        &lt;/geo:Point&gt;
+       &lt;/graves:location&gt;
+       &lt;graves:cenotaph&gt;
+        &lt;graves:memorial_name xml:lang="en"&gt;National War Memorial&lt;/graves:memorial_name&gt;
+        &lt;graves:memorial_name xml:lang="fr"&gt;Monument commemoratif de guerre du Canada&lt;/graves:memorial_name&gt;
+        &lt;graves:epitaph&gt;&lt;/graves:epitaph&gt;
+       &lt;/graves:tombstone&gt; 
+       &lt;graves:skeleton&gt;
+        &lt;graves:moved_from&gt;
+         &lt;graves:when&gt;Oct 21, 2011&lt;graves:when&gt;
+         &lt;graves:remains&gt;
+         &lt;graves:grave&gt;         
+          &lt;graves:location&gt;Plot 8, Row E, Grave 7&lt;/graves:location&gt;
+          &lt;graves:cemetery rdf:About="http://rdf.muninn-project.org/ww1/2011/11/11/location/22"&gt;
+           &lt;graves:site_name&gt;Cabaret-Rouge British Cemetery&lt;/graves:site_name&gt;
+            &lt;graves:location&gt;
+             &lt;geo:Point&gt;
+              &lt;geo:lat&gt;50.375833&lt;/geo:lat&gt;
+              &lt;geo:long&gt;2.7647&lt;/geo:long&gt;
+             &lt;/geo:Point&gt;
+            &lt;/graves:location&gt;
+           &lt;/graves:cemetery&gt;
+          &lt;/graves:grave&gt;
+         &lt;/graves:remains&gt;
+        &lt;/graves:moved_from&gt;
+       &lt;/graves:skeleton&gt;
+       &lt;/graves:cenotaph&gt;
+      &lt;/graves:grave&gt;
+      </pre>
+    </div>
+
+Similarly, in the case we wanted to record the provenance of partial humain remains
+from a <a href="#redriverdig">dig site near the Red Deer River</a>
+into a fictitious museum catalog:
+
+<div class="example" style="white-space: pre-wrap;">
+ <pre>
+ &lt;rdf:RDF&gt;
+  &lt;museum:artifact&gt;
+   &lt;dc:title&gt;Partial skeleton of an adult male.&lt;dc:title&gt;
+   &lt;dc:reference&gt;FD344-34459-32&lt;/dc:reference&gt;
+   &lt;dc:date&gt;
+    &lt;time:before&gt;
+     &lt;time:instant&gt;&lt;time:year&gt;-3500&lt;time:year&gt;&lt;/time:instant&gt;
+    &lt;/time:before&gt;
+   &lt;/dc:date&gt;
+   &lt;graves:partial_remains&gt;
+    &lt;graves:grave&gt;
+     &lt;graves:dig_site&gt;
+      &lt;graves:location&gt;
+       &lt;gn:Feature rdf:about="http://sws.geonames.org/6118186/"/&gt;
+       &lt;/graves:obfuscated&gt;
+      &lt;/graves:location&gt;
+     &lt;/graves:dig_site&gt;     
+    &lt;/graves:grave&gt;
+   &lt;/graves:partial_remains&gt;
+  &lt;/museum:artifact&gt;
+ &lt;/rdf:RDF&gt;
+  </pre>
+</div>
+
