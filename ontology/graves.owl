@@ -42,24 +42,24 @@
    <rdfs:label xml:lang="en">The Muninn Graves Ontology</rdfs:label>
    <rdfs:label xml:lang="fr">L'ontologie Graves de Muninn</rdfs:label> 
    <rdfs:label xml:lang="de">Die Muninn Graves Ontologie</rdfs:label>  
-   <rdfs:comment xml:lang="en">The Muninn Graves Ontology is meant to deal with the remains of human beings.</rdfs:comment>
-   <rdfs:comment xml:lang="fr">L'ontologie Graves de Muninn se soucie des restes humain.</rdfs:comment>
-   <rdfs:comment xml:lang="de">Die Muninn Graves Ontology soll sich mit den Überresten von Menschen befassen.</rdfs:comment>
-   <dcterms:description xml:lang="en">The Muninn Graves Ontology is meant to deal with the remains of human beings.</dcterms:description>
-   <dcterms:description xml:lang="fr">L'ontologie Graves de Muninn se soucie des restes humain.</dcterms:description>
-   <dcterms:description xml:lang="de">Die Muninn Graves Ontology soll sich mit den Überresten von Menschen befassen.</dcterms:description>
+   <rdfs:comment xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</rdfs:comment>
+   <dcterms:description xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</dcterms:description>
+   <dcterms:description xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</dcterms:description>
+   <dcterms:description xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</dcterms:description>
    <owl:priorVersion rdf:resource="https://rdf.muninn-project.org/ontologies/graves-20121031"/>
    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">ONTOLOGY_VERSION</owl:versionInfo>
    <vs:term_status>Stable</vs:term_status>
    <dcterms:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">ONTOLOGY_DATE</dcterms:date>
    <void:inDataset rdf:resource="#datasetdefinition"/>
    <foaf:logo rdf:resource="http://rdf.muninn-project.org/ontologies/UnknownGrave.png"/>
-   <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/> 
+   <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/> 
    <cc:Jurisdiction rdf:resource="http://dbpedia.org/resource/Canada"/>
    <cc:attributionURL rdf:resource="http://www.muninn-project.org/"/>
    <dcterms:creator rdf:resource="#warren"/>
    <dcterms:publisher rdf:resource="#muninn"/>
-   <loc:ctb rdf:resource="#jakes"/>
+   <loc:ctb rdf:resource="#jackes"/>
    <loc:ctb rdf:resource="#gates"/>
    <vann:preferredNamespacePrefix>graves</vann:preferredNamespacePrefix>
    <vann:preferredNamespaceUri>https://rdf.muninn-project.org/ontologies/graves#</vann:preferredNamespaceUri>
@@ -72,14 +72,14 @@
    <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves-ONTOLOGY_DATE"/>
    <void:inDataset rdf:resource="#datasetdefinition"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85066566"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85124583"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85018080"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85135935"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh96002721"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh00006370"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85056548"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/childrensSubjects/sj2013050003"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85066566"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85124583"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85018080"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85135935"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh96002721"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh00006370"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85056548"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/childrensSubjects/sj2013050003"/>
   </owl:Ontology>
 
   
@@ -98,36 +98,36 @@
    <schema:name xml:lang="en">The Muninn Graves Ontology</schema:name>
    <schema:name xml:lang="fr">L'ontologie Graves de Muninn</schema:name>
    <schema:name xml:lang="de">Die Muninn Graves Ontologie</schema:name>
-   <rdfs:comment xml:lang="en">The Muninn Graves Ontology is meant to deal with the remains of human beings.</rdfs:comment>
-   <rdfs:comment xml:lang="fr">L'ontologie Graves de Muninn se soucie des restes humain.</rdfs:comment>
-   <rdfs:comment xml:lang="de">Die Muninn Graves Ontology soll sich mit den Überresten von Menschen befassen.</rdfs:comment>
-   <dcterms:description xml:lang="en">The Muninn Graves Ontology is meant to deal with the remains of human beings.</dcterms:description>
-   <dcterms:description xml:lang="fr">L'ontologie Graves de Muninn se soucie des restes humain.</dcterms:description>
-   <dcterms:description xml:lang="de">Die Muninn Graves Ontology soll sich mit den Überresten von Menschen befassen.</dcterms:description>
-   <schema:description xml:lang="en">The Muninn Graves Ontology is meant to deal with the remains of human beings.</schema:description>
-   <schema:description xml:lang="fr">L'ontologie Graves de Muninn se soucie des restes humain.</schema:description>
-   <schema:description xml:lang="de">Die Muninn Graves Ontology soll sich mit den Überresten von Menschen befassen.</schema:description>
-   <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/> 
-   <schema:license>https://creativecommons.org/licenses/by/3.0/</schema:license>
+   <rdfs:comment xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</rdfs:comment>
+   <rdfs:comment xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</rdfs:comment>
+   <rdfs:comment xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</rdfs:comment>
+   <dcterms:description xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</dcterms:description>
+   <dcterms:description xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</dcterms:description>
+   <dcterms:description xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</dcterms:description>
+   <schema:description xml:lang="en">The Muninn Graves Ontology deals with human remains, graves and places they are found, and monuments that commemorate people or events.</schema:description>
+   <schema:description xml:lang="fr">L'ontologie Muninn Graves se concerne avec les restes humains, les tombes et les lieux où ils se trouvent ainsi que les monuments qui commémorent des personnes ou des événements.</schema:description>
+   <schema:description xml:lang="de">Die Muninn Graves Ontology befasst sich mit menschlichen Überresten, Gräbern und Orten, an denen sie gefunden wurden, und Denkmälern, die an Personen oder Ereignisse erinnern.</schema:description>
+   <cc:license rdf:resource="http://creativecommons.org/licenses/by/4.0/"/> 
+   <schema:license>https://creativecommons.org/licenses/by/4.0/</schema:license>
    <cc:Jurisdiction rdf:resource="http://dbpedia.org/resource/Canada"/>
    <cc:attributionURL rdf:resource="http://www.muninn-project.org/"/>
    <dcterms:creator rdf:resource="#warren"/>
    <schema:creator rdf:resource="#warren"/>
    <schema:creator rdf:resource="#muninn"/>
    <dcterms:publisher rdf:resource="#muninn"/>
-   <loc:ctb rdf:resource="#jakes"/>
-   <schema:contributor rdf:resource="#jakes"/>
+   <loc:ctb rdf:resource="#jackes"/>
+   <schema:contributor rdf:resource="#jackes"/>
    <loc:ctb rdf:resource="#gates"/>
    <schema:contributor rdf:resource="#gates"/>
    <schema:version>ONTOLOGY_VERSION</schema:version>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85066566"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85124583"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85018080"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85135935"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh96002721"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh00006370"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/subjects/sh85056548"/>
-   <dcterms:subject rdf:resource="http://id.loc.gov/authorities/childrensSubjects/sj2013050003"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85066566"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85124583"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85018080"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85135935"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh96002721"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh00006370"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/subjects/sh85056548"/>
+   <dcterms:subject rdf:resource="https://id.loc.gov/authorities/childrensSubjects/sj2013050003"/>
    <rdfs:isDefinedBy rdf:resource="https://rdf.muninn-project.org/ontologies/graves"/>
    <void:sparqlEndpoint rdf:resource="http://rdf.muninn-project.org/sparql"/>
    <void:triples>TOTAL_TRIPLES_ONTOLOGY</void:triples>
@@ -222,7 +222,7 @@
    <owl:sameAs rdf:resource="https://orcid.org/0000-0002-2615-5022"/>
   </foaf:Person>
 
-  <foaf:Person rdf:about="#jakes">
+  <foaf:Person rdf:about="#jackes">
    <rdf:type rdf:resource="https://schema.org/Person"/>
    <foaf:name>Mary Jackes</foaf:name>
    <rdfs:label>Mary Jackes</rdfs:label>
@@ -560,7 +560,7 @@
  <rdfs:label xml:lang="en">Eliminated</rdfs:label>
  <rdfs:label xml:lang="fr">Éliminé</rdfs:label>
  <rdfs:label xml:lang="de">Eliminiert</rdfs:label>
- <skos:definition xml:lang="en">The object was completely and permanently destroyed or disassembled. No remains or traces of the object exists.</skos:definition>
+ <skos:definition xml:lang="en">The object was completely and permanently destroyed or disassembled. No remains or traces of the object exist.</skos:definition>
  <skos:definition xml:lang="de">Das Objekt wurde vollständig und dauerhaft zerstört oder demontiert. Es sind keine Reste oder Spuren des Objekts vorhanden.</skos:definition>
  <skos:definition xml:lang="fr">L'objet a été complètement et définitivement détruit ou démonté. Aucune trace de l'objet n'existe.</skos:definition>
  <skos:inScheme rdf:resource="#ObjectStatesScheme"/>
@@ -1884,25 +1884,25 @@
 <!-- This section according to time/prov -->
 <rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity">
  <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
- <rdfs:comment xml:lang="en">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
  <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://www.w3.org/ns/prov#InstantaneousEvent">
  <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
- <rdfs:comment xml:lang="en">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
  <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Instant"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://www.w3.org/ns/prov#atTime">
  <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
- <rdfs:comment xml:lang="en">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
  <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#inXSDDateTime"/>
 </rdf:Description>
 
 <rdf:Description rdf:about="http://www.w3.org/ns/prov#endedAtTime">
  <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
- <rdfs:comment xml:lang="en">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
  <owl:propertyChainAxiom rdf:parseType="Collection">
   <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasEnd"/>
   <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTime"/>
@@ -1911,7 +1911,7 @@
 
 <rdf:Description rdf:about="http://www.w3.org/ns/prov#startedAtTime">
  <rdfs:comment xml:lang="en">According to https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
- <rdfs:comment xml:lang="en">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
+ <rdfs:comment xml:lang="fr">D'après https://www.w3.org/TR/owl-time/#time-prov</rdfs:comment>
  <owl:propertyChainAxiom rdf:parseType="Collection">
   <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasBeginning"/>
   <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#inXSDDateTime"/>
